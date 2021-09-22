@@ -1,11 +1,11 @@
 <?php
-	if($_POST){
-		require 'db_key.php';
-		$conn = connect_db();
-	if(isset($_POST['register']) ){
-		$username = $_POST['username'];
+if($_POST){
+require 'db_key.php';
+$conn = connect_db();
+if(isset($_POST['register']) ){
+$username = $_POST['username'];
 
-		$password = $_POST['password'];
+$password = $_POST['password'];
 $passwordHashed = password_hash($password, PASSWORD_BCRYPT);
 //sanitize your input
 $username = mysqli_real_escape_string($conn, $username);
