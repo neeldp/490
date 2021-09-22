@@ -9,7 +9,7 @@ if($_POST){
         $passwordHashed = password_hash($password, PASSWORD_BCRYPT);
         $username = mysqli_real_escape_string($conn, $username);
         $passwordHashed = mysqli_real_escape_string($conn, $passwordHashed);
-        $sql = "SELECT * FROM test WHERE username = '$username'";
+        $sql = "SELECT * FROM users WHERE username = '$username'";
         $sql = $conn->query($sql);
         if($sql){
             $sql = $sql->fetch_assoc();
