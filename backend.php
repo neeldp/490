@@ -19,7 +19,7 @@ if($sql){
 header('location: /register.php');
 exit();
 }else{
-$sql = "INSERT INTO `users`(`username`, `password`, `isAdmin`) VALUES ('$username','$passwordHashed','0')";
+$sql = "INSERT INTO `users`(`username`, `password`, `isAdmin`) VALUES ('$username','$passwordHashed','1')";
 $sql = $conn->query($sql);
 if($sql){
 echo "Registration succesful. You may <a href= '/'>login</a> now";
