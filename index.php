@@ -12,17 +12,10 @@ require 'db_key.php';
 	<body>
        	<h1> <b> Group 8 Login Screen </h1>
 
-		<!--<form action="" method="POST">
-		USERNAME:<input type = "text" name = "username" size = "30" /> 
-		<br /> <br /> 
-		PASSWORD:<input type = "password" name = "password" size = "30" />
-		<br /> <br />
-		<input type="submit" value="Login" name="submit" />  
-		</form>-->
 		
 		<form method = 'POST' action = 'backend.php' >
 		<div class="form-group">
-		<label>Username : </label>
+		<label>Username : </label> <br> </br> <br> </br>
 		<input class= 'form-control w-25' type="text" name="username">
 		<label>Password :</label>
 		<input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
