@@ -13,9 +13,11 @@ if($_POST){
         $sql = $conn->query($sql);
         if($sql){
             $sql = $sql->fetch_assoc();
+            $isAdmin = $sql['isAdmin'];
             if(password_verify($password, $sql['password'])){
                 session_start();
                 $_SESSION['username'] =$username;
+                $_SESSION['isAdmin'] =$isAdmin;
                 echo 'Congratulations';
                 header('location: landing.php');
             }else{
