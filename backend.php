@@ -42,7 +42,7 @@ session_start();
 $_SESSION['username'] = $username;
 $_SESSION['isAdmin'] = $isAdmin;
 echo 'You have successfully logged-in';
-header('location: /490/landing.php');
+header('location: login/490/landing.php');
 }
 }else{
 header('location: /index.php');
