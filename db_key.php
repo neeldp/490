@@ -10,12 +10,12 @@
 	#$sql_password='';
 	#$sql_database="users";
 	function connect_db() {
-		global $cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db;
-		$conn=new mysqli($cleardb_server,$cleardb_username,$cleardb_password);
+		global $sql_host, $sql_username, $sql_password, $sql_database;
+		$conn=new mysqli($sql_host,$sql_username,$sql_password);
 		if(mysqli_connect_error() !== null){
 			return false;
 		}
-		$conn -> select_db($cleardb_db);
+		$conn -> select_db($sql_database);
 		return $conn;
 	}
 
