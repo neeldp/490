@@ -16,7 +16,7 @@ $sql = "Select users.username From users Where username = '$username'";
 $sql = $conn->query($sql);
 $sql = $sql->fetch_assoc();
 if($sql){
-header('location: register.php');
+header('location: /register.php');
 exit();
 }else{
 $sql = "INSERT INTO `users`(`username`, `password`, `isAdmin`) VALUES ('$username','$passwordHashed','0')";
@@ -42,15 +42,15 @@ session_start();
 $_SESSION['username'] = $username;
 $_SESSION['isAdmin'] = $isAdmin;
 echo 'You have successfully logged-in';
-header('location: /login/landing.php');
+header('location: /landing.php');
 }
 }else{
-header('location: index.php');
+header('location: /index.php');
 exit();
 }
 }
 }else{
-header('location: index.php');
+header('location: /index.php');
 exit();
 }
 //header('location: index.php');
