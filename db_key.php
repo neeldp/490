@@ -5,10 +5,7 @@
 	$sql_password = $cleardb_url["pass"];
 	$sql_database = substr($cleardb_url["path"], 1);
 
-	#$sql_host="localhost";
-	#$sql_username="root";
-	#$sql_password='';
-	#$sql_database="users";
+	
 	function connect_db() {
 		global $sql_host, $sql_username, $sql_password, $sql_database;
 		$conn=new mysqli($sql_host,$sql_username,$sql_password);
