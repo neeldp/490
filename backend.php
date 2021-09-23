@@ -18,11 +18,12 @@ if($_POST){
                 session_start();
                 $_SESSION['username'] =$username;
                 $_SESSION['isAdmin'] =$isAdmin;
-                echo 'Congratulations';
+                #echo 'Congratulations';
                 header('location: landing.php');
             }else{
-                header("refresh:2;url=index.php");
-                echo 'incorrect password';
+                header('location: index.php');
+                #header("refresh:2;url=index.php");
+                #echo 'incorrect password';
                 exit();
             }
         } 
