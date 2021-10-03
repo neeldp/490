@@ -78,3 +78,9 @@ button.ghost {
 	height: 100%;
 	transition: all 0.6s ease-in-out;
 }
+
+.sign-in {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
