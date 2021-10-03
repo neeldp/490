@@ -79,10 +79,9 @@ button.ghost {
 	transition: all 0.6s ease-in-out;
 }
 
-.sign-in {
+.sign-in-container {
 	left: 0;
 	width: 50%;
-    position:center;
 	z-index: 2;
 }
 .container.right-panel-active .sign-in {
