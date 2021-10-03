@@ -82,6 +82,7 @@ button.ghost {
 .sign-in {
 	left: 0;
 	width: 50%;
+    position:center;
 	z-index: 2;
 }
 .container.right-panel-active .sign-in {
