@@ -4,8 +4,8 @@ require 'db_key.php';
 <!DOCTYPE html>
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
 <html lang = "en">    
-	<body>
-		<div class="containter" id="containter"> 
+	<body class="containter" id="containter">
+		<div > 
 			<div class="form-container sign-up-container">
 				<form action="#">
 					<h1>Create Account</h1>
