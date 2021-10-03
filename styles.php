@@ -88,3 +88,17 @@ button.ghost {
 .container.right-panel-active .sign-in {
 	transform: translateX(100%);
 }
+
+.sign-up {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
