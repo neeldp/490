@@ -8,6 +8,7 @@ require 'db_key.php';
        	<h1> <b> Group 8 Login Screen </h1>
 
 	<form method = 'POST' action = 'backend.php' >
+		<h1> Sign in </h1> 
 		<div class="form-group">
 			<label>Username : </label>
 			<input class= 'form-control w-25' type="text" name="username"><br><br>
