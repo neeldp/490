@@ -84,3 +84,6 @@ button.ghost {
 	width: 50%;
 	z-index: 2;
 }
+.container.right-panel-active .sign-in {
+	transform: translateX(100%);
+}
