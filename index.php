@@ -5,6 +5,19 @@ require 'db_key.php';
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
 <html lang = "en">    
 	<body class="containter" id="containter">
+	<script>
+			const signUpButton = document.getElementById('signUp');
+			const signInButton = document.getElementById('signIn');
+			const container = document.getElementById('container');
+
+			signUpButton.addEventListener('click', () => {
+				container.classList.add("right-panel-active");
+			});
+
+			signInButton.addEventListener('click', () => {
+				container.classList.remove("right-panel-active");
+			});
+		</script>
 		<div > 
 			<div class="form-container sign-up">
 				<form action="#">
@@ -44,18 +57,6 @@ require 'db_key.php';
 			</div>
 		</div>
 
-		<script>
-			const signUpButton = document.getElementById('signUp');
-			const signInButton = document.getElementById('signIn');
-			const container = document.getElementById('container');
-
-			signUpButton.addEventListener('click', () => {
-				container.classList.add("right-panel-active");
-			});
-
-			signInButton.addEventListener('click', () => {
-				container.classList.remove("right-panel-active");
-			});
-		</script>
+	
     </body>
 </html>
