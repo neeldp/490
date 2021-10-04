@@ -27,7 +27,7 @@ require 'db_key.php';
 							<label>Password :</label>
 							<input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
 						</div> 
-						<button class = 'btn btn-outline-info' type="submit" name="login" value= 'login' class="submit">Login</button>
+						<button>Login</button>
 					</form>	
 				</div>
 		</div>
@@ -45,7 +45,7 @@ require 'db_key.php';
 		</div>
 
 		<script id="rendered-js">
-		const signUpButton = document.getElementById('signUp');
+		const signUpButton = document.getElementByClass('ghost');
 		const signInButton = document.getElementById('signIn');
 		const container = document.getElementById('container');
 
