@@ -6,7 +6,7 @@ require 'db_key.php';
 <html lang = "en">    
 	<body class="containter" id="containter">
 		<div > 
-			<div class="form-container sign-up-container">
+			<div class="form-container sign-in">
 				<form action="#">
 					<h1>Create Account</h1>
 
@@ -17,7 +17,7 @@ require 'db_key.php';
 				</form>
 			</div>
 
-				<div class ="form-container sign-in">
+				<div class ="form-container sign-up">
 					<form method = 'POST' action = 'backend.php' >
 						<h1> Sign in to !Twitter </h1> 
 						<div class="form-group">
