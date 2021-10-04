@@ -34,8 +34,6 @@ require 'db_key.php';
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-left">
-					<h1>Welcome Back!</h1>
-					<p>To keep connected with us please login with your personal info</p>
 					<button class="ghost" id="signIn">Sign In</button>
 				</div>
 				<div class="overlay-panel overlay-right">
@@ -45,5 +43,19 @@ require 'db_key.php';
 				</div>
 			</div>
 		</div>
+
+		<script>
+			const signUpButton = document.getElementById('signUp');
+			const signInButton = document.getElementById('signIn');
+			const container = document.getElementById('container');
+
+			signUpButton.addEventListener('click', () => {
+				container.classList.add("right-panel-active");
+			});
+
+			signInButton.addEventListener('click', () => {
+				container.classList.remove("right-panel-active");
+			});
+		</script>
     </body>
 </html>
