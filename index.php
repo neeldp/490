@@ -3,23 +3,47 @@ require 'db_key.php';
 ?>
 <!DOCTYPE html>
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
-<html lang = "en">
-	<head>
-        	<title> Group 8 Login Screen </title>
-       		<meta charset = "utf-8" />
-	</head>
-    
-	<body>
-       	<h1> <b> Group 8 Login Screen </h1>
+<html lang = "en">    
+	<body class="containter" id="containter">
+		<div > 
+			<div class="form-container sign-up-container">
+				<form action="#">
+					<h1>Create Account</h1>
 
-		
-		<form method = 'POST' action = 'backend.php' >
-		<div class="form-group">
-		<label>Username : </label>
-		<input class= 'form-control w-25' type="text" name="username"><br><br>
-		<label>Password :</label>
-		<input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
-		</div><button class = 'btn btn-outline-info' type="submit" name="login" value= 'login' class="submit">Login</button></form>
-		
-    	</body>
+					<span>Make a Username</span>
+					<input type="text" placeholder="Username" />
+					<input type="password" placeholder="Password" />
+					<button>Sign Up</button>
+				</form>
+			</div>
+
+				<div class ="form-container sign-in">
+					<form method = 'POST' action = 'backend.php' >
+						<h1> Sign in to !Twitter </h1> 
+						<div class="form-group">
+							<label>Username : </label>
+							<input class= 'form-control w-25' type="text" name="username"><br><br>
+
+							<label>Password :</label>
+							<input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
+						</div> 
+						<button class = 'btn btn-outline-info' type="submit" name="login" value= 'login' class="submit">Login</button>
+					</form>	
+				</div>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Welcome Back!</h1>
+					<p>To keep connected with us please login with your personal info</p>
+					<button class="ghost" id="signIn">Sign In</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Hello, Friend!</h1>
+					<p>Enter your personal details and start journey with us</p>
+					<button class="ghost" id="signUp">Sign Up</button>
+				</div>
+			</div>
+		</div>
+    </body>
 </html>
