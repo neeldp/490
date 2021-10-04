@@ -121,6 +121,9 @@ input {
 	z-index: 2;
 }
 
+.container.right-panel-active .sign-in {
+	transform: translateX(100%);
+}
 
 .sign-up {
 	left: 0;
@@ -129,7 +132,24 @@ input {
 	z-index: 1;
 }
 
+.container.right-panel-active .sign-up {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
 
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
 
 .overlay-container {
 	position: absolute;
@@ -142,7 +162,9 @@ input {
 	z-index: 100;
 }
 
-
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
 
 .overlay {
 	background: #FF416C;
@@ -160,6 +182,9 @@ input {
 	transition: transform 0.6s ease-in-out;
 }
 
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
 
 .overlay-panel {
 	position: absolute;
@@ -176,4 +201,13 @@ input {
 	transition: transform 0.6s ease-in-out;
 }
 
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
 

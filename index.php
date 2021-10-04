@@ -9,27 +9,25 @@ require 'db_key.php';
 			<div class="form-container sign-up">
 				<form action="#">
 					<h1>Create Account</h1>
-
 					<span>Make a Username</span>
 					<input type="text" placeholder="Username" />
 					<input type="password" placeholder="Password" />
 					<button>Sign Up</button>
 				</form>
 			</div>
+			<div class ="form-container sign-in">
+				<form method = 'POST' action = 'backend.php' >
+					<h1> Sign in to !Twitter </h1> 
+					<div class="form-group">
+						<label>Username : </label>
+						<input class= 'form-control w-25' type="text" name="username"><br><br>
 
-				<div class ="form-container sign-in">
-					<form method = 'POST' action = 'backend.php' >
-						<h1> Sign in to !Twitter </h1> 
-						<div class="form-group">
-							<label>Username : </label>
-							<input class= 'form-control w-25' type="text" name="username"><br><br>
-
-							<label>Password :</label>
-							<input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
-						</div> 
-						<button class = 'btn btn-outline-info' type="submit" name="login" value= 'login' class="submit">Login</button>
-					</form>	
-				</div>
+						<label>Password :</label>
+						<input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
+					</div> 
+					<button class = 'btn btn-outline-info' type="submit" name="login" value= 'login' class="submit">Login</button>
+				</form>	
+			</div>
 		</div>
 		<div class="overlay-container">
 			<div class="overlay">
