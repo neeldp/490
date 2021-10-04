@@ -20,7 +20,16 @@ form {
 	height: 100%;
 	text-align: center;
 }
-
+body {
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
 input {
 	background-color: #eee;
 	border: none;
