@@ -1,10 +1,9 @@
 <?php require 'header.php';
 require 'db_key.php';
 ?>
-<!DOCTYPE html>
+
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
-<head><style> <link rel="stylesheet" href="styles.php" media="screen" /> </style></head>
-<html lang = "en">    
+ 
 	<body>
 		<div class="containter" id="containter">
 			<div class="form-container sign-up">
