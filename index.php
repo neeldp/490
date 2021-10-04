@@ -1,5 +1,4 @@
 <?php require 'header.php';
-require 'styles.php';
 require 'db_key.php';
 ?>
 <!DOCTYPE html>
