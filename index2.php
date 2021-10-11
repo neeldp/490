@@ -46,6 +46,6 @@
     
     <script> 
         var card = document.querySelector('.card'); 
-        var btn = document.querySelector('.button-register');
+         btn = document.querySelector('.button-register');
         btn.addEventListener('click', function () { card.classList.toggle('is-flipped');}); </script>
 </div>
