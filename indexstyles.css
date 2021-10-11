@@ -1,0 +1,106 @@
+
+
+body {    
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+}
+
+.scene {
+  width: 1000px;
+  height: 1000px;
+
+  margin: 30px 0;
+  margin-left: auto;
+  margin-right: auto;
+  perspective: 600px;
+  position: center;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position:center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+
+    transform: rotateY(180deg);
+  
+  
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 25px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: linear-gradient(to bottom right, #A0A1A4, #828385);;
+  
+}
+
+.card__face--back {
+  background: linear-gradient(to top right, #A0A1A4, #828385);;
+  transform: rotateY(180deg);
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    transform: translate(0, 65%);
+}
+
+h1{
+  font-size: 50px;
+}
+
+label{
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.button-login {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+.button-register{
+  border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.switch{
+  background:rgba(0, 255, 0, 0.3); /* only to prove that it's on top */
+  position:absolute;
+  top: 300px;
+  left:0;
+  width:100%;
+  height:100%;
+}
