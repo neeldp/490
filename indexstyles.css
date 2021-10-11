@@ -2,7 +2,7 @@
 
 body {    
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient( #A0A1A4, #828385);
 }
 
 .scene {
@@ -27,10 +27,7 @@ body {
 }
 
 .card.is-flipped {
-
     transform: rotateY(180deg);
-  
-  
 }
 
 .card__face {
@@ -47,19 +44,29 @@ body {
 }
 
 .card__face--front {
-  background: linear-gradient(to bottom right, #A0A1A4, #828385);;
+  background: linear-gradient( #A0A1A4, #828385);
   
 }
 
 .card__face--back {
-  background: linear-gradient(to top right, #A0A1A4, #828385);;
+  background: linear-gradient( #A0A1A4, #828385);;
   transform: rotateY(180deg);
 }
 
 .form-container{
     display: flex;
     justify-content: center;
-    transform: translate(0, 65%);
+    transform: translate(0, 35%);
+    box-sizing: border-box;
+    padding: 12px 5px;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
 }
 
 h1{
@@ -77,7 +84,7 @@ label{
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
 	color: #FFFFFF;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 1px;
@@ -89,7 +96,19 @@ label{
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
 	color: #FFFFFF;
-	font-size: 12px;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.button-register1{
+  border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 13px;
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 1px;
@@ -97,9 +116,8 @@ label{
 }
 
 .switch{
-  background:rgba(0, 255, 0, 0.3); /* only to prove that it's on top */
   position:absolute;
-  top: 300px;
+  top: 400px;
   left:0;
   width:100%;
   height:100%;
