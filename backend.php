@@ -15,7 +15,7 @@ if($_POST){
             header('location: /register.php');
             exit();
         }else{
-            $sql = "INSERT INTO `users`(`username`, `password`, `isAdmin`) VALUES ('$username','$passwordHashed','1')";
+            $sql = "INSERT INTO `users`(`username`, `password`, `isAdmin`) VALUES ('$username','$passwordHashed','0')"; #All new members are default USERS, admins added manually. 
             $sql = $conn->query($sql);
         if($sql){
             echo "Registration succesful. You may <a href= '/'>login</a> now";

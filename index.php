@@ -32,7 +32,7 @@
                         <label>Password :</label><br>
                         <input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
                     </div> 
-                    <br><button class = 'button-login' type="submit" name="register" value= 'login' class="register">Login</button>
+                    <br><button class = 'button-login' type="submit" name="register" value= 'login' class="register">Sign-up</button>
                 </form>	
                 <div class="switch">
                     <br><br><h2> Have an account? </h2>
