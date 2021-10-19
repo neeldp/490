@@ -8,5 +8,12 @@
     
 	<body>
        	<h1> <b> USER </h1>
+		<nav>
+        	<ul>
+            	<li><a href="#Create post"> Create post</a></li>
+            	<li><a href="#Dms">register</a></li>
+            	<li><a href="#logout">profile</a></li>
+        	</ul>
+    	</nav>
 	</body>
 </html></DOCTYPE>
