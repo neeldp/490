@@ -48,8 +48,8 @@ if($_POST){
             }
         } 
     }
-    else if(isset($_POST['post'])){
-        echo "hi";
+    else if(isset($_POST['Post'])){
+        header('location: landing.php');
     }
 }
 ?>
