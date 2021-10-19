@@ -48,9 +48,5 @@ if($_POST){
             }
         } 
     }
-    else if (isset($_POST['status']) ){
-        echo $status;
-    }
-
 }
 ?>
