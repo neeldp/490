@@ -48,15 +48,9 @@ if($_POST){
             }
         } 
     }
-
-    if($_POST){
-        require 'db_key.php';
-        $conn = connect_db();
-        if(isset($_POST['Post']) ){
-
-            echo "hi";
-
-        }
+    else if (isset($_POST['post']) ){
+        echo "hi";
     }
+
 }
 ?>
