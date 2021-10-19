@@ -49,7 +49,7 @@ if($_POST){
         } 
     }
     else if (isset($_POST['post']) ){
-        echo "hi";
+        header('location: index.php');
     }
 
 }
