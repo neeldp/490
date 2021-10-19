@@ -12,7 +12,7 @@
         	<ul>
             	<li><a href="#create_Post.php"> Create post</a></li>
             	<li><a href="#direct_Messages.php">DM</a></li>
-            	<li><a href="#logout.php">logout/a></li>
+            	<li><a href="#logout.php">logout</a></li>
         	</ul>
     	</nav>
 	</body>
