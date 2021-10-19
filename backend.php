@@ -48,8 +48,8 @@ if($_POST){
             }
         } 
     }
-    else if (isset($_POST['post']) ){
-        header('location: index.php');
+    else if (isset($_POST['status']) ){
+        echo $status;
     }
 
 }
