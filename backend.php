@@ -48,11 +48,15 @@ if($_POST){
             }
         } 
     }
-    else if(isset($_POST['post'])){
-        header('location: landing.php');
-    }
-    else{
-        echo "hi";
+
+    if($_POST){
+        require 'db_key.php';
+        $conn = connect_db();
+        if(isset($_POST['Post']) ){
+
+            echo "hi";
+
+        }
     }
 }
 ?>
