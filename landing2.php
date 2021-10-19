@@ -10,9 +10,9 @@
        	<h1> <b> USER </h1>
 		<nav>
         	<ul>
-            	<li><a href="#Create post"> Create post</a></li>
-            	<li><a href="#Dms">register</a></li>
-            	<li><a href="#logout">profile</a></li>
+            	<li><a href="#create_Post.php"> Create post</a></li>
+            	<li><a href="#direct_Messages.php">DM</a></li>
+            	<li><a href="#logout.php">logout/a></li>
         	</ul>
     	</nav>
 	</body>
