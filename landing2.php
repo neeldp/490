@@ -19,7 +19,7 @@ require 'nav.php';
 				if($result->num_rows > 0){
 					while($row = mysqli_fetch_array($result))
 					{
-						echo "<div class='posts'>"
+						echo "<div class='posts'>";
 						echo $row['time']."<br>";
 						echo $row['user']." <br>";
 						echo $row['text']."<br>";
