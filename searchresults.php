@@ -12,19 +12,13 @@ require 'nav.php';
 	</head>
     
 	<body>	
-		<form method="POST" action='backend.php'>
-			<h3> Search for a post </h3>
-			<div class='form-group'>
-				<label>Search:</label>
-				<input class= 'form-control w-25' type="text" name="to"><br><br>
-			</div>	
-			<button class = 'btn btn-outline-info' type="submit" name="search" value= 'search' class="search">Search</button>
-		</form>
-		<h1 class="tmln"> My Timeline </h1> 
+		<h1 class="tmln"> searchResults</h1> 
 		<div>
 			<?php
 				$conn = connect_db();
-				$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
+                $searchTerm = $_SESSION['searchTerm'];
+                $searchQuery = $_SESSION['query'];
+				$result = $conn->query($searchQuery);
 				if($result->num_rows > 0){
 					while($row = mysqli_fetch_array($result))
 					{

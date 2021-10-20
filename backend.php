@@ -119,6 +119,11 @@ if($_POST){
 
     }
     
+    if(isset($_POST['search'])){
+        $_SESSION['searchTerm'] = $_POST['search'];
+        $_SESSION['searchQuery'] = "SELECT * FROM posts WHERE `user` = '$searchTerm' OR `text` LIKE 'SEARCHTERM'"; 
+        header('location: /searchresults.php');
+    }
 
 }   
 ?>
