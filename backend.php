@@ -83,7 +83,6 @@ if($_POST){
         if(!$sql){
             die("Invalid ". mysqli_error($conn));
         }
-        //header('location: landing2.php');
 
         $sql = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
         if($sql->num_rows > 0){
@@ -95,10 +94,6 @@ if($_POST){
                 echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
             }
         }
-        //$sql=mysqli_fetch_array($sql);
-        //echo '<img src="data:image/jpeg;base64,'.base64_encode( $sql['image'] ).'"/>';
-
-
         }    
     }
 
