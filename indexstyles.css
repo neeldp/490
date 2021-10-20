@@ -152,4 +152,5 @@ header li a {
 .posts{
   margin-left: auto;
   margin-right: auto;
+  display: flex;
 }
