@@ -7,11 +7,8 @@
         $msg = $_POST['message'];
 
         $sql = "INSERT INTO dm_table ('sender','receiver','text_message') VALUES ('$from','$to','$msg')";
-        if($conn->query($sql)==TRUE){
-            echo "New record created successfully";
-        } else {
-          echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+        $sql = $conn->query($sql);
+        $sql = $sql->fetch_assoc();
         
         $conn->close();
 ?>
