@@ -86,7 +86,7 @@ if($_POST){
         //header('location: landing2.php');
 
         $sql = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
-        echo $sql;
+        
 
 
         }    
