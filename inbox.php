@@ -31,7 +31,7 @@ th, td {
                 if($result -> num_rows > 0){
                     while($row = mysqli_fetch_array($result)){
                         $id = $row['id'];
-                        echo "<tr><td>" . $row['text_message'] . "</td><td>" . $row['sender'] . "</td><td>" . "<form action='backend.php' method = 'POST'><button class = 'btn btn-outline-info' type='delete' name='delete' value= 'delete' class='submit' >delete</button></form>". "</td></tr>";
+                        echo "<tr><td>" . $row['text_message'] . "</td><td>" . $row['sender'] . "</td></tr>";
                     }
                     echo "</table>";
                 } 

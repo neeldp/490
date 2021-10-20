@@ -107,7 +107,7 @@ if($_POST){
         if(!$result){
             die("Invalid ". mysqli_error($conn));
         }
-        echo "BIG POSS";
+        header("location: inbox.php")
     }
     
     if(isset($_POST['adminbtn'])){
