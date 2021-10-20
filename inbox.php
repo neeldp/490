@@ -1,4 +1,5 @@
-<?php require 'header.php';
+<?php session_start();
+require 'header.php';
         require "db_key.php"
 ?>
 <style>
@@ -21,7 +22,7 @@ th, td {
                 <th>User</th>
             </tr>
             <?php
-                session_start();
+                
                 $conn = connect_db();
                 $usr = $_SESSION['username'];
                 $sql = "SELECT sender,text_message,receiver FROM dm_table WHERE `receiver` = '$usr'";
