@@ -24,7 +24,7 @@ require 'nav.php';
 						echo $row['user']." <br>";
 						echo $row['text']."<br>";
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
-						echo "</div>"
+						echo "</div>";
 					}
 				}
 				$conn->close();
