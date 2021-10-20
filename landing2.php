@@ -12,7 +12,7 @@ require 'nav.php';
 	</head>
     
 	<body>	
-		<form method="POST" action='backend.php'>
+		<form method="POST" action='searchresults.php'>
 			<h3> Search for a post </h3>
 			<div class='form-group'>
 				<label>Search:</label>
