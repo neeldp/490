@@ -10,21 +10,19 @@
 	</head>
     
 	<body>
-		<div class = "post-body"> 
-			<form method = "post" enctype= "multipart/form-data"> 
-			<textarea class = "status" name = "status" placeholder = "Write your post here!" rows="4" cols="50" maxlength = "300"autofocus></textarea> 
-		</div>
+		<!-- Send Messages -->
+		<div class ="form-container message">
+			<form method='POST' action ='dm.php'>
+				<h1> Send a Message </h1>
+				<div class='form-group'>
+					<label>To:</label>
+					<input class= 'form-control w-25' type="text" name="to"><br><br>
+					<label>Message:</label>
+					<input class= 'form-control w-25' type="text" name="message"><br><br>
+                </div>
+				<button class = 'btn btn-outline-info' type="submit" name="login" value= 'login' class="submitMsg">Login</button>
+			</form>
+		</div>	
 		
-		
-		<form action="">
-			<label for="img">Attach image:</label>
-			<input type="file" id="img" name="img" accept="image/*">
-			<!-- <input type="submit"> -->
-		</form>
-		
-		<br>
-		
-		<button class = 'btn btn-outline-info' type="submit" name="post" value= 'Post' class="submit">Post</button></form>
-		
-    	</body>
+    </body>
 </html>
