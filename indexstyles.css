@@ -126,6 +126,7 @@ label{
 }
 
 header{
+  background-color: palegreen;
   position:fixed;
   top: 0;
   top: 0;
@@ -155,7 +156,3 @@ header li a {
   display: flex;
 }
 
-body h1{
-  margin-left: auto;
-  margin-right: auto;
-}
