@@ -17,10 +17,11 @@ require 'nav.php';
 			<?php
             $conn = connect_db();
             if(isset($_POST['search'])){
-                $searchTerm = $_POST['search']['search']; 
+                $searchTerm = $_POST['search']; 
+
 				echo $searchTerm;
             
-				$result = $conn->query("SELECT * FROM posts WHERE `user` LIKE '%$searchTerm%' OR `text` LIKE '%$searchTerm%'");
+				$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE '%$searchTerm%' OR `text` LIKE '%$searchTerm%')");
 				if($result->num_rows > 0){
 					while($row = mysqli_fetch_array($result))
 					{
