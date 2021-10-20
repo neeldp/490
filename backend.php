@@ -55,7 +55,7 @@ if($_POST){
     }
 
     if(isset($_POST['submitMsg'])){
-
+        header('location: landing2.php');
         $sender = mysqli_real_escape_string($conn,$_POST['username'] );
         $receiver = mysqli_real_escape_string($conn,$_POST['to']);
         $text_message = mysqli_real_escape_string($conn, $_POST['message']);
