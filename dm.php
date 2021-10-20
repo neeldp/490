@@ -8,7 +8,7 @@ if($_POST){
         $receiver = mysqli_real_escape_string($conn,$_POST['to']);
         $text_message = mysqli_real_escape_string($conn, $_POST['message']);
         $sql = "INSERT INTO 'dm_table' VALUES ('$sender','$text_message','$receiver')";
-        $result = $conn->query($sql)
+        $result = $conn->query($sql);
         if(!$result){
             die("Invalid ". mysql_error())
         }
