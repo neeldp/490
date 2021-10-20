@@ -14,10 +14,18 @@
 <form method="POST" action='backend.php'>
 			<h3> Search for a post </h3>
 			<div class='form-group'>
+            <label>Search:</label>
+				<input class= 'form-control w-25' type="text" name="search"><br><br>
+			</div>	
+			<button class = 'btn btn-outline-info' type="submit" name="searchbtn" value= 'message' class="search">Search</button>
+		</form>
+        <form method="POST" action='backend.php'>
+			<h3> Delete A Post </h3>
+			<div class='form-group'>
 				<label>Search:</label>
 				<input class= 'form-control w-25' type="text" name="admin"><br><br>
 			</div>	
-			<button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">Search</button>
+			<button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">Admin</button>
 		</form>
 		<h1 class="tmln"> My Timeline </h1> 
 		<div>
