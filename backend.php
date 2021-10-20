@@ -85,7 +85,7 @@ if($_POST){
         }
         header('location: landing2.php');
 
-        $sql = $db->query("SELECT * FROM posts ORDER BY uploaded DESC");
+        $sql = $db->query("SELECT * FROM posts ORDER BY `time` DESC");
         ?>
         <?php if($sql->num_rows > 0){ ?>
             <div class="gallery"> 
