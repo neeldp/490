@@ -33,7 +33,6 @@ if(isset($_POST["create_Post"])){
     $sql = $conn->query($sql);
     $sql = $sql->fetch_assoc();
     echo $fileName;
-    echo $fileType;
 }
  
 // Display status message 
