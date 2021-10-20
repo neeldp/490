@@ -48,5 +48,10 @@ if($_POST){
             }
         } 
     }
+    
+    
+    if(isset($_POST['create_Post'])){
+        header('location: landing2.php');
+    }
 }
 ?>
