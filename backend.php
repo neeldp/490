@@ -56,9 +56,9 @@ if($_POST){
 
     if(isset($_POST['submitMsg'])){
 
-        $sender = mysqli_real_escape_string($conn,$_SESSION['username'] );
-        $receiver = mysqli_real_escape_string($conn,$_POST['to']);
-        $text_message = mysqli_real_escape_string($conn, $_POST['message']);
+        $sender = $_SESSION['username'];
+        $receiver = $_POST['to'];
+        $text_message =  $_POST['message'];
         $sql = "INSERT INTO 'dm_table'('sender','text_message','receiver') VALUES ('$sender','$text_message','$receiver')";
         $result = $conn->query($sql);
         if(!$result){
