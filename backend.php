@@ -83,12 +83,11 @@ if($_POST){
         if(!$sql){
             die("Invalid ". mysqli_error($conn));
         }
-        header('location: landing2.php');
+        //header('location: landing2.php');
 
         $sql = $db->query("SELECT * FROM posts ORDER BY `time` DESC");
-
         echo $sql;
-        
+        }    
     }
 
     if(isset($_POST['submitMsg'])){
