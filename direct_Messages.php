@@ -12,7 +12,7 @@
 	<body>
 		<!-- Send Messages -->
 		<div class ="form-container message">
-			<form method='POST' action ='backend.php'>
+			<form method='POST' action ='backende.php'>
 				<h1> Send a Message </h1>
 				<div class='form-group'>
 					<label>To:</label>
