@@ -27,7 +27,7 @@ th, td {
                 $sql = "SELECT sender,text_message,receiver FROM dm_table WHERE `receiver` = '$usr'";
                 $result = $conn->query($sql);
                 if($result -> num_rows > 0){
-                    while($row = $result->fetchassoc()){
+                    while($row = mysqli_fetch_array($result)){
                         echo "<tr><td>" . $row["text_message"] . "</td><td>" . $row["sender"] . "</td></tr>";
                     }
                     echo "</table>";
