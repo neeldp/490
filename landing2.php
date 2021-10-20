@@ -1,5 +1,6 @@
 <?php session_start();
 require 'header.php';
+require 'db_key.php';
 ?>
 <!DOCTYPE html>
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
@@ -21,9 +22,9 @@ require 'header.php';
     	</nav>
 		<?php
 			$conn = connect_db();
-			$sql = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
-			if($sql->num_rows > 0){
-				while($row = $sql->fetch_assoc())
+			$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
+			if($result->num_rows > 0){
+				while($row = mysqli_fetch_array($result))
 				{
 					echo $row['time']."<br>";
 					echo $row['user']." <br>";
@@ -31,6 +32,7 @@ require 'header.php';
 					echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 				}
 			}
+			$conn->close();
 		?>
 	</body>
 </html></DOCTYPE>
