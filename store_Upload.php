@@ -32,7 +32,6 @@ if(isset($_POST["create_Post"])){
     $sql = "Select users.username From users Where username = '$username'";
     $sql = $conn->query($sql);
     $sql = $sql->fetch_assoc();
-    echo $fileType;
 }
  
 // Display status message 
