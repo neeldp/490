@@ -7,5 +7,6 @@
         header('location: landing2.php');
     }
     require 'header.php';
+    require 'nav.php'
 ?>
 <body> <h1> ADMIN </h1> </body> </html> 

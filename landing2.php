@@ -3,7 +3,7 @@ require 'header.php';
 require 'db_key.php';
 require 'nav.php';
 ?>
-<!DOCTYPE html>
+
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
 <html lang = "en">
 	<head>
@@ -11,9 +11,8 @@ require 'nav.php';
        		<meta charset = "utf-8" />
 	</head>
     
-	<body>
-		
-		<div>
+	<body>	
+		<div class = "posts">
 			<?php
 				$conn = connect_db();
 				$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
