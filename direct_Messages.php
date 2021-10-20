@@ -20,7 +20,7 @@
 					<label>Message:</label>
 					<input class= 'form-control w-25' type="text" name="message"><br><br>
                 </div>
-				<button class = 'btn btn-outline-info' type="submit" name="login" value= 'login' class="submitMsg">Login</button>
+				<button class = 'btn btn-outline-info' type="submit" name="message" value= 'message' class="submitMsg">Message</button>
 			</form>
 		</div>	
 		
