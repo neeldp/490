@@ -10,7 +10,7 @@ if($_POST){
         $sql = "INSERT INTO 'dm_table' VALUES ('$sender','$text_message','$receiver')";
         $result = $conn->query($sql);
         if(!$result){
-            die("Invalid ". mysql_error())
+            die("Invalid ". mysql_error());
         }
         echo "BIG POSS";
         
