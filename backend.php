@@ -53,7 +53,38 @@ if($_POST){
     
     
     if(isset($_POST['create_Post'])){
-        echo "hi";
+        $status = $statusMsg = '';
+        if(isset($_POST["create_Post"])){ 
+            $status = 'error';
+            $post_Text = $_POST["post_Text"];
+
+            if(!empty($_FILES["img"]["name"])) { 
+                // Get file info 
+                $fileName = basename($_FILES["img"]["name"]); 
+                $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+                
+                // Allow certain file formats 
+                $allowTypes = array('jpg','png','jpeg','gif'); 
+                if(in_array($fileType, $allowTypes)){ 
+                    $image = $_FILES['img']['tmp_name']; 
+                    $imgContent = addslashes(file_get_contents($image)); 
+                
+                }//else{ 
+                //    $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
+                //} 
+            }else{ 
+                $statusMsg = 'Please select an image file to upload.'; 
+            }
+            
+        
+        $username = $_SESSION['username'];   
+        $sql = "INSERT into `posts` (`text`, `image`, `time`, `user`) VALUES ('$post_Text', '$imgContent', NOW(), '$username')";
+        $sql = $conn->query($sql);
+        if(!$sql){
+            die("Invalid ". mysqli_error($conn));
+        }
+        }
+        
     }
 
     if(isset($_POST['submitMsg'])){
