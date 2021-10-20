@@ -83,7 +83,7 @@ if($_POST){
         if(!$sql){
             die("Invalid ". mysqli_error($conn));
         }
-
+        header("location: landing2.php");
         $sql = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
         if($sql->num_rows > 0){
             while($row = $sql->fetch_assoc())
@@ -108,20 +108,14 @@ if($_POST){
             die("Invalid ". mysqli_error($conn));
         }
         echo "BIG POSS";
-        
-     
-        
-
     }
     
     if(isset($_POST['adminbtn'])){
         $adminTerm = $_POST['admin']; 
         $sql = "DELETE FROM `posts` WHERE (`user` LIKE '%$adminTerm%' OR `text` LIKE '%$adminTerm%')";
-    
         $result = $conn->query($sql);
         header('location: landing.php');
     }
-
 }   
 
 ?>
