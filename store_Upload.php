@@ -3,9 +3,9 @@ require_once 'db_key.php';
  
 // If file upload form is submitted 
 session_start();
-
+$status = $statusMsg = '';
 if(isset($_POST["create_Post"])){ 
-
+    $status = 'error';
     $post_Text = $_POST["post_Text"];
 
     if(!empty($_FILES["image"]["name"])) { 
@@ -21,8 +21,20 @@ if(isset($_POST["create_Post"])){
          
             // Insert image content into database 
             $insert = $db->query("INSERT into images (image, uploaded) VALUES ('$imgContent', NOW())");
-        }
+            if($insert){ 
+                $status = 'success'; 
+                $statusMsg = "File uploaded successfully."; 
+            }else{ 
+                $statusMsg = "File upload failed, please try again."; 
+            }  
+        }else{ 
+            $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
+        } 
+    }else{ 
+        $statusMsg = 'Please select an image file to upload.'; 
     }
+    
+    
     $username = $_SESSION['username'];
     $conn = connect_db();
     $sql = "INSERT INTO `posts`(`id`,`text`, `image`, `time`, `user`) VALUES (,'$post_Text','$imgContent',NOW()), '$username')";
