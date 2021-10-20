@@ -18,7 +18,7 @@ require 'nav.php';
 				<label>Search:</label>
 				<input class= 'form-control w-25' type="text" name="search"><br><br>
 			</div>	
-			<button class = 'btn btn-outline-info' type="submit" name="search" value= 'search' class="search">Search</button>
+			<button class = 'btn btn-outline-info' type="submit" name="searchbtn" value= 'message' class="search">Search</button>
 		</form>
 		<h1 class="tmln"> My Timeline </h1> 
 		<div>
