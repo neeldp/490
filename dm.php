@@ -11,7 +11,7 @@ if($_POST){
         $text_message = mysqli_real_escape_string($conn, $text_message);
         
         $sql = "INSERT INTO `dm_table`(`sender`, `reveiver`, `text_message`) VALUES ('$sender','$receiver','$text_message')"; #All new members are default USERS, admins added manually. 
-        sql = $conn->query($sql);
+        $sql = $conn->query($sql);
         
         if($sql){
             echo "Registration succesful. You may <a href= '/'>login</a> now";
