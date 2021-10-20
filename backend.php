@@ -2,6 +2,7 @@
 if($_POST){
     require 'db_key.php';
     $conn = connect_db();
+    session_start();
     if(isset($_POST['register']) ){
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -35,7 +36,7 @@ if($_POST){
             $sql = $sql->fetch_assoc();
             $isAdmin = $sql['isAdmin'];
             if(password_verify($password, $sql['password'])){
-                session_start();
+                
                 $_SESSION['username'] =$username;
                 $_SESSION['isAdmin'] =$isAdmin;
                 #echo 'Congratulations';
@@ -62,7 +63,7 @@ if($_POST){
         $sql = "INSERT INTO 'dm_table'('sender','text_message','receiver') VALUES ('$sender','$text_message','$receiver')";
         $result = $conn->query($sql);
         if(!$result){
-            die("Invalid ". mysqli_error());
+            die("Invalid ". mysqli_error($result));
         }
         echo "BIG POSS";
         
