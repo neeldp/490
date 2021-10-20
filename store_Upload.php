@@ -33,6 +33,7 @@ if(isset($_POST["create_Post"])){
     echo $conn;
     $sql = $conn->query($sql);
     $sql = $sql->fetch_assoc();  
+    echo $sql;
 }
  
 // Display status message 
