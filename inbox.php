@@ -23,7 +23,7 @@ th, td {
             <?php
                 session_start();
                 $conn = connect_db();
-                $usr = $_SESSION['username']
+                $usr = $_SESSION['username'];
                 $sql = "SELECT sender,text_message,receiver FROM dm_table WHERE `receiver` = '$usr'";
                 $result = $conn->query($sql);
                 if($result -> num_rows > 0){
