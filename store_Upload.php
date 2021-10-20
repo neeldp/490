@@ -25,7 +25,7 @@ if(isset($_POST["create_Post"])){
     }
     $username = $_SESSION['username'];
     $conn = connect_db();
-    $sql = "INSERT INTO `posts`(`text`, `image`, `time`, `user`) VALUES ('$post_Text','$imgContent',NOW()), '$username')";
+    $sql = "INSERT INTO `posts`(`id`,`text`, `image`, `time`, `user`) VALUES (,'$post_Text','$imgContent',NOW()), '$username')";
     $sql = $conn->query($sql);
     $sql = $sql->fetch_assoc();        
 }
