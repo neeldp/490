@@ -12,7 +12,7 @@ require 'nav.php';
 	</head>
     
 	<body>	
-		<div class = "posts">
+		<div class>
 			<?php
 				$conn = connect_db();
 				$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
