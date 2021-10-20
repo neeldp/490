@@ -16,20 +16,20 @@ th, td {
 </style>
 <body>
     <div class="form-container">
+
         <table>
             <tr>
                 <th>Message</th>
                 <th>User</th>
             </tr>
             <?php
-                
                 $conn = connect_db();
                 $usr = $_SESSION['username'];
                 $sql = "SELECT sender,text_message,receiver FROM dm_table WHERE `receiver` = '$usr'";
                 $result = $conn->query($sql);
                 if($result -> num_rows > 0){
                     while($row = mysqli_fetch_array($result)){
-                        echo "<tr><td>" . $row['text_message'] . "</td><td>" . $row['sender'] . "</td></tr>";
+                        echo "<tr><td>" . $row['text_message'] . "</td><td>" . $row['sender'] . "</td><td>" . <button class = 'btn btn-outline-info' type="submit" name="create_Post" value= 'Post' class="submit">Post</button> . "</td></tr>"";
                     }
                     echo "</table>";
                 } 
