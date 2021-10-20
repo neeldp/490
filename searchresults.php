@@ -15,9 +15,10 @@ require 'nav.php';
 		<h1 class="tmln"> searchResults</h1> 
 		<div>
 			<?php
+            $conn = connect_db();
             if(isset($_POST['search'])){
                 $searchTerm = $_POST['search']; 
-				$conn = connect_db();
+				
             
 				$result = $conn->query("SELECT * FROM posts WHERE `user` = '$searchTerm' OR `text` LIKE '$searchTerm'");
 				if($result->num_rows > 0){
