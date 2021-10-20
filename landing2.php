@@ -1,5 +1,5 @@
 <?php session_start();
-require header.php;
+require 'header.php';
 ?>
 <!DOCTYPE html>
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
