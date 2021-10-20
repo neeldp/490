@@ -116,9 +116,9 @@ if($_POST){
     
     if(isset($_POST['adminbtn'])){
         $adminTerm = $_POST['admin']; 
-
+        $sql = "DELETE FROM `posts` WHERE (`user` LIKE '%$adminTerm%' OR `text` LIKE '%$adminTerm%')";
     
-        $result = $conn->query("DELETE FROM posts WHERE (`user` LIKE '%$adminTerm%' OR `text` LIKE '%$adminTerm%')");
+        $result = $conn->query($sql);
         if($result->num_rows > 0){
             while($row = mysqli_fetch_array($result))
             {
