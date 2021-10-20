@@ -32,6 +32,7 @@ require 'nav.php';
 						echo "<br><br>";
 					}
 				}
+            }
 				$conn->close();
 			?>
 		</div>
