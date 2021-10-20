@@ -8,7 +8,7 @@ if($_POST){
         $receiver = mysqli_real_escape_string($_POST['to'], $conn);
         $text_message = mysqli_real_escape_string($_POST['message'], $conn);
         $sql = "INSERT INTO 'dm_table' VALUES ('$sender','$text_message','$receiver')";
-        mysqli_query($conn,$sql) or die(mysqli_error($conn));
+        mysqli_query($sql,$conn) or die(mysqli_error($conn));
         echo "BIG POSS"
         
      
