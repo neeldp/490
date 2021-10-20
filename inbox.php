@@ -9,10 +9,12 @@ th, td {
 }
 </style>
 <body>
-    <table>
-        <tr>
-            <th>Message</th>
-            <th>User</th>
-        </tr>
-    </table>
+    <div class="form-group">
+        <table>
+            <tr>
+                <th>Message</th>
+                <th>User</th>
+            </tr>
+        </table>
+    </div>
 </body>
