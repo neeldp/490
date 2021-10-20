@@ -11,7 +11,7 @@
     
 	<body>
 		<div class = "post-body"> 
-			<form action="store_Upload.php" method="post" enctype="multipart/form-data">
+			<form action="store_Upload.php" method="POST" enctype="multipart/form-data">
 
 				<textarea class = "status" name = "post_Text" placeholder = "Write your post here!" rows="4" cols="50" maxlength = "300"autofocus></textarea> 
 				
