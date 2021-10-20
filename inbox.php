@@ -29,13 +29,17 @@ th, td {
                 $result = $conn->query($sql);
                 if($result -> num_rows > 0){
                     while($row = mysqli_fetch_array($result)){
-                        echo "<tr><td>" . $row['text_message'] . "</td><td>" . $row['sender'] . "</td><td>" . "<button class = 'btn btn-outline-info' type='submit' name='create_Post' value= 'Post' class='submit'>Post</button>". "</td></tr>";
+                        echo "<tr><td>" . $row['text_message'] . "</td><td>" . $row['sender'] . "</td><td>" . "<form action='backend.php' method = 'POST'><button class = 'btn btn-outline-info' type='delete' name='delete' value= 'delete' class='submit'>delete</button></form>". "</td></tr>";
                     }
                     echo "</table>";
                 } 
                 else { echo "0 results"; }
                 $conn->close();
+                
             ?>
         </table>
+
     </div>
 </body>
+
+<form action='backend.php' method = "POST"><button class = 'btn btn-outline-info' type='reply' name='reply' value= 'reply' class='submit'>reply</button></form>
