@@ -86,7 +86,8 @@ if($_POST){
         //header('location: landing2.php');
 
         $sql = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
-        
+        $sql=mysqli_fetch_array($sql);
+        echo '<img src="data:image/jpeg;base64,'.base64_encode( $sql['image'] ).'"/>';
 
 
         }    
