@@ -119,7 +119,7 @@ if($_POST){
         $sql = "DELETE FROM `posts` WHERE (`user` LIKE '%$adminTerm%' OR `text` LIKE '%$adminTerm%')";
     
         $result = $conn->query($sql);
-        header('location: landing.php')
+        header('location: landing.php');
     }
 
 }   
