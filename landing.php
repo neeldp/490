@@ -8,6 +8,7 @@
     }
     require 'header.php';
     require 'nav.php'
+    require 'db_key.php';
 ?>
 <body>
 <form method="POST" action='backend.php'>
