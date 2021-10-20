@@ -1,4 +1,5 @@
 <?php
+if($_POST){
     require 'db_key.php';
     $conn = connect_db();
     if(isset($_POST['submitMsg'])){
@@ -11,4 +12,6 @@
         $sql = $sql->fetch_assoc();
         
         $conn->close();
+    }
+}
 ?>
