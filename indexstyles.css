@@ -2,8 +2,7 @@
 
 body {    
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient( #d80bdf, #10d110);
-    margin-top: 80px;
+    background: linear-gradient( #d80bdf,rgb(250, 171, 2) ,rgb(236, 174, 4),rgb(246, 250, 2));
     padding: 30px;
 }
 
