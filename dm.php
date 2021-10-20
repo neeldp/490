@@ -7,7 +7,11 @@
         $msg = $_POST['message'];
 
         $sql = "INSERT INTO 'heroku_d39ddae7fbaabf5.dm_table'('sender','receiver','text_message') VALUES ('$from','$to','$msg')";
-        $sql = $conn->query($sql);
-        echo "Message Sent!"
-
-    }
+        if($conn->query($sql)==TRUE){
+            echo "New record created successfully";
+        } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        
+        $conn->close();
+?>
