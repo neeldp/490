@@ -27,7 +27,11 @@ if(isset($_POST["create_Post"])){
     }
     
     
-    $username = $_SESSION['username'];      
+    $username = $_SESSION['username'];    
+    $conn = connect_db();
+    $sql = "INSERT INTO `posts`(`text`) VALUES ('Joe')";
+    $sql = $conn->query($sql);
+    $sql = $sql->fetch_assoc();  
 }
  
 // Display status message 
