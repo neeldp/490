@@ -6,7 +6,9 @@ if($_POST){
         $from = $_SESSION['username'];
         $to = "test";
         $msg = $_POST['message'];
-
+        $from = mysqli_real_escape_string($conn, $from);
+        $to = mysqli_real_escape_string($conn, $to);
+        $to = mysqli_real_escape_string($conn, $msg);
         $sql = "Select users.username From users Where username = '$from'";
         $sql = $conn->query($sql);
         $sql = $sql->fetch_assoc();
