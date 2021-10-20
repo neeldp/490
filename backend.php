@@ -69,10 +69,10 @@ if($_POST){
                     $image = $_FILES['img']['tmp_name']; 
                     $imgContent = addslashes(file_get_contents($image)); 
                 
-                }//else{ 
-                //    $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
-                //} 
-            }else{ 
+                }
+            }
+            
+            else{ 
                 $statusMsg = 'Please select an image file to upload.'; 
             }
             
@@ -83,6 +83,8 @@ if($_POST){
         if(!$sql){
             die("Invalid ". mysqli_error($conn));
         }
+        header('location: landing2.php');
+
         }
         
     }
