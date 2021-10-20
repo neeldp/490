@@ -21,8 +21,10 @@ th, td {
                 <th>User</th>
             </tr>
             <?php
+                session_start();
                 $conn = connect_db();
-                $sql = "SELECT sender,text_message,receiver FROM dm_table WHERE `receiver = $_SESSION['username']`";
+                $usr = $_SESSION['username']
+                $sql = "SELECT sender,text_message,receiver FROM dm_table WHERE `receiver` = '$usr'";
                 $result = $conn->query($sql);
                 if($result -> num_rows > 0){
                     while($row = $result->fetchassoc()){
