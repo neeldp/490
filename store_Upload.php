@@ -29,7 +29,7 @@ if(isset($_POST["create_Post"])){
     
     $username = $_SESSION['username'];   
     $conn = connect_db();
-    $sql = "INSERT into posts (post_Text, $imgContent, NOW(), $username)";
+    //$sql = "INSERT into posts (post_Text, $imgContent, NOW(), $username)";
     $sql = $conn->query($sql);
     $sql = $sql->fetch_assoc();
 }
