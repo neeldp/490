@@ -40,7 +40,6 @@
 						echo $row['user']." <br>";
 						echo $row['text']."<br>";
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
-                        echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>Admin</button>";
 						echo "</div>";
 						echo "<br><br>";
 					}
