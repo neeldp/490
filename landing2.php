@@ -1,7 +1,7 @@
 <?php session_start();
 require 'header.php';
 require 'db_key.php';
-require 'nav.php'
+require 'nav.php';
 ?>
 <!DOCTYPE html>
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
