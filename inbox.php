@@ -22,7 +22,7 @@ th, td {
             </tr>
             <?php
                 $conn = connect_db();
-                $sql = "SELECT sender,text_message,receiver FROM dm_table WHERE receiver = '$_SESSION['username']'";
+                $sql = "SELECT sender,text_message,receiver FROM dm_table WHERE `receiver = $_SESSION['username']`";
                 $result = $conn->query($sql);
                 if($result -> num_rows > 0){
                     while($row = $result->fetchassoc()){
