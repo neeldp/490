@@ -83,9 +83,9 @@ if($_POST){
         if(!$sql){
             die("Invalid ". mysqli_error($conn));
         }
-        //header('location: landing2.php');
+        header('location: landing2.php');
 
-        $sql = $db->query("SELECT * FROM posts ORDER BY `time` DESC");
+        //$sql = $db->query("SELECT * FROM posts ORDER BY `time` DESC");
         }    
     }
 
