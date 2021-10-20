@@ -19,9 +19,9 @@ if(isset($_POST["create_Post"])){
             $image = $_FILES['img']['tmp_name']; 
             $imgContent = addslashes(file_get_contents($image)); 
          
-        }else{ 
-            $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
-        } 
+        }//else{ 
+        //    $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
+        //} 
     }else{ 
         $statusMsg = 'Please select an image file to upload.'; 
     }
