@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <header>
 			<nav>
 				<ul>

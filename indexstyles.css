@@ -3,6 +3,8 @@
 body {    
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient( #A0A1A4, #828385);
+    margin-top: 80px;
+    padding: 30px;
 }
 
 .scene {
@@ -121,4 +123,18 @@ label{
   left:0;
   width:100%;
   height:100%;
+}
+
+header{
+  position:fixed;
+  top: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+
+}
+
+header * {
+  display:inline;
 }
