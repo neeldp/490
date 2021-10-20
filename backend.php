@@ -53,5 +53,21 @@ if($_POST){
     if(isset($_POST['create_Post'])){
         echo "hi";
     }
+    
+    if(isset($_POST['submitMsg'])){
+
+        $sender = mysqli_real_escape_string($conn,$_POST['username'] );
+        $receiver = mysqli_real_escape_string($conn,$_POST['to']);
+        $text_message = mysqli_real_escape_string($conn, $_POST['message']);
+        $sql = "INSERT INTO 'dm_table'('sender','text_message','receiver') VALUES ('$sender','$text_message','$receiver')";
+        $result = $conn->query($sql);
+        if(!$result){
+            die("Invalid ". mysql_error());
+        }
+        echo "BIG POSS";
+        
+     
+        
+    }
 }
 ?>
