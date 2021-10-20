@@ -89,7 +89,10 @@ if($_POST){
         if($sql->num_rows > 0){
             while($row = $sql->fetch_assoc())
             {
+                echo $row['user'];
+                echo $row['text'];
                 echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+                echo $row['time'];
             }
         }
         //$sql=mysqli_fetch_array($sql);
