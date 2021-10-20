@@ -4,7 +4,7 @@ if($_POST){
     $conn = connect_db();
     if(isset($_POST['submitMsg'])){
         $sender = $_SESSION['username'];
-        $receiver = "test";
+        $receiver = $_POST['to'];
         $text_message = $_POST['message'];
         $sender = mysqli_real_escape_string($conn, $sender);
         $receiver = mysqli_real_escape_string($conn, $receiver);
