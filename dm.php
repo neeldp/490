@@ -3,18 +3,15 @@ if($_POST){
     require 'db_key.php';
     $conn = connect_db();
     if(isset($_POST['submitMsg'])){
-        $sender = $_SESSION['username'];
-        $receiver = $_POST['to'];
-        $text_message = $_POST['message'];
-        $sender = mysqli_real_escape_string($conn, $sender);
-        $receiver = mysqli_real_escape_string($conn, $receiver);
-        $text_message = mysqli_real_escape_string($conn, $text_message);
+
+        $sender = mysqli_real_escape_string($_POST['username'], $conn);
+        $receiver = mysqli_real_escape_string($_POST['to'], $conn);
+        $text_message = mysqli_real_escape_string($_POST['message'], $conn);
+        $sql = "INSERT INTO 'dm_table' VALUES ('$sender','$text_message','$receiver')";
+        mysqli_query($conn,$sql) or die(mysqli_error($conn));
+        echo "BIG POSS"
         
-        $sql = "INSERT INTO `dm_table`(`sender`, `reveiver`, `text_message`) VALUES ('$sender','$receiver','$text_message')"; #All new members are default USERS, admins added manually. 
-        if($conn->query($sql) == TRUE){
-            echo(" SUCCESSFUL");
-        }
-        
+     
         
     }
 }
