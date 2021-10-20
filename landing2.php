@@ -12,6 +12,7 @@ require 'nav.php';
 	</head>
     
 	<body>	
+		<h1 class="tmln"> My Timeline </h1> 
 		<div>
 			<?php
 				$conn = connect_db();
@@ -25,6 +26,7 @@ require 'nav.php';
 						echo $row['text']."<br>";
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 						echo "</div>";
+						echo "<br><br>";
 					}
 				}
 				$conn->close();
