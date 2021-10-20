@@ -56,10 +56,10 @@ if($_POST){
 
     if(isset($_POST['submitMsg'])){
 
-        $sender = mysqli_real_escape_string($conn,$_POST['username'] );
+        $sender = mysqli_real_escape_string($conn,$_SESSION['username'] );
         $receiver = mysqli_real_escape_string($conn,$_POST['to']);
         $text_message = mysqli_real_escape_string($conn, $_POST['message']);
-        $sql = "INSERT INTO 'heroku_d39ddae7fbaabf5.dm_table'('sender','text_message','receiver') VALUES ('$sender','$text_message','$receiver')";
+        $sql = "INSERT INTO 'dm_table'('sender','text_message','receiver') VALUES ('$sender','$text_message','$receiver')";
         $result = $conn->query($sql);
         if(!$result){
             die("Invalid ". mysql_error());
