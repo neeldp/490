@@ -107,7 +107,7 @@ if($_POST){
         if(!$result){
             die("Invalid ". mysqli_error($conn));
         }
-        header("location: inbox.php")
+        header("location: inbox.php");
     }
     
     if(isset($_POST['adminbtn'])){
