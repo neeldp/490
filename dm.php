@@ -7,11 +7,20 @@ if($_POST){
         $to = "test";
         $msg = $_POST['message'];
 
-        $sql = "INSERT INTO dm_table ('sender','receiver','text_message') VALUES ('$from','$to','$msg')";
+        $sql = "Select users.username From users Where username = '$from'";
         $sql = $conn->query($sql);
         $sql = $sql->fetch_assoc();
-        
-        $conn->close();
+        if($sql){
+            header('location: /direct_Messages.php');
+            exit();
+        }else{
+            $sql = "INSERT INTO `dm_table`(`sender`, `reveiver`, `text_message`) VALUES ('$from','$to','$msg')"; #All new members are default USERS, admins added manually. 
+            $sql = $conn->query($sql);
+        }
+        if($sql){
+            echo "Registration succesful. You may <a href= '/'>login</a> now";
+            header('location: index.php');
+        }
     }
 }
 ?>
