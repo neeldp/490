@@ -132,9 +132,19 @@ header{
   left: 0;
   right: 0;
   height: 80px;
-
+  display: flex;
+  align-items: center;
 }
 
 header * {
   display:inline;
+}
+
+header li{
+  margin:15px;
+}
+
+header li a {
+  color: rgb(255, 187, 0);
+  text-decoration: none;
 }
