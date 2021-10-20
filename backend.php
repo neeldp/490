@@ -89,7 +89,7 @@ if($_POST){
         if($sql->num_rows > 0){
             while($row = $sql->fetch_assoc())
             {
-                echo '<img src="data:image/jpeg;base64,'.base64_encode( $sql['image'] ).'"/>';
+                echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
             }
         }
         //$sql=mysqli_fetch_array($sql);
