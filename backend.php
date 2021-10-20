@@ -61,8 +61,8 @@ if($_POST){
         $sender = $_SESSION['username'];
         $receiver = $_POST['to'];
         $text_message =  $_POST['message'];
-        $sql = "INSERT INTO" + " 'dm_table'('sender','text_message','receiver') VALUES ('{$sender}','{$text_message}','{$receiver}')";
-        $result = $conn->query($sql);
+        $sql = "INSERT INTO 'dm_table'('sender','text_message','receiver') VALUES ('{$sender}','{$text_message}','{$receiver}')";
+        $result = $conn->query("INSERT INTO 'dm_table'('sender','text_message','receiver') VALUES ('{$sender}','{$text_message}','{$receiver}')");
         if(!$result){
             die("Invalid ". mysqli_error($conn));
         }
