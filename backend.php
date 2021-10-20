@@ -63,7 +63,7 @@ if($_POST){
         $sql = "INSERT INTO 'dm_table'('sender','text_message','receiver') VALUES ('$sender','$text_message','$receiver')";
         $result = $conn->query($sql);
         if(!$result){
-            die("Invalid ". mysqli_error($result));
+            die("Invalid ". mysqli_error($conn));
         }
         echo "BIG POSS";
         
