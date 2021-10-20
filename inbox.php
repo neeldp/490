@@ -28,7 +28,7 @@ th, td {
                 $result = $conn->query($sql);
                 if($result -> num_rows > 0){
                     while($row = $result->fetchassoc()){
-                        echo "<tr><td>" . $row["text_message"] . "</td><td>" . $row["sender"] . "</td></tr>"
+                        echo "<tr><td>" . $row["text_message"] . "</td><td>" . $row["sender"] . "</td></tr>";
                     }
                     echo "</table>";
                 } 
