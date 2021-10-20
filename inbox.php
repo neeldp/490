@@ -5,11 +5,12 @@ th, td {
   padding: 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
-  align:center;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
 <body>
-    <div class="form-group">
+    <div class="form-container">
         <table>
             <tr>
                 <th>Message</th>
