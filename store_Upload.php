@@ -31,8 +31,7 @@ if(isset($_POST["create_Post"])){
     $conn = connect_db();
     $sql = "Select users.username From users Where username = '$username'";
     $sql = $conn->query($sql);
-    $sql = $sql->fetch_assoc();  
-    echo $sql;
+    $sql = $sql->fetch_assoc();
 }
  
 // Display status message 
