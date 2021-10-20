@@ -27,7 +27,8 @@ if(isset($_POST["create_Post"])){
     }
     
     
-    $username = $_SESSION['username'];    
+    $username = $_SESSION['username']; 
+    echo $username;   
     $conn = connect_db();
     $sql = "Select users.username From users Where username = '$username'";
     $sql = $conn->query($sql);
