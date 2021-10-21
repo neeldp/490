@@ -37,14 +37,14 @@ require 'nav.php';
 
 						$id = $row['id'];
 						
-						$sql = $conn->query("SELECT * FROM comments");
+						$sql = $conn->query("SELECT * FROM comments Where `postID` = $id");
 						//ORDER BY `date` DESC Where postID = '$id'
 						if($sql->num_rows > 0){
 							while($r = mysqli_fetch_array($sql))
 							{
 								echo $r['date']."<br>";
 								echo $r['name'].":";
-								echo $r['text']."<br><br><br>";
+								echo $r['text']."<br><br>";
 								
 							}
 						}	
