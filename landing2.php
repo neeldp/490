@@ -36,7 +36,7 @@ require 'nav.php';
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 
 						$id = $row['id'];
-						echo "$id";
+						var_dump($id);
 						
 						$sql = $conn->query("SELECT * FROM comments Where `postID` = '{$id}'");
 						//Where postID = '$id'
