@@ -37,7 +37,7 @@ require 'nav.php';
 
 						$id = $row['id'];
 						
-						$sql = $conn->query("SELECT * FROM comments Where convert(integer, postID) = convert(integer ,$id)");
+						$sql = $conn->query("SELECT * FROM comments Where convert(integer, postID) = convert(integer ,'$id')");
 						//ORDER BY `date` DESC Where postID = '$id'
 						if($sql->num_rows > 0){
 							while($r = mysqli_fetch_array($sql))
