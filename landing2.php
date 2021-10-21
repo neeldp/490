@@ -36,7 +36,7 @@ require 'nav.php';
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 
 						$id = $row['id'];
-						echo "$id";
+						
 						$sql = $conn->query("SELECT * FROM comments");
 						//ORDER BY `date` DESC Where postID = '$id'
 						if($sql->num_rows > 0){
@@ -44,7 +44,7 @@ require 'nav.php';
 							{
 								echo $r['date']."<br>";
 								echo $r['name'].":";
-								echo $r['text']."<br>";
+								echo $r['text']."<br><br><br>";
 								
 							}
 						}	
