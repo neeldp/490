@@ -121,7 +121,8 @@ if($_POST){
         $username = $_SESSION['username'];
         $text = $_POST['comment']; 
         $post_ID = $_POST['post_ID'];
-        echo $post_ID;
+        var_dump($_POST);
+        //echo $post_ID;
         $sql = "INSERT INTO `comments`(`name`,`text`,`date`, `post_ID`) VALUES ('$username','$text', NOW(), '$post_ID')";
         $result = $conn->query($sql);
         //header('location: landing2.php');
