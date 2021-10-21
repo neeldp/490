@@ -29,16 +29,18 @@ require 'nav.php';
 				if($result->num_rows > 0){
 					while($row = mysqli_fetch_array($result))
 					{
-						//echo '<div class="posts" id="'.$row.'">';
+						//echo '<div class="posts" >';
 						echo "<div id ='". $row['id'] ."'>";
 						echo $row['time']."<br>";
 						echo $row['user']." <br>";
 						echo $row['text']."<br>";
+						echo $row['id'];
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 						echo '<form method="POST" action="backend.php">
 						<div class="form-group">
 							<label>Comment:</label>
 							<input class= "form-control w-25" type="text" name="comment"><br><br>
+							<input type="hidden" name="post_ID" value="'. $row['id'].'" />
 						</div>	
 						<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>
 					</form>';
