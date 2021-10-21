@@ -25,10 +25,12 @@ require 'nav.php';
 			<?php
 				$conn = connect_db();
 				$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
+				$dom = new DOMDocument();
 				if($result->num_rows > 0){
 					while($row = mysqli_fetch_array($result))
 					{
-						echo "<div class='posts'>";
+						//echo '<div class="posts" id="'.$row.'">';
+						echo "<div id ='". $row['id'] ."'>";
 						echo $row['time']."<br>";
 						echo $row['user']." <br>";
 						echo $row['text']."<br>";
