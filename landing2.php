@@ -33,6 +33,13 @@ require 'nav.php';
 						echo $row['user']." <br>";
 						echo $row['text']."<br>";
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
+						echo '<form method="POST" action="backend.php">
+						<div class="form-group">
+							<label>Comment:</label>
+							<input class= "form-control w-25" type="text" name="comment"><br><br>
+						</div>	
+						<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>
+					</form>';
 						echo "</div>";
 						echo "<br><br>";
 					}
