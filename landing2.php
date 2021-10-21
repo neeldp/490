@@ -36,7 +36,7 @@ require 'nav.php';
 						$id = $row['id'];
 
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
-						$sql = $conn->query("SELECT * FROM comments Where 'postID' = '$id'");
+						$sql = $conn->query("SELECT * FROM comments Where postID = '$id'");
 						//ORDER BY `date` DESC
 						if($sql->num_rows > 0){
 							while($r = mysqli_fetch_array($sql))
