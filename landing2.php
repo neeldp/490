@@ -38,15 +38,15 @@ require 'nav.php';
 						$id = $row['id'];
 						//echo $row['id'];
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
-						$sql = $conn->query("SELECT * FROM comments Where `postID` = $id ORDER BY `date` DESC");
-						if($sql->num_rows > 0){
-							while($r = mysqli_fetch_array($sql))
-							{
-								echo $r['name']."<br>";
-								echo $r['text']."<br>";
-								echo $r['date']."<br>";
-							}
-						}	
+						//$sql = $conn->query("SELECT * FROM comments Where `postID` = $id ORDER BY `date` DESC");
+						//if($sql->num_rows > 0){
+						//	while($r = mysqli_fetch_array($sql))
+						//	{
+						//		echo $r['name']."<br>";
+						//		echo $r['text']."<br>";
+						//		echo $r['date']."<br>";
+						//	}
+						//}	
 						echo '<form method="POST" action="backend.php">
 						<div class="form-group">
 							<label>Comment:</label>
@@ -55,6 +55,15 @@ require 'nav.php';
 						</div>	
 						<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>
 					</form>';
+						$sql = $conn->query("SELECT * FROM comments Where `postID` = $id ORDER BY `date` DESC");
+						if($sql->num_rows > 0){
+							while($r = mysqli_fetch_array($sql))
+							{
+								echo $r['name']."<br>";
+								echo $r['text']."<br>";
+								echo $r['date']."<br>";
+							}
+						}
 						echo "</div>";
 						echo "<br><br>";
 					}
