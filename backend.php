@@ -116,6 +116,16 @@ if($_POST){
         $result = $conn->query($sql);
         header('location: landing.php');
     }
-}   
+
+    if(isset($_POST['commentbtn'])){
+        $username = $_SESSION['username'];
+        $text = $_POST['comment']; 
+        $post_ID = $_POST['post_ID'];
+        $sql = "INSERT INTO `comments`(`name`,`text`,`date`, `post_ID`) VALUES ('$username','$text', NOW(), '$post_ID')";
+        $result = $conn->query($sql);
+    }
+
+
+} 
 
 ?>
