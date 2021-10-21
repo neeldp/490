@@ -36,14 +36,16 @@ require 'nav.php';
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 
 						$id = $row['id'];
+						echo "$id";
 						$sql = $conn->query("SELECT * FROM comments");
 						//ORDER BY `date` DESC Where postID = '$id'
 						if($sql->num_rows > 0){
 							while($r = mysqli_fetch_array($sql))
 							{
-								echo $r['name']."<br>";
-								echo $r['text']."<br>";
 								echo $r['date']."<br>";
+								echo $r['name'].":";
+								echo $r['text']."<br>";
+								
 							}
 						}	
 						echo '<form method="POST" action="backend.php">
