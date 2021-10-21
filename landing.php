@@ -11,7 +11,7 @@
     require 'db_key.php';
 ?>
 <body>
-<form method="POST" action='backend.php'>
+<form method="POST" action='searchresults.php'>
 			<h3> Search for a post </h3>
 			<div class='form-group'>
             <label>Search:</label>
@@ -23,7 +23,7 @@
 			<h3> Delete A Post </h3>
 			<div class='form-group'>
 				<label>Delete:</label>
-				<input class= 'form-control w-25' type="text" name="admin"><br><br>
+					<input class= 'form-control w-25' type="text" name="admin"><br><br>
 			</div>	
 			<button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">Admin</button>
 		</form>
