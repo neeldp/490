@@ -25,7 +25,8 @@ require 'nav.php';
 			<?php
 				$conn = connect_db();
 				$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
-				$dom = new DOMDocument();
+				$sql = $conn->query("SELECT * FROM comments Where `postID` = `id` ORDER BY `time` DESC");
+				//$dom = new DOMDocument();
 				if($result->num_rows > 0){
 					while($row = mysqli_fetch_array($result))
 					{
@@ -36,6 +37,14 @@ require 'nav.php';
 						echo $row['text']."<br>";
 						//echo $row['id'];
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
+						if($sql->num_rows > 0){
+							while($r = mysqli_fetch_array($sql))
+							{
+								echo $r['name']."<br>";
+								echo $r['text']."<br>";
+								echo $r['date']."<br>";
+							}
+						}	
 						echo '<form method="POST" action="backend.php">
 						<div class="form-group">
 							<label>Comment:</label>
