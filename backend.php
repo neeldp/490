@@ -72,9 +72,9 @@ if($_POST){
                 }
             }
             
-            else{ 
-                $statusMsg = 'Please select an image file to upload.'; 
-            }
+            //else{ 
+            //    $statusMsg = 'Please select an image file to upload.'; 
+            //}
             
         
         $username = $_SESSION['username'];   
