@@ -37,7 +37,7 @@ require 'nav.php';
 
 						$id = $row['id'];
 						
-						$sql = $conn->query("SELECT * FROM comments");
+						$sql = $conn->query("SELECT * FROM comments Where postID = '{$id}'");
 						//Where postID = '$id'
 						//ORDER BY `date` DESC 
 						if($sql->num_rows > 0){
