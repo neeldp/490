@@ -112,9 +112,10 @@ if($_POST){
     
     if(isset($_POST['adminbtn'])){
         $adminTerm = $_POST['admin']; 
+        $result = "DELETE FROM `comments` WHERE (`post_ID` = 'posts.id')";
         $sql = "DELETE FROM `posts` WHERE (`user` LIKE '%$adminTerm%' OR `text` LIKE '%$adminTerm%')";
-        echo $adminTerm;
-        $result = $conn->query($sql);
+        //echo $adminTerm;
+        $sql = $conn->query($sql);
         header('location: landing.php');
     }
 
