@@ -28,7 +28,7 @@ require 'nav.php';
 				if($result->num_rows > 0){
 					while($row = mysqli_fetch_array($result))
 					{
-						//echo '<div class="posts" >';
+				
 						echo "<div id ='". $row['id'] ."'>";
 						echo $row['time']."<br>";
 						echo $row['user']." <br>";
@@ -36,12 +36,9 @@ require 'nav.php';
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 
 						$id = $row['id'];
-						var_dump($id);
 						
 						$sql = $conn->query("SELECT * FROM comments Where `post_ID` = '{$id}'");
-						var_dump("post_ID");
-						//Where postID = '$id'
-						//ORDER BY `date` DESC 
+					
 						if($sql->num_rows > 0){
 							while($r = mysqli_fetch_array($sql))
 							{
