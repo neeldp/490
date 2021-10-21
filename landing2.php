@@ -16,7 +16,7 @@ require 'nav.php';
 			<h3> Search for a post </h3>
 			<div class='form-group'>
 				<label>Search:</label>
-				<input class= 'form-control w-25' type="text" name="search"><br><br>
+					<input class= 'form-control w-25' type="text" name="search"><br><br>
 			</div>	
 			<button class = 'btn btn-outline-info' type="submit" name="searchbtn" value= 'message' class="search">Search</button>
 		</form>
