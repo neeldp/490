@@ -34,7 +34,7 @@ require 'nav.php';
 						echo $row['time']."<br>";
 						echo $row['user']." <br>";
 						echo $row['text']."<br>";
-						echo $row['id'];
+						//echo $row['id'];
 						echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 						echo '<form method="POST" action="backend.php">
 						<div class="form-group">
