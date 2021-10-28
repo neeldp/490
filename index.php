@@ -1,7 +1,7 @@
 <?php require 'header.php'; require 'db_key.php';?>
 
 
-<div class = "">
+<div class = "login">
     <form method = 'POST' action = 'backend.php' >
         <h1 class = "title"> Sign in to !Twitter </h1> <br>
         <div class="form-group">
