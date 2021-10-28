@@ -13,10 +13,10 @@ require 'nav.php';
     
 	<body>	
 		<h1> Create A User </h2>
-		<div class = "form-container">
+		<div class = "">
             <form method = 'POST' action = 'backend.php' >
                 <h1 class = "title"> Sign up to !Twitter </h1> <br>
-                <div class="form-group">
+                <div class="">
                     <label>Username : </label><br>
                     <input class= 'form-control w-25' type="text" name="username"><br>
                     <label>Password :</label><br>
