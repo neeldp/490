@@ -12,6 +12,18 @@ require 'nav.php';
 	</head>
     
 	<body>	
+		<h1> Create A User </h2>
+		<div class = "form-container">
+            <form method = 'POST' action = 'backend.php' >
+                <h1 class = "title"> Sign up to !Twitter </h1> <br>
+                <div class="form-group">
+                    <label>Username : </label><br>
+                    <input class= 'form-control w-25' type="text" name="username"><br>
+                    <label>Password :</label><br>
+                    <input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
+                </div> 
+                <br><button class = 'button-login' type="submit" name="register" value= 'login' class="register">Sign-up</button>
+            </form>	
 		<form method="POST" action='searchresults.php'>
 			<h3> Search for a post </h3>
 			<div class='form-group'>
@@ -20,7 +32,7 @@ require 'nav.php';
 			</div>	
 			<button class = 'btn btn-outline-info' type="submit" name="searchbtn" value= 'message' class="search">Search</button>
 		</form>
-		<h1 class="tmln"> My Timeline </h1> 
+2		<h1 class="tmln"> My Timeline </h1> 
 		<div>
 			<?php
 				$conn = connect_db();
