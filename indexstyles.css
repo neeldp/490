@@ -47,14 +47,11 @@ body {
 }
 
 .card__face--front {
-  background: linear-gradient( #A0A1A4, #828385);
+  background: linear-gradient( #ffffff, #ffffff);
   
 }
 
-.card__face--back {
-  background: linear-gradient( #A0A1A4, #828385);;
-  transform: rotateY(180deg);
-}
+
 
 .form-container{
     display: flex;
@@ -84,8 +81,8 @@ label{
 
 .button-login {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+  border: 1px solid #c8d8e4;
+	background-color: #c8d8e4;
 	color: #FFFFFF;
 	font-size: 13px;
 	font-weight: bold;
@@ -108,8 +105,8 @@ label{
 
 .button-register1{
   border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #c8d8e4;
+	background-color: #c8d8e4;
 	color: #FFFFFF;
 	font-size: 13px;
 	font-weight: bold;
@@ -127,7 +124,7 @@ label{
 }
 
 header{
-  background-color: #d80bdf;
+  background-color: #ffffff;
   position:fixed;
   top: 0;
   top: 0;

@@ -16,19 +16,10 @@
                     <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
                     
                 </form>	
-                <div class="switch">
-                    <br><br><h2> No Account? </h2>
-                    <button class='button-register' >Sign-up</button>
-                </div>
             </div>
         </div>
         
     </div>
     
-    <script> 
-        var card = document.querySelector('.card'); 
-        var btn = document.querySelector('.button-register');
-        var btn1 = document.querySelector('.button-register1');
-        btn.addEventListener('click', function () { card.classList.toggle('is-flipped');});
-        btn1.addEventListener('click', function () { card.classList.toggle('is-flipped');}); </script>
+    
 </div>
