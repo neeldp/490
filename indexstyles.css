@@ -8,16 +8,7 @@ body {
 }
 
 
-.login {
-  width: 1000px;
-  height: 1000px;
 
-  margin: 30px 0;
-  margin-left: auto;
-  margin-right: auto;
-  perspective: 600px;
-  position: center;
-}
 .form-group{
   width: 1000px;
   height: 1000px;
@@ -29,7 +20,7 @@ body {
   position: center;
 }
 
-.form-container{
+.login{
     display: flex;
     justify-content: center;
     transform: translate(0, 35%);
