@@ -8,8 +8,7 @@ body {
 }
 
 
-
-.form-group{
+.scene {
   width: 1000px;
   height: 1000px;
 
@@ -20,7 +19,44 @@ body {
   position: center;
 }
 
-.login{
+.card {
+  width: 100%;
+  height: 100%;
+  position:center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 25px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: linear-gradient( #A0A1A4, #828385);
+  
+}
+
+.card__face--back {
+  background: linear-gradient( #A0A1A4, #828385);;
+  transform: rotateY(180deg);
+}
+
+.form-container{
     display: flex;
     justify-content: center;
     transform: translate(0, 35%);
