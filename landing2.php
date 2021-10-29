@@ -10,7 +10,7 @@ require 'nav.php';
 
 	<!-- Admin Create User -->	
 	<div class = "create_user">
-		<h3> Search for a post </h3>
+		<h3> Create A User </h3>
 		<form method = 'POST' action = 'backend.php' >
 			<div class="">
 				<label>Username : </label><br>
@@ -30,7 +30,7 @@ require 'nav.php';
 				<label>Search:</label>
 				<input class= 'form-control w-25' type="text" name="search"><br><br>
 			</div>	
-			<button class = 'btn btn-outline-info' type="submit" name="searchbtn" value= 'message' class="search">Search</button>
+			<br><button class = 'button-login' type="submit" name="register" value= 'login' class="register">Search</button>
 		</form>
 	</div>	
 
