@@ -171,3 +171,10 @@ display: flex;
   border:2px solid #333;
   overflow: hidden;
 }
+.timeline{
+  margin:0 auto;
+  width:400px;
+  padding:20px;
+  border:2px solid #333;
+  overflow: hidden;
+}

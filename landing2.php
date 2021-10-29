@@ -21,8 +21,8 @@ require 'nav.php';
 	</div>	
 
 	<!-- Admin Timeline Code --> 
-	<h1 class="tmln"> My Timeline </h1> 
-	<div>
+	<div class = "timeline">
+		<h1 class="tmln"> My Timeline </h1> 
 		<?php
 			$conn = connect_db();
 			$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");

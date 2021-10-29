@@ -46,10 +46,10 @@
 		</div>	
 		<button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">Admin</button>
 	</form>
-	
+
 	<!-- Admin Timeline Code --> 
+	<div class = "timeline">
 	<h1 class="tmln"> My Timeline </h1> 
-	<div>
 		<?php
 			$conn = connect_db();
 			$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
