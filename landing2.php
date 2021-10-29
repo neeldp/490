@@ -10,7 +10,7 @@ require 'nav.php';
 
 	<!-- Admin Create User -->	
 	<div class = "create_user">
-		<h1> Create A User </h2>
+		<h3> Search for a post </h3>
 		<form method = 'POST' action = 'backend.php' >
 			<div class="">
 				<label>Username : </label><br>
