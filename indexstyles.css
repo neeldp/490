@@ -173,8 +173,9 @@ display: flex;
 }
 .timeline{
   margin:0 auto;
-  width:400px;
+  width:75%;
   padding:20px;
   border:2px solid #333;
+  
   overflow: hidden;
 }
