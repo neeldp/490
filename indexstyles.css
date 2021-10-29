@@ -1,156 +1,160 @@
 
 
 body {    
-    font-family: 'Montserrat', sans-serif;
-    background: background-color(#2b6777 );
-    padding: 30px;
-    margin-top: 80px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff; 
+  background: linear-gradient(#2b6775,#2b6675,#2b6770) ;
+  padding: 30px;
+  margin-top: 80px;
 }
 
 
 .scene {
-  width: 1000px;
-  height: 1000px;
+width: 1000px;
+height: 1000px;
 
-  margin: 30px 0;
-  margin-left: auto;
-  margin-right: auto;
-  perspective: 600px;
-  position: center;
+margin: 30px 0;
+margin-left: auto;
+margin-right: auto;
+perspective: 600px;
+position: center;
 }
 
 .card {
-  width: 100%;
-  height: 100%;
-  position:center;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
+width: 100%;
+height: 100%;
+position:center;
+transition: transform 1s;
+transform-style: preserve-3d;
+cursor: pointer;
+position: relative;
 }
 
 .card.is-flipped {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  line-height: 25px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 10px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+position: absolute;
+width: 100%;
+height: 100%;
+line-height: 25px;
+color: white;
+text-align: center;
+font-weight: bold;
+font-size: 10px;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
 }
 
 .card__face--front {
-  background: linear-gradient( #ffffff, #ffffff);
-  
-}
+background: linear-gradient( #ffffff, #ffffff);
 
+}
 
 
 .form-container{
-    display: flex;
-    justify-content: center;
-    transform: translate(0, 35%);
-    box-sizing: border-box;
-    padding: 12px 5px;
+  display: flex;
+  justify-content: center;
+  transform: translate(0, 35%);
+  box-sizing: border-box;
+  padding: 12px 5px;
 }
 
 input {
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
+background-color: #eee;
+border: none;
+padding: 12px 15px;
+margin: 8px 0;
+width: 100%;
 }
 
 h1{
-  font-size: 50px;
+font-size: 50px;
 }
 
 label{
-  font-family: sans-serif;
-  font-weight: normal;
-  font-size: 20px;
+font-family: sans-serif;
+font-weight: normal;
+font-size: 20px;
 }
 
 .button-login {
-	border-radius: 20px;
-  border: 1px solid #c8d8e4;
-	background-color: #c8d8e4;
-	color: #FFFFFF;
-	font-size: 13px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+border-radius: 20px;
+border: 1px solid #c8d8e4;
+background-color: #c8d8e4;
+color: #FFFFFF;
+font-size: 13px;
+font-weight: bold;
+padding: 12px 45px;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: transform 80ms ease-in;
 }
 .button-register{
-  border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
-	color: #FFFFFF;
-	font-size: 13px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+border-radius: 20px;
+border: 1px solid #FF4B2B;
+background-color: #FF4B2B;
+color: #FFFFFF;
+font-size: 13px;
+font-weight: bold;
+padding: 12px 45px;
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 
 .button-register1{
-  border-radius: 20px;
-	border: 1px solid #c8d8e4;
-	background-color: #c8d8e4;
-	color: #FFFFFF;
-	font-size: 13px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+border-radius: 20px;
+border: 1px solid #c8d8e4;
+background: linear-gradient(#2b6775,#2b6675,#2b6770); 
+color: #FFFFFF;
+font-size: 13px;
+font-weight: bold;
+padding: 12px 45px;
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 
 .switch{
-  position:absolute;
-  top: 400px;
-  left:0;
-  width:100%;
-  height:100%;
+position:absolute;
+top: 400px;
+left:0;
+width:100%;
+height:100%;
 }
 
 header{
-  background-color: #ffffff;
-  position:fixed;
-  top: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  display: flex;
-  align-items: center;
+background-color: #708090;
+position:fixed;
+top: 0;
+top: 0;
+left: 0;
+right: 0;
+height: 80px;
+display: flex;
+align-items: center;
+border-bottom:5px solid #000;
 }
 
 header * {
-  display:inline;
+display:inline;
+box-sizing:border-box;
+
 }
 
 header li{
-  margin:15px;
+margin:15px;
+
 }
 
 header li a {
-  color: rgb(255, 187, 0);
-  text-decoration: none;
+color: #ffffff;
+text-decoration: none;
 }
 
 .posts{
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
+margin-left: auto;
+margin-right: auto;
+display: flex;
 }
 
