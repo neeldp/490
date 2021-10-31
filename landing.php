@@ -62,8 +62,8 @@
 					echo "<td>". $row['user']."</td>";
 					echo "<td>". $row['text']."</td>";
 					echo "<td>".'<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."</li>";
-					echo "</tr></div>";
-					echo "<br><table><br>";
+					echo "</tr>";
+					echo "<table>"."</div>";
 				}
 			}
 			$conn->close();
