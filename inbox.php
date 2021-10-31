@@ -5,7 +5,7 @@ require 'nav.php';
 ?>
 
 <body>
-    <div class="inbox">
+    <div class="inbox_style">
         <table>
             <tr>
                 <th>Message</th>

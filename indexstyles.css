@@ -168,7 +168,6 @@ display: flex;
 .search_post{
   width:400px;
   padding:20px;
-  border:2px solid #333;
   overflow: hidden;
 }
 .timeline{
@@ -180,7 +179,7 @@ display: flex;
   overflow: hidden;
 }
 
-.index th, td {
+.index-style th, td {
   padding: 15px;
   text-align: left;
   border-top: 1px solid #ddd;
