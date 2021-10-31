@@ -57,7 +57,7 @@
 				while($row = mysqli_fetch_array($result))
 				{
 					echo "<div class='posts'>";
-					echo "<table>"."<tr>";
+					echo "<table class='table_style'>"."<tr>";
 					echo "<td>". $row['time']."</td>";
 					echo "<td>". $row['user']."</td>";
 					echo "<td>". $row['text']."</td>";
