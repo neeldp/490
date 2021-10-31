@@ -2,7 +2,7 @@
 
 body {    
   font-family: 'Montserrat', sans-serif;
-  color: #ffffff; 
+  color: #0000; 
   background: linear-gradient(#2b6775,#2b6675,#2b6770) ;
   padding: 30px;
   margin-top: 80px;
@@ -39,7 +39,7 @@ position: absolute;
 width: 100%;
 height: 100%;
 line-height: 25px;
-color: white;
+background: linear-gradient(#2b6775,#2b6675,#2b6770) ;
 text-align: center;
 font-weight: bold;
 font-size: 10px;
