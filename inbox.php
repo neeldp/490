@@ -3,21 +3,9 @@ require 'header.php';
 require "db_key.php";
 require 'nav.php';
 ?>
-<style>
-th, td {
-  padding: 15px;
-  text-align: left;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-<body>
-    <div class="form-container">
 
+<body>
+    <div class="inbox">
         <table>
             <tr>
                 <th>Message</th>
@@ -36,11 +24,9 @@ th, td {
                     echo "</table>";
                 } 
                 else { echo "0 results"; }
-                $conn->close();
-                
+                $conn->close();  
             ?>
         </table>
-
     </div>
 </body>
 

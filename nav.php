@@ -7,7 +7,7 @@
 					<li><a href="sendMessage.php">Send a Message.</a></li>
 					<li><a href="inbox.php">Inbox</a></li>
 					<li><a href="index.php">logout</a></li>
-				</ul>
+				<li>
 				<!--Search Section --> 
 				<div div class = "search_post">
 					<form method="POST" action='searchresults.php'>
@@ -18,5 +18,6 @@
 						<sp><button class = 'button-login' type="submit" name="register" value= 'login' class="register">Search</button>
 					</form>
 				</div>
+				</li></ul>
 			</nav>
 </header>

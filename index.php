@@ -14,12 +14,8 @@
                         <input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
                     </div> 
                     <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
-                    
                 </form>	
             </div>
-        </div>
-        
-    </div>
-    
-    
+        </div>       
+    </div> 
 </div>
