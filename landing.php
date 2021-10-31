@@ -49,7 +49,7 @@
 
 	<!-- Admin Timeline Code --> 
 	<h1 class="tmln"> My Timeline </h1> 
-	<div class = "timelinetd
+	<div class = "timeline">
 		<?php
 			$conn = connect_db();
 			$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
@@ -57,7 +57,7 @@
 				while($row = mysqli_fetch_array($result))
 				{
 					echo "<div class='posts'>";
-					echo "<table class='table_style'>"."<tr>";
+					echo "<table class='table_style>"."<tr>";
 					echo "<td>". $row['time']."</td>";
 					echo "<td>". $row['user']."</td>";
 					echo "<td>". $row['text']."</td>";
