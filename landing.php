@@ -59,6 +59,7 @@
 					echo "<div class='posts'>";
 					echo "<table class='table_style'>"."<tr>";
 					echo "<td>". $row['time']."</td>";
+					echo "</tr>"."<tr>";
 					echo "<td>". $row['user']."</td>";
 					echo "<td>". $row['text']."</td>";
 					echo "<td>".'<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."</li>";
