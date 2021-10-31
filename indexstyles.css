@@ -30,9 +30,6 @@ cursor: pointer;
 position: relative;
 }
 
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
 
 .login_Style {
 position: absolute;
@@ -42,11 +39,11 @@ line-height: 25px;
 text-align: center;
 font-weight: bold;
 font-size: 10px;
--webkit-backface-visibility: hidden;
-backface-visibility: hidden;
 }
 
-
+.title{
+  font-size:50px;
+}
 
 
 .form-container{
@@ -186,6 +183,6 @@ display: flex;
 .tmln{
   margin:0, auto; 
 }
-.table_style{
+.posts .table_style {
   margin:0,auto;
 }
