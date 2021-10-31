@@ -2,7 +2,7 @@
 
 <div class="scene">
     <div class="card">
-        <div class="card__face card__face--front">
+        <div class="login_Style">
             <div class = "form-container">
                 <form method = 'POST' action = 'backend.php' >
                     <h1 class = "title"> Sign in to !Twitter </h1> <br>
@@ -18,5 +18,5 @@
             </div>
         </div>       
     </div>   
-    
+
 </div>
