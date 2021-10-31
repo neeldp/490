@@ -170,7 +170,7 @@ display: flex;
   overflow: hidden;
 }
 
-.index-style th, td {
+.inbox_style th, td {
   padding: 15px;
   text-align: left;
   border-top: 1px solid #ddd;
@@ -183,6 +183,13 @@ display: flex;
 .tmln{
   margin:0, auto; 
 }
-.posts .table_style {
-  margin:0,auto;
+.posts td {
+  padding: 15px;
+  text-align: left;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  margin-left: auto;
+  margin-right: auto; 
 }
