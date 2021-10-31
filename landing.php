@@ -58,10 +58,10 @@
 				{
 					echo "<div class='posts'>";
 					echo "<ul>"
-					echo "<li> $row['time'].'<br>' </li>";
-					echo "<li> $row['user'].'<br>' </li>";
-					echo "<li> $row['text'].'<br>' </li>";
-					echo '<li> <img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>""</li>";
+					echo "<li>". $row['time'].'<br>'."</li>";
+					echo "<li>". $row['user'].'<br>'."</li>";
+					echo "<li>". $row['text'].'<br>'."</li>";
+					echo "<li>".'<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>"."</li>";
 					echo "</ul></div>";
 					echo "<br><br>";
 				}
