@@ -57,11 +57,12 @@
 				while($row = mysqli_fetch_array($result))
 				{
 					echo "<div class='posts'>";
-					echo $row['time']."<br>";
-					echo $row['user']." <br>";
-					echo $row['text']."<br>";
-					echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
-					echo "</div>";
+					echo "<ul>"
+					echo "<li> $row['time'].'<br>' </li>";
+					echo "<li> $row['user'].'<br>' </li>";
+					echo "<li> $row['text'].'<br>' </li>";
+					echo '<li> <img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>""</li>";
+					echo "</ul></div>";
 					echo "<br><br>";
 				}
 			}
