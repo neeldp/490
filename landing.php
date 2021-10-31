@@ -57,7 +57,7 @@
 				while($row = mysqli_fetch_array($result))
 				{
 					echo "<div class='posts'>";
-					echo "<ul>"
+					echo "<ul>";
 					echo "<li>". $row['time'].'<br>'."</li>";
 					echo "<li>". $row['user'].'<br>'."</li>";
 					echo "<li>". $row['text'].'<br>'."</li>";
