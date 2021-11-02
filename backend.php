@@ -126,7 +126,7 @@ if($_POST){
         $sql = "INSERT INTO `comments`(`name`,`text`,`date`, `post_ID`) VALUES ('$username','$text', NOW(), '$post_ID')";
         $result = $conn->query($sql);
         //$isAdmin = $sql['isAdmin'];
-        header('location: landing2.php');
+        header('location: landing.php');
         //echo "$post_ID";
         
     }
