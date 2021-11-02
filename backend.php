@@ -39,7 +39,6 @@ if($_POST){
                 
                 $_SESSION['username'] =$username;
                 $_SESSION['isAdmin'] =$isAdmin;
-                #echo 'Congratulations';
                 header('location: landing.php');
             }else{
                 header('location: index.php');
