@@ -43,8 +43,6 @@ if($_POST){
                 header('location: landing.php');
             }else{
                 header('location: index.php');
-                #header("refresh:2;url=index.php");
-                #echo 'incorrect password';
                 exit();
 
             }
@@ -83,7 +81,7 @@ if($_POST){
         if(!$sql){
             die("Invalid ". mysqli_error($conn));
         }
-        header("location: landing2.php");
+        header("location: landing.php");
         $sql = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
         if($sql->num_rows > 0){
             while($row = $sql->fetch_assoc())
