@@ -48,8 +48,8 @@
 	</form>
 
 	<!-- Admin Timeline Code --> 
-	<h1 class="tmln"> My Timeline </h1> 
 	<div class = "timeline">
+	<h1 class="tmln"> My Timeline </h1> 
 		<?php
 			$conn = connect_db();
 			$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
@@ -57,14 +57,12 @@
 				while($row = mysqli_fetch_array($result))
 				{
 					echo "<div class='posts'>";
-					echo "<table class='table_style'>"."<tr>";
-					echo "<td>". $row['time']."</td>";
-					echo "</tr>"."<tr>";
-					echo "<td>". $row['user']."</td>";
-					echo "<td>". $row['text']."</td>";
-					echo "<td>".'<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."</li>";
-					echo "</tr>";
-					echo "<table>"."</div>";
+					echo $row['time']."<br>";
+					echo $row['user']." <br>";
+					echo $row['text']."<br>";
+					echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
+					echo "</div>";
+					echo "<br><br>";
 				}
 			}
 			$conn->close();
