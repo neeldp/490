@@ -8,6 +8,12 @@
 					<li><a href="inbox.php">Inbox</a></li>
 					<li><a href="index.php">logout</a></li>
 				<li>
+				<!--Admin Button Section --> 
+				<?php if($_SESSION['isAdmin']==1){
+						echo"<li>";
+						echo "<a href='index.php'>"."Admin"."</a>"; 
+						echo "</li>";}?>
+
 				<!--Search Section --> 
 				<div div class = "search_post">
 					<form method="POST" action='searchresults.php'>
@@ -19,10 +25,7 @@
 					</form>
 				</div>
 				</li>
-				<?php if($_SESSION['isAdmin']==1){
-						echo"<li>";
-						echo "<a href='index.php'>"."logout"."</a>"; 
-						echo "</li>";}?>
+				
 			</ul>
 			</nav>
 </header>
