@@ -2,11 +2,11 @@
 <header>
 			<nav>
 				<ul>
-                    <li><a href="index.php">Timeline</a></li>
+                    <li><a href="landing.php">Timeline</a></li>
 					<li><a href="create_Post.php">Create post</a></li>
 					<li><a href="sendMessage.php">Send a Message.</a></li>
 					<li><a href="inbox.php">Inbox</a></li>
-					<li><a href="login.php">logout</a></li>
+					<li><a href="index.php">logout</a></li>
 				<li>
 				<!--Admin Button Section --> 
 				<?php if($_SESSION['isAdmin']==1){
