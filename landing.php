@@ -1,5 +1,6 @@
 <?php    
     session_start();
+
     require 'header.php';
     require 'nav.php';
     require 'db_key.php';
@@ -30,17 +31,9 @@
 			<br><button class = 'button-login' type="submit" name="register" value= 'login' class="register">Search</button>
 		</form>
 	</div>
-
-	<!--Delete Post --> 
-    <form method="POST" action='backend.php'>
-		<h3> Delete A Post </h3>
-		<div class='form-group'>
-			<label>Delete:</label>
-				<input class= 'form-control w-25' type="text" name="admin"><br><br>
-		</div>	
-		<button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">Admin</button>
-	</form>
-
+	<?php
+     echo "<form method='POST' action='backend.php'> <h3> Delete A Post </h3> <div class='form-group'> <label>Delete:</label> <input class= 'form-control w-25' type="text" name="admin"><br><br> </div> <button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">Admin</button> </form> "
+	?>
 	<!-- Admin Timeline Code --> 
 	<div class = "timeline">
 	<h1 class="tmln"> My Timeline </h1> 
