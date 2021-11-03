@@ -43,7 +43,7 @@
 		echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Admin"."</button>";
 		echo "</form>";
 	}else{
-		echo "";
+		echo "<br>";
 	}
     
 	?>
