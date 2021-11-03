@@ -144,8 +144,9 @@ color: #000000;
 text-decoration: none;
 }
 
-.posts_inner{
-position:absolute;
+.posts{
+margin:0 , auto; 
+display: flex;
 }
 
 .create_user{
@@ -160,15 +161,22 @@ position:absolute;
   padding:20px;
   overflow: hidden;
 }
-.timeline_outer{
+.timeline{
   margin:0 auto;
   width:75%;
   padding:20px;
   border:2px solid #333;
-
+  
   overflow: hidden;
 }
-
+.timeline td {
+  margin:0 auto;
+  width:75%;
+  padding:20px;
+  border:2px solid #333;
+  
+  overflow: hidden;
+}
 .inbox_style th, td {
   padding: 15px;
   text-align: left;
@@ -180,7 +188,7 @@ position:absolute;
   margin-right: auto; 
 }
 .tmln{
-  margin:auto, auto; 
+  margin:0, auto; 
 }
 .posts td {
   padding: 15px;
