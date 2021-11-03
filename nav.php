@@ -18,6 +18,11 @@
 						<sp><button class = 'button-login' type="submit" name="register" value= 'login' class="register">Search</button>
 					</form>
 				</div>
-				</li></ul>
+				</li>
+				<?php if($_SESSION['isAdmin']==1){
+						echo"<li>";
+						echo "<a href='index.php'>"."logout"."</a>"; 
+						echo "</li>";}?>
+			</ul>
 			</nav>
 </header>

@@ -38,7 +38,7 @@ if($_POST){
             if(password_verify($password, $sql['password'])){
                 
                 $_SESSION['username'] =$username;
-                $_SESSION['isAdmin'] =$isAdmin;
+                $_SESSION['isAdmin'] = $isAdmin;
                 header('location: landing.php');
             }else{
                 header('location: index.php');
