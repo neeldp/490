@@ -32,7 +32,7 @@
 		</form>
 	</div>
 	<?php
-     echo "<form method='POST' action='backend.php'> <h3> Delete A Post </h3> <div class='form-group'> <label>Delete:</label> <input class= 'form-control w-25' type="text" name="admin"><br><br> </div> <button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">Admin</button> </form> "
+     echo ""<form method='POST' action='backend.php'>" . "<h3> Delete A Post </h3>"."<div class='form-group'>" ."<label>Delete:</label>". "<input class= 'form-control w-25' type="text" name="admin">"."<br>"."<br>". "</div>". "<button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">Admin</button>". "</form>""
 	?>
 	<!-- Admin Timeline Code --> 
 	<div class = "timeline">
