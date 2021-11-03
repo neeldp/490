@@ -11,7 +11,7 @@
 				<!--Admin Button Section --> 
 				<?php if($_SESSION['isAdmin']==1){
 						echo"<li>";
-						echo "<a href='index.php'>"."Admin"."</a>"; 
+						echo "<a href='admin.php'>"."Admin"."</a>"; 
 						echo "</li>";}?>
 
 				<!--Search Section --> 
