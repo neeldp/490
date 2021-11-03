@@ -33,7 +33,7 @@
 	</div>
 	
 	<?php
-	if($_SESSION['$isAdmin'] == 1){
+	if($_SESSION['isAdmin'] == 1){
 		echo "<form method='POST' action='backend.php'>";
 		echo "<h3>". "Delete A Post". "</h3>";
 		echo "<div class='form-group'>";
