@@ -21,7 +21,7 @@ if($_POST){
         }
         if($sql){
             echo "Registration succesful. You may <a href= '/'>login</a> now";
-            header('location: index.php');
+            header('location: login.php');
         }
     }   
     else if(isset($_POST['login'])){
@@ -39,9 +39,9 @@ if($_POST){
                 
                 $_SESSION['username'] =$username;
                 $_SESSION['isAdmin'] = $isAdmin;
-                header('location: landing.php');
-            }else{
                 header('location: index.php');
+            }else{
+                header('location: login.php');
                 exit();
 
             }
@@ -80,7 +80,7 @@ if($_POST){
         if(!$sql){
             die("Invalid ". mysqli_error($conn));
         }
-        header("location: landing.php");
+        header("location: index.php");
         $sql = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
         if($sql->num_rows > 0){
             while($row = $sql->fetch_assoc())
@@ -114,7 +114,7 @@ if($_POST){
         $sql = "DELETE FROM `posts` WHERE (`user` LIKE '%$adminTerm%' OR `text` LIKE '%$adminTerm%')";
         //echo $adminTerm;
         $sql = $conn->query($sql);
-        header('location: landing.php');
+        header('location: index.php');
     }
 
     if(isset($_POST['commentbtn'])){
@@ -125,7 +125,7 @@ if($_POST){
         $sql = "INSERT INTO `comments`(`name`,`text`,`date`, `post_ID`) VALUES ('$username','$text', NOW(), '$post_ID')";
         $result = $conn->query($sql);
         //$isAdmin = $sql['isAdmin'];
-        header('location: landing.php');
+        header('location: index.php');
         //echo "$post_ID";
         
     }

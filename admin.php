@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if($_SESSION['isAdmin'] ==  0){
-	header('location: landing.php');	
+	header('location: index.php');	
 }
 require 'header.php';
 require 'db_key.php';
