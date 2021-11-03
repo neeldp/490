@@ -31,8 +31,16 @@
 			<br><button class = 'button-login' type="submit" name="register" value= 'login' class="register">Search</button>
 		</form>
 	</div>
+	
 	<?php
-     echo ""<form method='POST' action='backend.php'>" . "<h3> Delete A Post </h3>"."<div class='form-group'>" ."<label>Delete:</label>". "<input class= 'form-control w-25' type="text" name="admin">"."<br>"."<br>". "</div>". "<button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">Admin</button>". "</form>""
+    echo "<form method="POST" action='backend.php'>"
+		echo "<h3>". "Delete A Post". "</h3>"
+		echo "<div class='form-group'>"
+			echo "<label>"."Delete:""</label>"
+				echo "<input class= 'form-control w-25' type="text" name="admin">"."<br>"."<br>"
+		echo "</div>"	
+		echo "<button class = 'btn btn-outline-info' type="submit" name="adminbtn" value= 'message' class="adminbtn">"."Admin"."</button>"
+	echo "</form>"
 	?>
 	<!-- Admin Timeline Code --> 
 	<div class = "timeline">
