@@ -151,26 +151,31 @@ transition: transform 80ms ease-in;
 .puser{
   font-size:50px;
   color:#000;
-  position: relative;
+  position: absolute;
   height: 50px;
+  width: 75%;
   margin: 20px;
 }
 .ptext{
   font-size:50px;
   color:#000;
-  position: relative;  
+  position: absolute;  
+  width: 75%;
   height: 50px;
   margin: 20px;
 }
 .ptime{
   font-size:50px;
   color:#000;
-  position: relative;  
+  position: absolute;  
   height: 50px;
   margin: 20px;
+  width: 75%;
 }
 .post_image{
   margin:0 auto;
-  position: relative;  height: 500px;
+  position: absolute;  
+  width: 75%;
+  height: 500px;
   margin: 20px;
 }
