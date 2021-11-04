@@ -1,5 +1,32 @@
 
 
+header{
+  background-color: #708090;
+  position:fixed;
+  top: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom:5px solid #000;
+  }
+  
+  header * {
+  display:inline;
+  box-sizing:border-box;
+  }
+  
+  header li{
+  margin:15px;
+  
+  }
+  
+  header li a {
+  color: #000000;
+  text-decoration: none;
+  }
 body {    
   font-family: 'Montserrat', sans-serif;
   color: #200000; 
@@ -8,11 +35,9 @@ body {
   margin-top: 80px;
 }
 
-
 .scene {
 width: 1000px;
 height: 1000px;
-
 margin: 30px 0;
 margin-left: auto;
 margin-right: auto;
@@ -84,70 +109,6 @@ letter-spacing: 1px;
 text-transform: uppercase;
 transition: transform 80ms ease-in;
 }
-.button-register{
-border-radius: 20px;
-border: 1px solid #FF4B2B;
-background-color: #FF4B2B;
-color: #FFFFFF;
-font-size: 13px;
-font-weight: bold;
-padding: 12px 45px;
-letter-spacing: 1px;
-text-transform: uppercase;
-}
-
-.button-register1{
-border-radius: 20px;
-border: 1px solid #c8d8e4;
-background: linear-gradient(#2b6775,#2b6675,#2b6770); 
-color: #FFFFFF;
-font-size: 13px;
-font-weight: bold;
-padding: 12px 45px;
-letter-spacing: 1px;
-text-transform: uppercase;
-}
-
-.switch{
-position:absolute;
-top: 400px;
-left:0;
-width:100%;
-height:100%;
-}
-
-header{
-background-color: #708090;
-position:fixed;
-top: 0;
-top: 0;
-left: 0;
-right: 0;
-height: 80px;
-display: flex;
-align-items: center;
-border-bottom:5px solid #000;
-}
-
-header * {
-display:inline;
-box-sizing:border-box;
-}
-
-header li{
-margin:15px;
-
-}
-
-header li a {
-color: #000000;
-text-decoration: none;
-}
-
-.posts{
-margin:0 , auto; 
-display: flex;
-}
 
 .create_user{
   margin:0 ; 
@@ -161,22 +122,7 @@ display: flex;
   padding:20px;
   overflow: hidden;
 }
-.timeline{
-  margin:0 auto;
-  width:75%;
-  padding:20px;
-  border:none;
-  
-  overflow: hidden;
-}
-.timeline td {
-  margin:0 auto;
-  width:75%;
-  padding:20px;
-  border:2px solid #333;
-  
-  overflow: hidden;
-}
+
 .inbox_style th, td {
   padding: 15px;
   text-align: left;
@@ -187,9 +133,7 @@ display: flex;
   margin-left: auto;
   margin-right: auto; 
 }
-.tmln{
-  margin:0, auto; 
-}
+
 .posts td {
   padding: 15px;
   text-align: left;
@@ -199,8 +143,41 @@ display: flex;
   display:flex; 
   
 }
-.puser{
-  font-size:25px;
-  color:#000;
+.timeline{
+  margin:0 auto;
+  width:75%;
+  padding:20px;
+  border:none;
+  background-color: orange;
+  overflow: hidden;
+}
+.timeline td {
+  margin:0 auto;
+  width:75%;
+  padding:20px;
+  border:2px solid #333;
   
+  overflow: hidden;
+}
+.posts{
+  margin:0 , auto; 
+  display: flex;
+  }
+.puser{
+  font-size:50px;
+  color:#000;
+  position: absolute;
+}
+.ptext{
+  font-size:50px;
+  color:#000;
+  position: relative;
+}
+.ptime{
+  font-size:50px;
+  color:#000;
+  position: relative;
+}
+.post_image{
+  position: relative;
 }
