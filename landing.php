@@ -35,7 +35,8 @@
 					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
 					echo "<p class='ptext'>". $row['text']."</p>";
 					echo "<p class='ptime'>". $row['time']."</p>";
-					echo '<form method="POST" action="backed.php">';
+
+					echo '<form method="POST" action="backend.php">';
 					echo '<div class ="form-group">';
 					echo '<label>Comment:</label>';
 					echo '<input class= "form-control w-25" type="text" name="comment">';
@@ -43,7 +44,7 @@
 					echo '</div>';
 					echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
 					echo '</form>';
-					
+
 					echo "</div>";
 					echo "<br><br>";
 				}
