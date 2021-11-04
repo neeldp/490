@@ -137,7 +137,8 @@ transition: transform 80ms ease-in;
 
 .timeline{
   margin:0 auto;
-  width:75%;
+  display: grid;
+  grid-template-columns:75% ;
   height: 100%;
   padding:20px;
   border:none;
