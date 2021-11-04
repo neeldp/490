@@ -31,10 +31,10 @@
 				while($row = mysqli_fetch_array($result))
 				{
 					echo "<div class='posts'>";
-					echo $row['time']."<br>";
-					echo $row['user']." <br>";
-					echo $row['text']."<br>";
-					echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
+					echo "<p>". "$row['time']"."<p>"."<br>";
+					echo "<p>". "$row['user']"."<p>"."<br>";
+					echo "<p>". "$row['text']"."<p>"."<br>";
+					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 					echo "</div>";
 					echo "<br><br>";
 				}
