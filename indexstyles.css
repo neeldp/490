@@ -138,6 +138,7 @@ transition: transform 80ms ease-in;
 .timeline{
   margin:0 auto;
   width:75%;
+  height: 100%;
   padding:20px;
   border:none;
   background-color: orange;
