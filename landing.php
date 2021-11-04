@@ -35,7 +35,18 @@
 					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
 					echo "<p class='ptext'>". $row['text']."</p>";
 					echo "<p class='ptime'>". $row['time']."</p>";
+		
+					$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
 
+					if($sql->num_rows > 0){
+						while($r = mysqli_fetch_array($sql))
+						{
+							echo $r['date']."<br>";
+							echo $r['name'].":";
+							echo $r['text']."<br><br>";
+
+						}
+					}
 					echo '<form method="POST" action="backend.php">';
 					echo '<div class ="form-group">';
 					echo '<label>Comment:</label>';
