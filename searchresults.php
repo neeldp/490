@@ -5,14 +5,9 @@ require 'nav.php';
 ?>
 
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
-<html lang = "en">
-	<head>
-        	<title> USER </title>
-       		<meta charset = "utf-8" />
-	</head>
     
 	<body>	
-		<h1 class="tmln"> searchResults</h1> 
+		<h1> searchResults</h1> 
 		<div>
 			<?php
             $conn = connect_db();

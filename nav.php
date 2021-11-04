@@ -19,7 +19,7 @@
 						<label>Search:</label>
 						<input class= 'form-control w-25' type="text" name="search">
 					</div>	
-					<sp><button class = 'button-login' type="submit" name="register" value= 'login' class="register">Search</button>
+					<sp><button class = 'button-login' type="submit" name="register" value= 'login' class="searchbtn">Search</button>
 				</form>
 			</div>
 			</li>	
