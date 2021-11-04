@@ -31,13 +31,13 @@
 				while($row = mysqli_fetch_array($result))
 				{
 					echo "<div class='posts'>";
-					echo "<p class='puser'>". $row['user']."<br>"."</p>";
+					echo "<p class='puser'>". $row['user']."</p>";
 					echo "&nbsp";
-					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
+					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
 					echo "&nbsp";
-					echo "<p class='ptext'>". $row['text']."<br>"."</p>";
+					echo "<p class='ptext'>". $row['text']."</p>";
 					echo "&nbsp";
-					echo "<p class='ptime'>". $row['time']."<br>"."</p>";
+					echo "<p class='ptime'>". $row['time']."</p>";
 					echo "</div>";
 					echo "<br><br>";
 				}

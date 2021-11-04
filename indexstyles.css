@@ -136,20 +136,13 @@ transition: transform 80ms ease-in;
 
 
 .timeline{
-  margin:0 auto;
-  display: grid;
-  grid-template-columns:75% ;
-  height: 100%;
-  padding:20px;
-  border:none;
-  background-color: orange;
-  overflow: hidden;
-  position: relative;
+  display:grid;
+  grid-template-columns: 100%;
 }
 
 .posts{
   margin:0 , auto; 
-  display: flex;
+
   width: 75%;
   height: 25%;
   }
@@ -162,6 +155,7 @@ transition: transform 80ms ease-in;
 .post_image{
   margin:0 auto;
   float:right;
+  width: 75%;
 }
 .ptext{
   font-size:50px;
