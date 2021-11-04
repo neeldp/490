@@ -21,9 +21,9 @@
 
 	?>
 	<!-- Timeline Code --> 
-	<h1> My Timeline </h1> 
-	<div class = "timeline">
 	
+	<div class = "timeline">
+		<h1> My Timeline </h1> 
 		<?php
 			$conn = connect_db();
 			$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");

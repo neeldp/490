@@ -138,12 +138,17 @@ transition: transform 80ms ease-in;
 .timeline{
   display:grid;
 }
+.timeline h1{
+  margin-left:auto;
+}
 
 .posts{
     font-size: 50px;
     justify-content:center;
     align-content:center;
-    border:1px solid #000;
+    background-color: gray;
+    width: 75%;
+    margin: 0 auto;
   }
 .puser{
   color:#000;
