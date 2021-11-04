@@ -10,7 +10,7 @@ header{
   height: 80px;
   display: flex;
   align-items: center;
-  border-bottom:5px solid #000;
+  border-bottom:2px solid #000;
   }
   
   header * {
@@ -137,25 +137,32 @@ transition: transform 80ms ease-in;
 
 .timeline{
   display:grid;
-  grid-template-columns: 100%;
+  /* grid-template-columns: 20% 60% 20%; */
   background-color: orange;
 }
 
 .posts{
     font-size: 50px;
     background-color: green;
+    justify-content:center;
+    align-content:center;
   }
 .puser{
-
   color:#000;
- 
-}
+  border-bottom: 2px solid;
+  padding-bottom: 5px;
+  padding-left: 15px;}
 .post_image{
   border: orange;
+  display: block;
+  margin: 0 auto;
+  /* border-top: 5px solid; */
 }
 .ptext{
   font-size:50px;
-
+  border-top: 2px solid;
+  padding-bottom: 5px;
+  padding-left: 15px;
 }
 .ptime{
   font-size:50px;
