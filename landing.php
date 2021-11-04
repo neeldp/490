@@ -21,7 +21,7 @@
 
 	?>
 	<!-- Timeline Code --> 
-	<h1 class="tmln"> My Timeline </h1> 
+	<h1> My Timeline </h1> 
 	<div class = "timeline">
 	
 		<?php
