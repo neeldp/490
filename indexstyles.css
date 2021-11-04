@@ -142,6 +142,7 @@ transition: transform 80ms ease-in;
   border:none;
   background-color: orange;
   overflow: hidden;
+  position: absolute;
 }
 
 .posts{
