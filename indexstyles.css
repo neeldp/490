@@ -134,12 +134,11 @@ transition: transform 80ms ease-in;
   margin-right: auto; 
 }
 
-
 .timeline{
   display:grid;
 }
 .timeline h1{
-  margin-left:auto;
+  padding-left:1000px
 }
 
 .posts{
