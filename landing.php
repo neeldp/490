@@ -32,8 +32,11 @@
 				{
 					echo "<div class='posts'>";
 					echo "<p class='puser'>". $row['user']."</p>"."<br>";
+					echo "&nbsp";
 					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
+					echo "&nbsp";
 					echo "<p class='ptext'>". $row['text']."</p>"."<br>";
+					echo "&nbsp";
 					echo "<p class='ptime'>". $row['time']."</p>"."<br>";
 					echo "</div>";
 					echo "<br><br>";
