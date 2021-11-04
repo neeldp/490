@@ -138,10 +138,12 @@ transition: transform 80ms ease-in;
 .timeline{
   display:grid;
   grid-template-columns: 100%;
+  background-color: orange;
 }
 
 .posts{
     font-size: 50px;
+    background-color: green;
   }
 .puser{
 
