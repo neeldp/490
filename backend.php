@@ -36,10 +36,13 @@ if($_POST){
             $sql = $sql->fetch_assoc();
             $isAdmin = $sql['isAdmin'];
             if(password_verify($password, $sql['password'])){
-                
-                $_SESSION['username'] =$username;
-                $_SESSION['isAdmin'] = $isAdmin;
-                header('location: landing.php');
+                if(strlen($username) == 0){
+                    header('location: index.php');
+                }else{
+                    $_SESSION['username'] =$username;
+                    $_SESSION['isAdmin'] = $isAdmin;
+                    header('location: landing.php');
+                }
             }else{
                 header('location: index.php');
                 exit();
