@@ -20,13 +20,12 @@ header{
   
   header li{
   margin:15px;
-  
   }
   
   header li a {
   color: #000000;
   text-decoration: none;
-  }
+}
 body {    
   font-family: 'Montserrat', sans-serif;
   color: #200000; 
