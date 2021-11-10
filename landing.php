@@ -35,7 +35,7 @@
 					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
 					echo "<p class='ptext'>". $row['text']."</p>";
 					echo "<p class='ptime'>". $row['time']."</p>";
-					
+
 					$id = $row['id'];
 					$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
 

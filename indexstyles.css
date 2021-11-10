@@ -148,6 +148,7 @@ transition: transform 80ms ease-in;
     background-color: gray;
     width: 75%;
     margin: 0 auto;
+    border-radius: 25px;
   }
 .puser{
   color:#000;
