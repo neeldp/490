@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 require 'header.php';
 require 'db_key.php';
 require 'nav.php';

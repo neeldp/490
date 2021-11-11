@@ -1,11 +1,10 @@
 <?php 
-session_start();
-if($_SESSION['isAdmin'] ==  0){
-	header('location: landing.php');	
-}
 require 'header.php';
 require 'db_key.php';
 require 'nav.php';
+if($_SESSION['isAdmin'] ==  0){
+	header('location: landing.php');	
+}
 ?>
 
 <body>
