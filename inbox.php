@@ -13,7 +13,7 @@ require 'nav.php';
            $result = $conn->query($sql);
            if($result -> num_rows > 0){
             while($row = mysqli_fetch_array($result)){
-                echo "<p>" . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>";
+                echo "<p class='>" . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>";
             }
         }
         $conn->close();
