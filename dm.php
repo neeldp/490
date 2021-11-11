@@ -11,7 +11,6 @@
             if(!$result){
                 die("Invalid ". mysql_error());
             }
-            echo "BIG POSS";
         }
     }
 ?>
