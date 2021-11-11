@@ -9,3 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet"> 
 </head>
+<?php
+session_start();
+ini_set('session.cookie_httponly', 1);
+ini_set('session.hash_function', 'whirlpool');
+ini_set('session.use_only_cookies', 1);
+ini_set('session.cookie_secure', 1);
+?>
