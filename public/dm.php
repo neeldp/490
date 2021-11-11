@@ -1,4 +1,5 @@
 <?php
+    require header.php;
     if($_POST){
         require 'db_key.php';
         $conn = connect_db();

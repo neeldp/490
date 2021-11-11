@@ -8,7 +8,8 @@ require 'nav.php';
     <div class="inbox_style">
         <?php
            $conn = connect_db();
-           $usr = $_SESSION['username']; 
+           $usr = $_SESSION['username'];
+
            $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE `receiver` = '$usr'";
            $result = $conn->query($sql);
            if($result -> num_rows > 0){
@@ -16,7 +17,7 @@ require 'nav.php';
                    echo "<p> " . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>" . "</p>";
                 }
             }
-            $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE `receiver` = '$usr'";
+            $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE `sender` = '$usr' ";
             $result = $conn->query($sql);
             if($result -> num_rows > 0){
                 while($row = mysqli_fetch_array($result)){
