@@ -1,5 +1,6 @@
 <?php session_start();
-require 'header.php';?>
+require 'header.php';
+require 'backend.php'?>
 <header>
 	<nav>
 		<ul>
