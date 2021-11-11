@@ -2,14 +2,8 @@
 require 'nav.php';
 ?>
 
-<!DOCTYPE html>
 <!-- This file is used for creating a post for the CS 490 SEC. 003 Group 8 Simple Social Media Project -->
-<html lang = "en">
-	<head>
-        	<title> Post </title>
-       		<meta charset = "utf-8" />
-	</head>
-    
+
 	<body>
 		<!-- Send Messages -->
 		<div class ="form-container message">
