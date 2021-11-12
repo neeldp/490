@@ -12,7 +12,7 @@ $NAME = $_GET["name"];
            $conn = connect_db();
            $usr = $_SESSION['username'];
 
-           $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE (`receiver` = '{$usr}' OR `receiver` = '{$NAME}')  AND (`sender` = '{$NAME}' OR `sender` = '{$usr}') ORDER BY id";
+           $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE (`receiver` = '{$usr}' OR `receiver` = '{$NAME}')  AND (`sender` = '{$NAME}' OR `sender` = '{$usr}')";
            $result = $conn->query($sql);
            if($result -> num_rows > 0){
                while($row = mysqli_fetch_array($result)){
