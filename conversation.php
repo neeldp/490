@@ -15,7 +15,7 @@ $NAME = $_GET["name"];
             if(!$result){
                 die("Invalid ". mysqli_error($conn));
             }
-            $query = http_build_query($_GET)
+            $query = http_build_query($_GET);
             header("Location: conversation.php".'?'.$query); 
             }?>
 
