@@ -6,38 +6,20 @@ require 'nav.php';
 
 <body>
     <div class="inbox_style">
-        <?php
-           $conn = connect_db();
-           $usr = $_SESSION['username'];
-
-           $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE `receiver` = '$usr'";
-           $result = $conn->query($sql);
-           if($result -> num_rows > 0){
-               while($row = mysqli_fetch_array($result)){
-                   echo "<p> " . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>" . "</p>";
-                }
-            }
-            $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE `sender` = '$usr' ";
-            $result = $conn->query($sql);
-            if($result -> num_rows > 0){
-                while($row = mysqli_fetch_array($result)){
-                    echo "<p> Second arr </p>";
-                    echo "<p> " . $row['text_message'] . "</br>" . $row['reciever'] . "<br><br>" . "</p>";
-                 }
+       <a href= sendMessage.php> Send a new message. </a> 
+       <ul> <tr> <th> Conversation Name </th></tr> 
+        <?php 
+        $conn = connect_db();
+        $usr = $_SESSION['username'];
+        $sql = "SELECT sender FROM dm_table WHERE 'reciever' = '$usr";
+        $result = $conn->query($sql);
+        if($result -> num_rows > 0){
+            while($row = mysqli_fetch_array($result)){
+                echo "<td> <a> " .$row['sender']  . "</a></td>";
              }
-
-        $conn->close();
+         }
         ?>
-        <div class ="form-container message">
-			<form method='POST' action ='backend.php'>
-				<div class='form-group'>
-					<label>To:</label>
-					<input class= 'form-control w-25' type="text" name="to">
-					<label>Message:</label>
-					<input class= 'form-control w-25' type="text" name="message">
-                </div>
-				<button class = 'btn btn-outline-info' type="submit" name="submitMsg" value= 'message' class="submitMsg">Message</button>
-			</form>
-		</div>	
+        </ul> 
+
     </div>
 </body>
