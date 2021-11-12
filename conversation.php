@@ -2,8 +2,8 @@
 require 'header.php';
 require "db_key.php";
 require 'nav.php';
-$NAME = $_GET['NAME'];
-echo 'Conversation with ' . htmlspecialchars($_GET["name"]) . '!';
+$NAME = $_GET["name"];
+//echo 'Conversation with ' . htmlspecialchars($_GET["name"]) . '!';
 ?>
 
 <body>
