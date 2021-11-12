@@ -19,7 +19,7 @@ $NAME = $_GET["name"];
                    echo "<p> " . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>" . "</p>";
                 }
             }
-            echo "<p> Should be current users sent messages </p>"
+            echo "<p> Should be current users sent messages </p>";
             $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE `receiver` = '{$NAME}' AND `sender` = '{$usr}'";
             $result = $conn->query($sql);
             if($result -> num_rows > 0){
