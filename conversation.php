@@ -30,15 +30,25 @@ $NAME = $_GET["name"];
         $conn->close();
         ?>
         <div class ="form-container message">
-            <form method='POST' action ='backend.php'>
+            <form method='POST' action ='conversation.php'>
                 <div class='form-group'>
-                    <label>To:</label>
-                    <input class= 'form-control w-25' type="text" name="to">
                     <label>Message:</label>
                     <input class= 'form-control w-25' type="text" name="message">
                 </div>
                 <button class = 'btn btn-outline-info' type="submit" name="submitMsg" value= 'message' class="submitMsg">Message</button>
             </form>
-        </div>    
+        </div> 
+        <?   
+        if(isset($_POST['submitMsg'])){
+            $sender = $_SESSION['username'];
+            $receiver = $NAME;
+            $text_message =  $_POST['message'];
+            $sql = "INSERT INTO `dm_table`(`sender`,`text_message`,`receiver`) VALUES ('$sender','$text_message','$receiver')";
+            $result = $conn->query($sql);
+            if(!$result){
+                die("Invalid ". mysqli_error($conn));
+            }
+            header("location: conversation.php?name=$NAME");
+            }?>
     </div>
 </body>
