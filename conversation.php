@@ -5,6 +5,18 @@ require 'nav.php';
 $NAME = $_GET["name"];
 //echo 'Conversation with ' . htmlspecialchars($_GET["name"]) . '!';
 ?>
+<?php 
+        if(isset($_POST['replyMsg'])){
+            $sender = $_SESSION['username'];
+            $receiver = $NAME;
+            $text_message =  $_POST['message'];
+            $sql = "INSERT INTO `dm_table`(`sender`,`text_message`,`receiver`) VALUES ('$sender','$text_message','$receiver')";
+            $result = $conn->query($sql);
+            if(!$result){
+                die("Invalid ". mysqli_error($conn));
+            }
+            header('Location: '); 
+            }?>
 
 <body>
     <div class="inbox_style">
@@ -35,20 +47,9 @@ $NAME = $_GET["name"];
                     <label>Message:</label>
                     <input class= 'form-control w-25' type="text" name="message">
                 </div>
-                <button class = 'btn btn-outline-info' type="submit" name="submitMsg" value= 'message' class="submitMsg">Message</button>
+                <button class = 'btn btn-outline-info' type="submit" name="replyMsg" value= 'message' class="replyMsg">Message</button>
             </form>
         </div> 
-        <?php 
-        if(isset($_POST['submitMsg'])){
-            $sender = $_SESSION['username'];
-            $receiver = $NAME;
-            $text_message =  $_POST['message'];
-            $sql = "INSERT INTO `dm_table`(`sender`,`text_message`,`receiver`) VALUES ('$sender','$text_message','$receiver')";
-            $result = $conn->query($sql);
-            if(!$result){
-                die("Invalid ". mysqli_error($conn));
-            }
-            header('Location: '.$_SERVER['PHP_SELF']); die;
-            }?>
+        
     </div>
 </body>
