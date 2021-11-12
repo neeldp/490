@@ -11,7 +11,7 @@ require 'nav.php';
         <?php 
         $conn = connect_db();
         $usr = $_SESSION['username'];
-        $sql = "SELECT sender FROM dm_table WHERE receiver = '$usr'";
+        $sql = "SELECT sender FROM dm_table WHERE receiver = '{$usr}'";
         $result = $conn->query($sql);
         if($result -> num_rows > 0){
             while($row = mysqli_fetch_array($result)){
