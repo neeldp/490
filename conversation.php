@@ -15,8 +15,8 @@ $NAME = $_GET["name"];
             if(!$result){
                 die("Invalid ". mysqli_error($conn));
             }
-            //$query = http_build_query($NAME);
-            //header("Location: conversation.php?name=" . $NAME); 
+            $query = http_build_query($_GET)
+            header("Location: conversation.php".'?'.$query); 
             }?>
 
 <body>
@@ -42,17 +42,15 @@ $NAME = $_GET["name"];
             // }
         $conn->close();
         ?>
-        <?php
-        echo '<div class ="form-container message">';
-            $act = 'conversation.php?name=' . $NAME;
-            echo "<form method='POST' action = $act>";
-               echo "<div class='form-group'>";
-                echo    "<label>Message:</label>";
-                echo   "<input class= 'form-control w-25' type='text' name='message'>";
-                echo "</div>";
-                echo "<button class = 'btn btn-outline-info' type='submit' name='replyMsg' value= 'message' class='replyMsg'>Message</button>";
-           echo "</form>";
-        echo "</div>" ;
-        ?>
+        <div class ="form-container message">
+            <form method='POST' action ='conversation.php'>
+                <div class='form-group'>
+                    <label>Message:</label>
+                    <input class= 'form-control w-25' type="text" name="message">
+                </div>
+                <button class = 'btn btn-outline-info' type="submit" name="replyMsg" value= 'message' class="replyMsg">Message</button>
+            </form>
+        </div> 
+        
     </div>
 </body>
