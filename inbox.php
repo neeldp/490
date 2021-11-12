@@ -15,7 +15,7 @@ require 'nav.php';
         $result = $conn->query($sql);
         if($result -> num_rows > 0){
             while($row = mysqli_fetch_array($result)){
-                echo "<td> <a> " .$row['sender']  . "</a></td>";
+                echo "<td> <a> " . $row['sender']  . "</a></td>";
              }
          }
         ?>
