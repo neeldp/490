@@ -15,7 +15,11 @@ require 'nav.php';
         $result = $conn->query($sql);
         if($result -> num_rows > 0){
             while($row = mysqli_fetch_array($result)){
-                echo "<tr><td>".  "<a href='conversation.php?name=".$row['sender'] . "'>" . $row['sender']  . "</a></td></tr>";
+                if ($row['sender'] == $usr ){
+                echo "<tr><td>".  "<a href='conversation.php?name=".$row['reveiver'] . "'>" . $row['receiver']  . "</a></td></tr>";
+                }else{
+                    echo "<tr><td>".  "<a href='conversation.php?name=".$row['sender'] . "'>" . $row['sender']  . "</a></td></tr>";
+                }
              }
         }
          $conn->close();
