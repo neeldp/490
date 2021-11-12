@@ -2,8 +2,8 @@
 require 'header.php';
 require "db_key.php";
 require 'nav.php';
-$NAME = $_GET['NAME'];
-echo 'Conversation with ' . htmlspecialchars($_GET["name"]) . '!';
+$NAME = $_GET["name"];
+//echo 'Conversation with ' . htmlspecialchars($_GET["name"]) . '!';
 ?>
 
 <body>
@@ -19,6 +19,14 @@ echo 'Conversation with ' . htmlspecialchars($_GET["name"]) . '!';
                    echo "<p> " . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>" . "</p>";
                 }
             }
+            echo "<p> Should be current users sent messages </p>"
+            $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE `receiver` = '{$NAME}' AND `sender` = '{$usr}'";
+            $result = $conn->query($sql);
+            if($result -> num_rows > 0){
+                while($row = mysqli_fetch_array($result)){
+                    echo "<p> " . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>" . "</p>";
+                 }
+             }
         $conn->close();
         ?>
         <div class ="form-container message">
