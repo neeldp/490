@@ -38,7 +38,7 @@ $NAME = $_GET["name"];
                 <button class = 'btn btn-outline-info' type="submit" name="submitMsg" value= 'message' class="submitMsg">Message</button>
             </form>
         </div> 
-        <?   
+        <?php 
         if(isset($_POST['submitMsg'])){
             $sender = $_SESSION['username'];
             $receiver = $NAME;
