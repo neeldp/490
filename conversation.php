@@ -48,7 +48,7 @@ $NAME = $_GET["name"];
             if(!$result){
                 die("Invalid ". mysqli_error($conn));
             }
-            header("location: conversation.php?name=".$NAME);
+            header('Location: '.$_SERVER['PHP_SELF']); die;
             }?>
     </div>
 </body>
