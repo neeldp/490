@@ -110,6 +110,18 @@ if($_POST){
         header("location: inbox.php");
     }
     
+        if(isset($_POST['replyMsg'])){
+            $sender = $_SESSION['username'];
+            $receiver = $_SESSION['get'];
+            $text_message =  $_POST['message'];
+            $sql = "INSERT INTO `dm_table`(`sender`,`text_message`,`receiver`) VALUES ('$sender','$text_message','$receiver')";
+            $result = $conn->query($sql);
+            if(!$result){
+                die("Invalid ". mysqli_error($conn));
+            }
+            $query = http_build_query($_GET);
+            header("Location: conversation.php?name=".$receiver); 
+            }
     if(isset($_POST['adminbtn'])){
         $adminTerm = $_POST['admin']; 
         //$result = "DELETE FROM `comments` WHERE (`post_ID` = 'posts.id')";

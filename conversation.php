@@ -3,21 +3,10 @@ require 'header.php';
 require "db_key.php";
 require 'nav.php';
 $NAME = $_GET["name"];
+$_SESSION['get'] = $NAME;
 //echo 'Conversation with ' . htmlspecialchars($_GET["name"]) . '!';
 ?>
-<?php 
-        if(isset($_POST['replyMsg'])){
-            $sender = $_SESSION['username'];
-            $receiver = $NAME;
-            $text_message =  $_POST['message'];
-            $sql = "INSERT INTO `dm_table`(`sender`,`text_message`,`receiver`) VALUES ('$sender','$text_message','$receiver')";
-            $result = $conn->query($sql);
-            if(!$result){
-                die("Invalid ". mysqli_error($conn));
-            }
-            $query = http_build_query($_GET);
-            header("Location: conversation.php".'?'.$query); 
-            }?>
+
 
 <body>
     <div class="inbox_style">
@@ -43,7 +32,7 @@ $NAME = $_GET["name"];
         $conn->close();
         ?>
         <div class ="form-container message">
-            <form method='POST' action ='conversation.php'>
+            <form method='POST' action ='backend.php'>
                 <div class='form-group'>
                     <label>Message:</label>
                     <input class= 'form-control w-25' type="text" name="message">
