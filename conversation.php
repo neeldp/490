@@ -9,7 +9,7 @@ $_SESSION['get'] = $NAME;
 
 
 <body>
-    <div class="inbox_style">
+    <div class="inbox_style" id="fresh">
         <?php
            $conn = connect_db();
            $usr = $_SESSION['username'];
@@ -42,4 +42,15 @@ $_SESSION['get'] = $NAME;
         </div> 
         
     </div>
+    <script>
+        $(document).ready(function(){
+            function refresh(){
+                var div = $('#fresh'), divHtml = div.html();
+                div.html(divHtml);
+            }
+            setInterval(function(){
+                refresh()
+            }, 1000);
+        })
+    </script> 
 </body>
