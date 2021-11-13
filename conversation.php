@@ -9,6 +9,13 @@ $_SESSION['get'] = $NAME;
 
 
 <body>
+    <script> 
+    $(document).ready(function(){
+    setInterval(function(){
+        $("#fresh").load(window.location.href + " #fresh" );
+    }, 1000);
+    });
+    </script>
     <div class="inbox_style" id="fresh">
         <?php
            $conn = connect_db();
@@ -42,17 +49,5 @@ $_SESSION['get'] = $NAME;
             </form>
         </div> 
         
-    <script>
-        $(document).ready(function()
-        {
-            function refresh(){ 
-                $( "#here" ).load(window.location.href + " #here" );
-            }
 
-            setInterval(function()
-            {
-                refresh()
-            }, 1000); 
-        })
-    </script> 
 </body>
