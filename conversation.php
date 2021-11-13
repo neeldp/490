@@ -7,7 +7,23 @@ $_SESSION['get'] = $NAME;
 //echo 'Conversation with ' . htmlspecialchars($_GET["name"]) . '!';
 ?>
 
+<script>
+    $(document).ready(function()
+{
+    function refresh()
+    {
+        var div = $('#fresh'),
+            divHtml = div.html();
 
+        div.html(divHtml);
+    }
+
+    setInterval(function()
+    {
+        refresh()
+    }, 1000); //300000 is 5minutes in ms
+
+ </script>
 <body>
     <div class="inbox_style" id="fresh">
         <?php
@@ -43,14 +59,6 @@ $_SESSION['get'] = $NAME;
         
     </div>
     <script>
-        $(document).ready(function(){
-            function refresh(){
-                var div = $('#fresh'), divHtml = div.html();
-                div.html(divHtml);
-            }
-            setInterval(function(){
-                refresh()
-            }, 1000);
-        })
+            })
     </script> 
 </body>
