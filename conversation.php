@@ -45,12 +45,8 @@ $_SESSION['get'] = $NAME;
     <script>
         $(document).ready(function()
         {
-            function refresh()
-            {
-                var div = $('#fresh'),
-                    divHtml = div.html();
-
-                div.html(divHtml);
+            function refresh(){ 
+                $( "#here" ).load(window.location.href + " #here" );
             }
 
             setInterval(function()
