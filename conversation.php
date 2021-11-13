@@ -31,6 +31,7 @@ $_SESSION['get'] = $NAME;
             // }
         $conn->close();
         ?>
+        </div>
         <div class ="form-container message">
             <form method='POST' action ='backend.php'>
                 <div class='form-group'>
@@ -41,22 +42,21 @@ $_SESSION['get'] = $NAME;
             </form>
         </div> 
         
-    </div>
     <script>
         $(document).ready(function()
-{
-    function refresh()
-    {
-        var div = $('#fresh'),
-            divHtml = div.html();
+        {
+            function refresh()
+            {
+                var div = $('#fresh'),
+                    divHtml = div.html();
 
-        div.html(divHtml);
-    }
+                div.html(divHtml);
+            }
 
-    setInterval(function()
-    {
-        refresh()
-    }, 1000); //300000 is 5minutes in ms
-})
+            setInterval(function()
+            {
+                refresh()
+            }, 1000); 
+        })
     </script> 
 </body>
