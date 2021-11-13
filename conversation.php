@@ -43,16 +43,20 @@ $_SESSION['get'] = $NAME;
         
     </div>
     <script>
-        function refresh()
-        {
-            var div = $('#fresh'),
-                divHtml = div.html();
+        $(document).ready(function()
+{
+    function refresh()
+    {
+        var div = $('#fresh'),
+            divHtml = div.html();
 
-            div.html(divHtml);
-        }
-        setInterval(function()
-        {
-            refresh()
-        }, 1000); //300000 is 5minutes in ms
+        div.html(divHtml);
+    }
+
+    setInterval(function()
+    {
+        refresh()
+    }, 1000); //300000 is 5minutes in ms
+})
     </script> 
 </body>
