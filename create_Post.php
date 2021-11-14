@@ -7,8 +7,8 @@ require 'vendor/autoload.php';
 		require 'vendor/autoload.php';
 
 		$session = new SpotifyWebAPI\Session(
-			'CLIENT_ID',
-			'CLIENT_SECRET'
+			'b7d9baca79b6424597551d19d5fd02cf',
+			'6b988bb0c7ae4cf58013ff29e6ce5a26'
 		);
 		
 		$session->requestCredentialsToken();
