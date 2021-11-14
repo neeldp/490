@@ -30,20 +30,3 @@
     }
 }
 
-{
-   "repositories": [{
-     "type": "package",
-     "package": {
-        "name": "neeldp/490",
-        "version": "",
-        "source": {
-            "url": "https://github.com/neeldp/490.git",
-            "type": "git",
-            "reference": ""
-        }
-    }
-  }],
-  "require": {
-      "neeldp/490": ""
-  }
-}
