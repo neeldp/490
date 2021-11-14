@@ -24,6 +24,10 @@
 	<div class = "timeline">
 		<h1> My Timeline </h1> 
 		<?php
+			$value = getenv("VARNAME");
+			echo "<p>". $value."</p>";
+		?>
+		<?php
 			$conn = connect_db();
 			$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
 			if($result->num_rows > 0){

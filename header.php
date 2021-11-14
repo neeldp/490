@@ -22,7 +22,7 @@
     }
   });
 
-  console.log(token);
+  process.env.SPOTIFY_TOKEN = token; 
 </script> 
 
 <head>

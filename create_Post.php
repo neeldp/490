@@ -11,5 +11,5 @@ require 'vendor/autoload.php';
 			<button class = 'btn btn-outline-info' type="submit" name="create_Post" value= 'Post' class="submit">Post</button></form>
 		</form>
 	</div>
-
+	
 </body></html>
