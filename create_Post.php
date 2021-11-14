@@ -3,6 +3,24 @@ require 'nav.php';
 require 'vendor/autoload.php';
 ?>   
 <body>
+	<?php 
+		require 'vendor/autoload.php';
+
+		$session = new SpotifyWebAPI\Session(
+			'CLIENT_ID',
+			'CLIENT_SECRET'
+		);
+		
+		$session->requestCredentialsToken();
+		$accessToken = $session->getAccessToken();
+		
+		$conn -> connect_db(); 
+		$sql = "INSERT INTO `spotify`(`AC`) VALUES ('$accessToken')";
+		$sql = $conn->query($sql);
+	
+		
+		die();
+	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
 			<textarea class = "status" name = "post_Text" placeholder = "Write your post here!" rows="4" cols="50" maxlength = "300"autofocus></textarea> 
@@ -11,7 +29,7 @@ require 'vendor/autoload.php';
 			<button class = 'btn btn-outline-info' type="submit" name="create_Post" value= 'Post' class="submit">Post</button></form>
 		</form>
 	</div>
-	<script>
+	<!-- <script>
 		var client_id = 'b7d9baca79b6424597551d19d5fd02cf';
 		var client_secret = '6b988bb0c7ae4cf58013ff29e6ce5a26';
 		var buffer = new Buffer(); 
@@ -34,5 +52,5 @@ require 'vendor/autoload.php';
 
 		process.env.SPOTIFY_TOKEN = token;
 		console.log(token);
-	</script> 
+	</script>  -->
 </body></html>
