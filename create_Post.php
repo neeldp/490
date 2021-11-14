@@ -5,6 +5,7 @@ require 'vendor/autoload.php';
 $session = new SpotifyWebAPI\Session(
 	'b7d9baca79b6424597551d19d5fd02cf',
 	'6b988bb0c7ae4cf58013ff29e6ce5a26',
+	'https://login490.herokuapp.com'
 );
 
 $session -> requestCredentialsToken();
@@ -13,26 +14,6 @@ $accessToken = $session -> getAccessToken();
 $api = new SpotifyWebAPI\SpotifyWebAPI();
 $api -> setAccessToken($accessToken);
 
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://v1.nocodeapi.com/jake_nhan/spotify/CNRBKHbFlcgJPXzG/search?q=Sanctuary&type=track&perPage=5",
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => '',
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 0,
-    CURLOPT_FOLLOWLOCATION => true,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => 'GET',
-    CURLOPT_POSTFIELDS =>'{}',
-    CURLOPT_HTTPHEADER => array(
-    'Content-Type: application/json'
-    ),
-));
-
-$response = curl_exec($curl);
-
-curl_close($curl);
 echo $response;
 ?>   
 <body>
