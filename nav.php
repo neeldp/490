@@ -6,8 +6,8 @@ require 'backend.php'?>
 		<ul>
 			<li><a href="landing.php">Timeline</a></li>
 			<li><a href="create_Post.php">Create post</a></li>
-			<li><a href="sendMessage.php">Send a Message.</a></li>
 			<li><a href="inbox.php">Inbox</a></li>
+			<li><a href="profile.php">Profile</a></li>
 			<li><a href="index.php">logout</a></li>
 			<?php if($_SESSION['isAdmin']==1){
 				echo"<li>";

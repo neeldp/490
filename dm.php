@@ -1,4 +1,5 @@
 <?php
+    require 'header.php';
     if($_POST){
         require 'db_key.php';
         $conn = connect_db();
@@ -9,7 +10,7 @@
             $sql = "INSERT INTO 'dm_table'('sender','text_message','receiver') VALUES ('$sender','$text_message','$receiver')";
             $result = $conn->query($sql);
             if(!$result){
-                die("Invalid ". mysql_error());
+                die("Invalid ");
             }
         }
     }

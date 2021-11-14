@@ -6,28 +6,26 @@ require 'nav.php';
 
 <body>
     <div class="inbox_style">
-        <?php
-           $conn = connect_db();
-           $usr = $_SESSION['username']; 
-           $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE `receiver` = '$usr'";
-           $result = $conn->query($sql);
-           if($result -> num_rows > 0){
+       <a href= sendMessage.php> Send a new message. </a> 
+       <ul> <tr> <th> Conversation Name </th></tr> 
+        <?php 
+        $conn = connect_db();
+        $usr = $_SESSION['username'];
+        //$sql = "SELECT sender FROM dm_table WHERE receiver = '{$usr}'";
+        $sql = "SELECT receiver FROM dm_table WHERE sender = '{$usr}' UNION SELECT sender FROM dm_table WHERE receiver = '{$usr}'";
+        $result = $conn->query($sql);
+        if($result -> num_rows > 0){
             while($row = mysqli_fetch_array($result)){
-                echo "<p> " . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>" . "</p>";
-            }
+                //if ($row['sender'] == $usr ){
+                echo "<tr><td>".  "<a href='conversation.php?name=".$row['receiver'] . "'>" . $row['receiver']  . "</a></td></tr>";
+                //}else{
+                //    echo "<tr><td>".  "<a href='conversation.php?name=".$row['sender'] . "'>" . $row['sender']  . "</a></td></tr>";
+                //}
+             }
         }
-        $conn->close();
+         $conn->close();
         ?>
-        <div class ="form-container message">
-			<form method='POST' action ='backend.php'>
-				<div class='form-group'>
-					<label>To:</label>
-					<input class= 'form-control w-25' type="text" name="to">
-					<label>Message:</label>
-					<input class= 'form-control w-25' type="text" name="message">
-                </div>
-				<button class = 'btn btn-outline-info' type="submit" name="submitMsg" value= 'message' class="submitMsg">Message</button>
-			</form>
-		</div>	
+        </ul> 
+
     </div>
 </body>
