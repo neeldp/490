@@ -107,7 +107,7 @@ if($_POST){
         if(!$result){
             die("Invalid ". mysqli_error($conn));
         }
-        header("location: inbox.php");
+        header("Location: conversation.php?name=".$receiver);
     }
     
         if(isset($_POST['replyMsg'])){
