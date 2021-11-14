@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '41ee01385057cf094bccb21b274df9d438cd9fb0',
+        'reference' => 'fa0b723885452f6a24efad27106ebec45fa0afc2',
         'name' => 'jwilsson/spotify-web-api-php',
         'dev' => true,
     ),
@@ -52,7 +52,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '41ee01385057cf094bccb21b274df9d438cd9fb0',
+            'reference' => 'fa0b723885452f6a24efad27106ebec45fa0afc2',
             'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
