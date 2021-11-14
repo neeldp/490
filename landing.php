@@ -24,7 +24,7 @@
 	<div class = "timeline">
 		<h1> My Timeline </h1> 
 		<?php
-			$value = getenv("VARNAME");
+			$value = getenv("SPOTIFY_TOKEN");
 			echo "<p>". $value."</p>";
 		?>
 		<?php
