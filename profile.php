@@ -23,5 +23,5 @@ require 'db_key.php';
     }
     ?>
     <div>
-<body>
+<body></html>
         
