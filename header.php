@@ -1,29 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<script>
-  var client_id = 'b7d9baca79b6424597551d19d5fd02cf';
-  var client_secret = '6b988bb0c7ae4cf58013ff29e6ce5a26';
 
-  var authOptions = {
-    url: 'https://accounts.spotify.com/api/token',
-    headers: {
-      'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
-    },
-    form: {
-      grant_type: 'client_credentials'
-    },
-    json: true
-  };
-
-  request.post(authOptions, function(error, response, body) {
-    if (!error && response.statusCode === 200) {
-      var token = body.access_token;
-    }
-  });
-
-  process.env.SPOTIFY_TOKEN = token; 
-</script> 
 
 <head>
     <title> Not Twitter </title>
