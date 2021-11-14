@@ -1,5 +1,5 @@
 <?php
-require 'nav.php';
+require 'header.php';
 require 'nav.php';
 require 'db_key.php';
 ?>
@@ -12,7 +12,7 @@ require 'db_key.php';
     echo $user; 
     
     $conn = connect_db();
-	$result = $conn->query("SELECT * FROM posts WHERE username = '$user' ORDER BY `time` DESC");
+	$result = $conn->query("SELECT * FROM posts WHERE username = '{$user}' ORDER BY `time` DESC");
 	if($result->num_rows > 0){
 	    while($row = mysqli_fetch_array($result))
 		{
