@@ -1,4 +1,3 @@
-spotify_API_FIles
 <?php require 'header.php';
 require 'nav.php';
 require 'vendor/autoload.php';

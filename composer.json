@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 {
     "name": "jwilsson/spotify-web-api-php",
     "description": "A PHP wrapper for Spotify's Web API.",
@@ -31,4 +29,21 @@
         "test": "phpcs src -v && phpunit"
     }
 }
->>>>>>> Stashed changes
+
+{
+   "repositories": [{
+     "type": "package",
+     "package": {
+        "name": "neeldp/490",
+        "version": "",
+        "source": {
+            "url": "https://github.com/neeldp/490.git",
+            "type": "git",
+            "reference": ""
+        }
+    }
+  }],
+  "require": {
+      "neeldp/490": ""
+  }
+}
