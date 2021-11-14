@@ -28,4 +28,5 @@
     "scripts": {
         "test": "phpcs src -v && phpunit"
     }
+
 }
