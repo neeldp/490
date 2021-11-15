@@ -16,7 +16,8 @@ require 'vendor/autoload.php';
 		// It's now possible to request data from the Spotify catalog
 		print_r(
 			$api->getTrack('7EjyzZcbLxW7PaaLua9Ksb')
-		);'Location: create_Post.php');
+		);
+		header('Location: create_Post.php');
 		die();
 	?> 
 	<div class = "post-body"> 
