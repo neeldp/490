@@ -19,7 +19,7 @@ require 'db_key.php';
 		
 		// Set the code on the API wrapper
 		$api->setAccessToken($accessToken);
-		echo "<p>" . $accessToken . "</p>"
+		echo "<p>" . $accessToken . "</p>";
 		$results = $api->search('Whenever, Wherever','track');
 		foreach($results->tracks->item as $track){
 			echo $track->name, '<br>';
