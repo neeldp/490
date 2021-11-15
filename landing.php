@@ -32,8 +32,6 @@
 			{
 				echo "<p class='puser'>". $row['username']."</p>";				
 				echo '<form method="POST" action="backend.php">';
-				echo '<div class ="follow button">';
-				echo '</div>';
 				echo '<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>';
 				echo '</form>';
 				
