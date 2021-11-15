@@ -25,10 +25,11 @@ require 'db_key.php';
 		foreach ($results->track as $artist) {
 			echo $artist->name, '<br>';
 		}
+		echo "<p> break </p>";
 		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
 			
 	
-		echo '<b>' . $trk->spotify . '</b>';
+		echo '<b>' . $trk->spotify-> . '</b>';
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
