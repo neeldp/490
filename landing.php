@@ -30,7 +30,10 @@
 		if($result->num_rows > 0){
 			while($row = mysqli_fetch_array($result))
 			{
-				echo "<p class='puser'>". $row['username']."</p>";				
+				echo "class='puser'>". $row['username'];	
+				
+				//echo '<button type="button>Follow"</button>';
+				
 				echo '<form method="POST" action="backend.php">';
 				echo '<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>';
 				echo '</form>';
