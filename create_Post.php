@@ -26,7 +26,7 @@ require 'db_key.php';
 		echo "<p> break </p>";
 
 		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
-		$json = json_decode($trk,true,4)
+		$json = json_decode($trk,true,4);
 		var_dump(json_decode($json, true, 4));
 		echo 'Last error: ', json_last_error_msg(), PHP_EOL, PHP_EOL;
 	?> 
