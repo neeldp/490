@@ -26,7 +26,8 @@ require 'db_key.php';
 			echo $artist->name, '<br>';
 		}
 		print_r(
-			$api->getTrack('4uLU6hMCjMI75M1A2tKUQC')
+			$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC')
+			echo '<b>' . $trk->name . '</b>';
 		);
 	?> 
 	<div class = "post-body"> 
