@@ -21,11 +21,13 @@ require 'db_key.php';
 		$api->setAccessToken($accessToken);
 		echo "<p>" . $accessToken . "</p>";
 
-		 $res = SpotifyWebAPI::search('hotel', ['track'])
+		 $res = $api->search('hotel', ['track'])
 
 		echo "<p>" . $res->name ." </p>";
 
+		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
 		
+		echo '<b>'	. $trk->href . '</b>';
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
