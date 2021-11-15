@@ -26,7 +26,7 @@
 
 		$user = $_SESSION['username'];
 		$conn = connect_db();
-		$id = $conn->query("SELECT id FROM users WHERE `username` != '{$user}'");
+		$id = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
 		echo "$id";
 		$result = $conn->query("SELECT * FROM users WHERE `username` != '{$user}'");
 		if($result->num_rows > 0){
