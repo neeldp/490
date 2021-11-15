@@ -6,7 +6,7 @@ require 'db_key.php';
 <body>
 	<?php 
 		require 'vendor/autoload.php';
-		$conn -> connect_db();
+		$conn = connect_db();
 
 		$sql = "SELECT `ac` FROM `spotify`";
         $accessToken = $conn->query($sql);
