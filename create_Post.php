@@ -29,10 +29,9 @@ require 'db_key.php';
 
 		echo "<p> break </p>";
 
-		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
-		echo $trk; 
-		echo "<br>";
-		echo '<b>' . $trk->name . '</b>';
+		print_r(
+			$api->getTrack('4uLU6hMCjMI75M1A2tKUQC')
+		);
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
