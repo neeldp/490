@@ -22,8 +22,10 @@ require 'db_key.php';
 		echo "<p>" . $accessToken . "</p>";
 
 		 $res = $api->search('hotel', ['track']);
+		foreach($res->tracks->items as $track){
+			echo $track->id, '<br>';
+		}
 
-		echo "<p>" . $res ." </p>";
 
 		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
 		
