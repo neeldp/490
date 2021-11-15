@@ -26,9 +26,8 @@ require 'db_key.php';
 		echo "<p> break </p>";
 
 		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
-		$key = array_search("https://open.spotify.com/track/4uLU6hMCjMI75M1A2tKUQC",$trk);
-		echo "<br>";
-		echo '<b>' . $key . '</b>';
+		
+		echo '<b>'	. $trk[external_urls]->spotify . '</b>';
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
