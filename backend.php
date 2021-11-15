@@ -153,7 +153,7 @@ if($_POST){
 		$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
 		$row = mysqli_fetch_array($result);
 		$id = $row['id'];
-        $following = $_SESSION['following'];
+        $following = $_POST['following'];
         echo "$following";
         //echo "hi";
     }
