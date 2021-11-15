@@ -19,8 +19,25 @@
 	}
 
 	?>
+
+	<div class = "follow list">
+
+		<?php
+
+		$user = $_SESSION['username'];
+		$conn = connect_db();
+		$result = $conn->query("SELECT * FROM users WHERE username != '{$user}'");
+		if($result->num_rows > 0){
+			while($row = mysqli_fetch_array($result))
+			{
+				echo "<p class='puser'>". $row['user']."</p>";
+			}
+		}
+
+		?>
+	</div>	
+
 	<!-- Timeline Code --> 
-	
 	<div class = "timeline">
 		<h1> My Timeline </h1> 
 		<?php
