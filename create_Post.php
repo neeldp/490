@@ -28,7 +28,7 @@ require 'db_key.php';
 		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
 			
 	
-		echo '<b>' . $trk->name . '</b>';
+		echo '<b>' . $trk->id . '</b>';
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
