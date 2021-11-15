@@ -30,7 +30,7 @@
 		if($result->num_rows > 0){
 			while($row = mysqli_fetch_array($result))
 			{
-				echo "class='puser'>". $row['username'];	
+				echo $row['username'];	
 				
 				//echo '<button type="button>Follow"</button>';
 				
