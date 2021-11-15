@@ -158,6 +158,11 @@ if($_POST){
         //echo "hi";
     }
 
+    if(isset($_POST['searchbtnsong'])){
+        $searchTerm = $_POST['searchSong'];
+        header('location: create_Post.php?song=' . " $searchTerm");
+
+    }
 
 } 
 
