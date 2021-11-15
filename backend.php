@@ -160,7 +160,7 @@ if($_POST){
 
     if(isset($_POST['searchbtnsong'])){
         $searchTerm = $_POST['searchSong'];
-        header('location: create_Post.php?song=' . " $searchTerm");
+        header('location: create_Post.php?song=' . "$searchTerm");
 
     }
 

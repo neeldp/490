@@ -36,7 +36,7 @@ $_SESSION['song'] = $NAME;
 		foreach($res->tracks->items as $track){
 			echo "<a href='backend.php?id=". $track->id . "'>" . $track->name . "</a>" . '<br>';
 		}
-		
+		echo "<p>" . $_SESSION["song"] . "</p>";
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
