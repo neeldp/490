@@ -35,14 +35,13 @@
 			while($row = mysqli_fetch_array($result))
 			{
 				echo $row['username'];
-				echo '<button type="button>Follow"</button>';
-				echo "<br>";
+				//echo '<button type="button>Follow"</button>';
 
 				//echo '<button onclick="myFunction()>"Follow"</button>';
 				
-				//echo '<form method="POST" action="backend.php">';
-				//echo '<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>';
-				//echo '</form>';
+				echo '<form method="POST" action="backend.php">';
+				echo '<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>';
+				echo '</form>';
 				
 				$id = $row['id'];
 			}
