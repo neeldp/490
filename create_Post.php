@@ -32,7 +32,7 @@ $_SESSION['song'] = $NAME;
 		
 		
 
-		$res = $api->search('hotel', ['track']);
+		$res = $api->search($_SESSION["song"], ['track']);
 		foreach($res->tracks->items as $track){
 			echo "<a href='backend.php?id=". $track->id . "'>" . $track->name . "</a>" . '<br>';
 		}
