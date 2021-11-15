@@ -30,7 +30,7 @@
 		if($result->num_rows > 0){
 			while($row = mysqli_fetch_array($result))
 			{
-				echo "<p class='puser'>". $row['user']."</p>";
+				echo "<p class='puser'>". $row['username']."</p>";
 			}
 		}
 
