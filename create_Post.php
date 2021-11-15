@@ -26,7 +26,7 @@ require 'db_key.php';
 			echo "<a href='backend.php?name=". $track->id . "'>" . $track->name . "</a>" . '<br>';
 		}
 
-		"<a href='backend.php?name="
+
 		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
 		
 		echo '<b>'	. $trk->href . '</b>';
