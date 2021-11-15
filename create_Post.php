@@ -25,7 +25,9 @@ require 'db_key.php';
 		foreach ($results->artists->items as $artist) {
 			echo $artist->name, '<br>';
 		}
-
+		print_r(
+			$api->getTrack('4uLU6hMCjMI75M1A2tKUQC')
+		);
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
