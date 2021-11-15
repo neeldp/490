@@ -25,10 +25,10 @@ require 'db_key.php';
 		foreach ($results->artists->items as $artist) {
 			echo $artist->name, '<br>';
 		}
-		print_r(
-			$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC')
-			echo '<b>' . $trk->name . '</b>';
-		);
+		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
+			
+	
+		echo '<b>' . $trk->name . '</b>';
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
