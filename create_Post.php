@@ -1,25 +1,30 @@
 <?php require 'header.php';
 require 'nav.php';
-require 'vendor/autoload.php';
 require 'db_key.php';
 ?>   
 <body>
 	<?php 
 		require 'vendor/autoload.php';
-		$conn = connect_db();
 
-		$sql = "SELECT `ac` FROM `spotify`";
-        $accessToken = $conn->query($sql);
-
-		$api = new SpotifyWebAPI\SpotifyWebAPI();
-		$api->setAccessToken($accessToken);
-
-		// It's now possible to request data from the Spotify catalog
-		print_r(
-			$api->getTrack('7EjyzZcbLxW7PaaLua9Ksb')
+		$session = new SpotifyWebAPI\Session(
+			'b7d9baca79b6424597551d19d5fd02cf',
+			'6b988bb0c7ae4cf58013ff29e6ce5a26',
+			'https://login490.herokuapp.com/redir.php'
 		);
-		header('Location: create_Post.php');
-		die();
+		
+		$api = new SpotifyWebAPI\SpotifyWebAPI();
+		
+		$session->requestCredentialsToken();
+		$accessToken = $session->getAccessToken();
+		
+		// Set the code on the API wrapper
+		$api->setAccessToken($accessToken);
+		echo "<p>" . $accessToken . "</p>";
+		$results = $api->search('Whenever, Wherever','track');
+		foreach($results->tracks->item as $track){
+			echo $track->name, '<br>';
+		}
+
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
