@@ -26,7 +26,7 @@
 
 		$user = $_SESSION['username'];
 		$conn = connect_db();
-		$result = $conn->query("SELECT * FROM users WHERE username != '{$user}'");
+		$result = $conn->query("SELECT * FROM users WHERE `username` != '{$user}'");
 		if($result->num_rows > 0){
 			while($row = mysqli_fetch_array($result))
 			{
