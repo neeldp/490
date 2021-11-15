@@ -32,7 +32,13 @@
 			{
 				echo "<p class='puser'>". $row['username']."</p>";
 				
-				echo '<button type="button"> Follow</button>'; 
+				//echo '<button type="button"> Follow</button>';
+				
+				echo '<form method="POST" action="backend.php">';
+				echo '<div class ="follow button">';
+				echo '</div>';
+				echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
+				echo '</form>';
 				
 				$id = $row['id'];
 			}
