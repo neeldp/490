@@ -19,7 +19,7 @@ require 'db_key.php';
 		
 		// Set the code on the API wrapper
 		$api->setAccessToken($accessToken);
-		echo "<p>" . $_SESSION[accesstoken] . "</p>"
+		echo "<p>" . $accessToken . "</p>"
 
 	?> 
 	<div class = "post-body"> 
