@@ -146,7 +146,14 @@ if($_POST){
     }
 
     if(isset($_POST['followbtn'])){
-        echo "hi";
+        $user = $_SESSION['username'];
+        $conn = connect_db();
+		$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+		$row = mysqli_fetch_array($result);
+		//$id = $row['id'];
+        $hi = $_SESSION['id'];
+        echo "$hi";
+        //echo "hi";
     }
 
 
