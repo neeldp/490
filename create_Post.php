@@ -20,14 +20,15 @@ require 'db_key.php';
 		// Set the code on the API wrapper
 		$api->setAccessToken($accessToken);
 		echo "<p>" . $accessToken . "</p>";
-		$results = $api->search('blur', 'artist');
 
-		foreach ($results->artists->items as $artist) {
-			echo $artist->name, '<br>';
-		}
-		print_r(
-			$api->getTrack('4uLU6hMCjMI75M1A2tKUQC')
-		);
+		
+
+		echo "<p> break </p>";
+
+		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
+		key = array_search("https://open.spotify.com/track/4uLU6hMCjMI75M1A2tKUQC",$trk);
+		echo "<br>";
+		echo '<b>' . $key . '</b>';
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
