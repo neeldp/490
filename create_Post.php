@@ -29,9 +29,9 @@ require 'db_key.php';
 
 		echo "<p> break </p>";
 
-		print_r(
-			$api->getTrack('4uLU6hMCjMI75M1A2tKUQC')
-		);
+		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
+		echo "<br>";
+		echo '<b>' . $trk->artists->external_urls->spotify . '</b>';
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
