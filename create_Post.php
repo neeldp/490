@@ -20,15 +20,18 @@ require 'db_key.php';
 		// Set the code on the API wrapper
 		$api->setAccessToken($accessToken);
 		echo "<p>" . $accessToken . "</p>";
+
 		$results = $api->search('blur', 'track');
 
 		foreach ($results->track as $artist) {
 			echo $artist->name, '<br>';
 		}
+
 		echo "<p> break </p>";
+
 		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
-			
-	
+		echo $trk; 
+		echo "<br>";
 		echo '<b>' . $trk->name . '</b>';
 	?> 
 	<div class = "post-body"> 
