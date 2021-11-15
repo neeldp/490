@@ -1,25 +1,10 @@
 <?php require 'header.php';
 require 'nav.php';
-require 'vendor/autoload.php';
 require 'db_key.php';
 ?>   
 <body>
 	<?php 
-		require 'vendor/autoload.php';
-		$conn = connect_db();
-
-		$sql = "SELECT `ac` FROM `spotify`";
-        $accessToken = $conn->query($sql);
-
-		$api = new SpotifyWebAPI\SpotifyWebAPI();
-		$api->setAccessToken($accessToken);
-
-		// It's now possible to request data from the Spotify catalog
-		print_r(
-			$api->getTrack('7EjyzZcbLxW7PaaLua9Ksb')
-		);
-		header('Location: create_Post.php');
-		die();
+		echo "<p>" . $_SESSION[accesstoken] . "</p>"
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
