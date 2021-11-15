@@ -21,7 +21,7 @@ require 'db_key.php';
 		$api->setAccessToken($accessToken);
 		echo "<p>" . $accessToken . "</p>";
 
-		$res = SpotifyWebAPI::search('hotel', 'track')
+		$res = SpotifyWebAPI::search('hotel', 'track');
 
 		echo "<p>" . $res ." </p>";
 
