@@ -27,7 +27,7 @@ require 'db_key.php';
 
 		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
 		
-		echo '<b>'	. $trk["external_urls"]->spotify . '</b>';
+		echo '<b>'	. $trk->href . '</b>';
 	?> 
 	<div class = "post-body"> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">
