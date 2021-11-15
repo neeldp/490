@@ -9,6 +9,7 @@ require 'db_key.php';
 <div class = "timeline">
 		<h1> My Profile </h1> 
 		<?php
+			
 			$conn = connect_db();
             $usr = $_SESSION['username'];
 			$result = $conn->query("SELECT * FROM posts WHERE `user` = '{$usr}' ORDER BY `time` DESC");
