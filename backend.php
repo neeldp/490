@@ -145,6 +145,10 @@ if($_POST){
         
     }
 
+    if(isset($_POST['followbtn'])){
+        echo $hi;
+    }
+
 
 } 
 
