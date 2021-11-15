@@ -23,7 +23,7 @@ require 'db_key.php';
 
 		 $res = $api->search('hotel', ['track']);
 		foreach($res->tracks->items as $track){
-			echo $track->id, '<br>';
+			echo $track->name . $track->id, '<br>';
 		}
 
 
