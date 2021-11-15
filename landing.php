@@ -31,6 +31,10 @@
 			while($row = mysqli_fetch_array($result))
 			{
 				echo "<p class='puser'>". $row['username']."</p>";
+				
+				echo '<button type="button"> Follow</button>'; 
+				
+				$id = $row['id'];
 			}
 		}
 
