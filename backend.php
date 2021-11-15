@@ -150,9 +150,8 @@ if($_POST){
         $conn = connect_db();
 		$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
 		$row = mysqli_fetch_array($result);
-		//$id = $row['id'];
-        $hi = $_SESSION['id'];
-        echo "$hi";
+		$id = $row['id'];
+        echo "$id";
         //echo "hi";
     }
 
