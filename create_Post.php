@@ -1,6 +1,7 @@
 <?php require 'header.php';
 require 'nav.php';
 require 'vendor/autoload.php';
+require 'db_key.php';
 ?>   
 <body>
 	<?php 
