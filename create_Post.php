@@ -23,10 +23,10 @@ require 'db_key.php';
 
 		 $res = $api->search('hotel', ['track']);
 		foreach($res->tracks->items as $track){
-			echo $track->name . $track->id, '<br>';
+			echo "<a href='backend.php?name=". $track->id . "'>" . $track->name . "</a>" . '<br>';
 		}
 
-
+		"<a href='backend.php?name="
 		$trk = $api->getTrack('4uLU6hMCjMI75M1A2tKUQC');
 		
 		echo '<b>'	. $trk->href . '</b>';
