@@ -34,9 +34,10 @@
 		if($result->num_rows > 0){
 			while($row = mysqli_fetch_array($result))
 			{
-				echo $row['username'];	
-				
+				echo $row['username'];
 				echo '<button type="button>Follow"</button>';
+				echo "<br>";
+
 				//echo '<button onclick="myFunction()>"Follow"</button>';
 				
 				//echo '<form method="POST" action="backend.php">';
