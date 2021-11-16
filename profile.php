@@ -29,7 +29,7 @@ require 'db_key.php';
 			$row = mysqli_fetch_array($sql_query);
 			//echo "$row[0]";
 			//echo '<a href="following.php">following</a>';
-			echo "$row[0]";
+			echo "$row[0] ";
 			echo '<label onclick="myFunction()">Following</label';
 			
 
