@@ -12,7 +12,7 @@ require 'db_key.php';
 		<script>
 
 			function myFunction() {
-				header('location: following.php');
+				window.location.replace("following.php");
 			}
 
 		</script>
