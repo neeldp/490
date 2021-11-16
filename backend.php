@@ -156,9 +156,8 @@ if($_POST){
         //the user in the session is the follower
 		$follower_id = $row['id'];
         //the person we will follow
-        $user_id = $_POST['follower_id'];
+        $user_id = $_POST['user_id'];
         echo "$user_id";
-        //echo "hi";
     }
 
     if(isset($_POST['searchbtnsong'])){
