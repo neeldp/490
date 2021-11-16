@@ -26,24 +26,42 @@
 
         $user = $_SESSION['username'];
         $conn = connect_db();
-        $result = $conn->query("SELECT * FROM users WHERE `username` != '{$user}'");
-        if($result->num_rows > 0){
-            while($row = mysqli_fetch_array($result))
+        $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+        $row = mysqli_fetch_array($result);
+		$user_id = $row['id'];
+
+        $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
+        $arr = array();
+        $counter = 0;
+        if($sql->num_rows > 0){
+            while($row = mysqli_fetch_array($sql))
             {
-                echo $row['username'];
+                $arr[$counter] = $row['user'];
+                    $counter++;
+            }
+        }
+        $list = implode("' ,'", $arr);
+        $sql_query = $conn->query("SELECT * FROM `users` Where `id` NOT IN ('{$list}') ");
+
+        //$result = $conn->query("SELECT * FROM users WHERE `username` != '{$user}'");
+        if($sql_query->num_rows > 0){
+            while($row = mysqli_fetch_array($sql_query))
+            {
+                echo $row['user'];
                 //echo '<button type="button>Follow"</button>';
 
                 //echo '<button onclick="myFunction()>"Follow"</button>';
-                
+                    
                 echo '<form method="POST" action="backend.php">
-                <input type="hidden" name="user" value="'. $row['username'].'" />
+                <input type="hidden" name="user" value="'. $row['user'].'" />
                 <button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
                 </form>';
 
                 echo '<br><br>';
-                
+                    
             }
         }
+
 
         ?>
     </div>    
@@ -60,7 +78,7 @@
             $conn = connect_db();
             $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
             $row = mysqli_fetch_array($result);
-		    $user_id = $row['id'];;
+		    $user_id = $row['id'];
             
             
             $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
@@ -72,10 +90,10 @@
                     $arr[$counter] = $row['user'];
                     $counter++;
                 }
-            //}
-            $list = implode("' ,'", $arr);
-            $sql_query = $conn->query("SELECT * FROM `posts` Where `user` IN ('{$list}') ORDER BY `time` DESC");
-            //if($sql_query->num_rows > 0){
+                //}
+                $list = implode("' ,'", $arr);
+                $sql_query = $conn->query("SELECT * FROM `posts` Where `user` IN ('{$list}') ORDER BY `time` DESC");
+                //if($sql_query->num_rows > 0){
                 while($row = mysqli_fetch_array($sql_query))
                 {
                     echo "<div class='posts'>";
