@@ -61,7 +61,7 @@
             $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
             $row = mysqli_fetch_array($result);
 		    $user_id = $row['id'];
-            echo "$userid";
+            echo "$user_id";
             $sql = $conn->query("SELECT `user` FROM followers_table WHERE follower_id = '{$user_id}'");
             if($sql->num_rows > 0){
                 while($row = mysqli_fetch_array($sql))
