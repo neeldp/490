@@ -40,13 +40,12 @@
                 $arr[$counter] = $row['user'];
                 $counter++;
             }
+            $arr[$counter] = $user;
         }
         
-
         $list = implode("' ,'", $arr);
         $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ");
 
-        //$result = $conn->query("SELECT * FROM users WHERE `username` != '{$user}'");
         if($sql_query->num_rows > 0){
             while($row = mysqli_fetch_array($sql_query))
             {
