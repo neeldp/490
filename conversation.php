@@ -15,8 +15,10 @@ $_SESSION['get'] = $NAME;
         $("#fresh").load(window.location.href + " #fresh" );
     }, 1000);
     });
+    document.getElementbyId("inbox_container_style").scrollTop =  document.getElementbyId("inbox_container_style").scrollHeight;   
     </script>
-    <div class="inbox_container_style">
+    
+    <div id="inbox_container_style" class="inbox_container_style">
         <div class="inbox_style" id="fresh">
             <?php
                $conn = connect_db();
