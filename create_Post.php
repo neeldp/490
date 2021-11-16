@@ -2,7 +2,7 @@
 require 'nav.php';
 require 'db_key.php';
 $NAME = $_GET["song"];
-$songID = $_GET['id'];
+$songID = $_SESSION['songID']; 
 $_SESSION['song'] = $NAME;
 ?>   
 <body>
@@ -46,7 +46,7 @@ $_SESSION['song'] = $NAME;
 		foreach($res->tracks->items as $track){
 			echo "<a href='songredir.php?id=". $track->id . "'>" . $track->name . "</a>" . '<br>';
 		}
-		echo "<p>" . $_SESSION['id'] . "</p>";
+		echo "<p>" . $_SESSION['songID'] . "</p>";
 	?> 
 	
 
