@@ -1,6 +1,6 @@
 <?php
 $songId = $_GET['id'];
-header(location: 'create_post.php');
+header('location: create_post.php');
 if($_POST){
     require 'db_key.php';
     $conn = connect_db();
