@@ -30,18 +30,10 @@ $_SESSION['get'] = $NAME;
                        echo "<p> " . $row['text_message'] . "</br> <b>" . $row['sender'] . "</b><br><br>" . "</p>";
                     }
                 }
-                //echo "<p> Should be current users sent messages </p>";
-                //$sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE `receiver` = '{$NAME}' AND `sender` = '{$usr}'";
-                //$result = $conn->query($sql);
-                //if($result -> num_rows > 0){
-                //    while($row = mysqli_fetch_array($result)){
-                //        echo "<p> " . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>" . "</p>";
-                //     }
-                // }
             $conn->close();
             ?>
             <script>
-             document.getElementbyId("inbox_container_style").scrollTop =  document.getElementbyId("inbox_container_style").scrollHeight;   
+             document.getElementbyId("fresh").scrollTop =  document.getElementbyId("fresh").scrollHeight;   
             </script>
             </div>
     </div>
