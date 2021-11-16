@@ -157,10 +157,10 @@ if($_POST){
         //the user in the session is the follower
 		$follower_id = $row['id'];
         //the person we will follow
-        $username = $_POST['user_'];
-        echo "$username";
+        $name = $_POST['follow_list'];
+        echo "$name";
 
-        $result = $conn->query("INSERT INTO `followers_table`(`user`, `follower_id`) VALUES ('$username', '$follower_id')");
+        //$result = $conn->query("INSERT INTO `followers_table`(`user`, `follower_id`) VALUES ('$username', '$follower_id')");
         //header('location: landing.php');
     }
 
