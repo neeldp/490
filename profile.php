@@ -6,7 +6,29 @@ require 'db_key.php';
 
 
 <body>
-<div class = "timeline">
+
+	<div class = "stats">
+
+		<?php
+
+			$conn = connect_db();
+			$user = $_SESSION['username'];
+        	$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+        	$row = mysqli_fetch_array($result);
+			$user_id = $row['id'];
+
+			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
+			$row = mysqli_fetch_array($result);
+			echo "$row";
+
+
+		?>
+
+
+	</div>
+
+
+	<div class = "timeline">
 		<h1> My Profile </h1> 
 		<?php
 			
