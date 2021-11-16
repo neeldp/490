@@ -73,10 +73,10 @@
 
                 }
             }
-            print_r($arr);
-            $result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
-            if($result->num_rows > 0){
-                while($row = mysqli_fetch_array($result))
+
+            $sql_query = $conn->query("SELECT * FROM posts Where `user` IN $arr ORDER BY `time` DESC");
+            if($sql_query->num_rows > 0){
+                while($row = mysqli_fetch_array($sql_query))
                 {
                     echo "<div class='posts'>";
                     echo "<p class='puser'>". $row['user']."</p>";
