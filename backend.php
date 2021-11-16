@@ -1,4 +1,6 @@
 <?php
+$songId = $_GET['id'];
+header(location: 'create_post.php')
 if($_POST){
     require 'db_key.php';
     $conn = connect_db();
@@ -77,8 +79,7 @@ if($_POST){
             //}
             
         
-        $username = $_SESSION['username'];
-        $songId = $_GET['id'];   
+        $username = $_SESSION['username']; 
         $sql = "INSERT into `posts` (`text`, `image`, `time`, `user`,`spotID`) VALUES ('$post_Text', '$imgContent', NOW(), '$username','$songId')";
         $sql = $conn->query($sql);
         if(!$sql){
