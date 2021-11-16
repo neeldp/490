@@ -39,7 +39,7 @@
 				<input type="hidden" name="user_id" value="'. $row['id'].'" />
 				<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
 				</form>';
-				echo $row['spotID'];
+				
 				echo '<br>';
 				
 			}
@@ -66,7 +66,7 @@
 					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
 					echo "<p class='ptext'>". $row['text']."</p>";
 					echo "<p class='ptime'>". $row['time']."</p>";
-
+					echo "<p class='ptime'>". $row['spotID']."</p>";
 					$id = $row['id'];
 					$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
 
