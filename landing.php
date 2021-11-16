@@ -29,6 +29,7 @@
         $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
         $row = mysqli_fetch_array($result);
 		$user_id = $row['id'];
+        echo $user_id;
 
         $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
         $arr = array();
@@ -40,6 +41,8 @@
                     $counter++;
             }
         }
+        print_r($arr);
+        
         $list = implode("' ,'", $arr);
         $sql_query = $conn->query("SELECT * FROM `users` Where `id` NOT IN ('{$list}') ");
 
