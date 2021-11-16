@@ -157,7 +157,9 @@ if($_POST){
 		$follower_id = $row['id'];
         //the person we will follow
         $user_id = $_POST['user_id'];
-        echo "$user_id";
+        //echo "$user_id";
+
+        $result = $conn->query("INSERT INTO `followers_table`(`users_id`, `follower_id`) VALUES ('$user_id', '$follower_id')");
     }
 
     if(isset($_POST['searchbtnsong'])){
