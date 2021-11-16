@@ -28,11 +28,10 @@ require 'db_key.php';
         }
         print_r($arr);
         $list = implode("' ,'", $arr);
-        $sql_query = $conn->query("SELECT username FROM `users` Where `id` IN ('{$list}')");
+        $sql_query = $conn->query("SELECT `username` FROM `users` Where `id` IN ('{$list}')");
         while($row = mysqli_fetch_array($sql_query))
         {
-            echo $row['username'];
-            echo '<br>';
+            echo $row['username']."<br>";
 
         }
 
