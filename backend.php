@@ -153,9 +153,11 @@ if($_POST){
         $conn = connect_db();
 		$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
 		$row = mysqli_fetch_array($result);
-		$id = $row['id'];
-        $following = $_POST['following'];
-        echo "$following";
+        //the user in the session is the follower
+		$follower_id = $row['id'];
+        //the person we will follow
+        $user_id = $_POST['follower_id'];
+        echo "$user_id";
         //echo "hi";
     }
 
