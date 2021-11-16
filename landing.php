@@ -39,6 +39,8 @@
 				<input type="hidden" name="user_id" value="'. $row['id'].'" />
 				<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
 				</form>';
+
+				echo '<br>';
 				
 			}
 		}
