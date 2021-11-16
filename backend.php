@@ -77,8 +77,9 @@ if($_POST){
             //}
             
         
-        $username = $_SESSION['username'];   
-        $sql = "INSERT into `posts` (`text`, `image`, `time`, `user`) VALUES ('$post_Text', '$imgContent', NOW(), '$username')";
+        $username = $_SESSION['username'];
+        $songId = $_GET['id']   
+        $sql = "INSERT into `posts` (`text`, `image`, `time`, `user`,`spotID`) VALUES ('$post_Text', '$imgContent', NOW(), '$username','$songId')";
         $sql = $conn->query($sql);
         if(!$sql){
             die("Invalid ". mysqli_error($conn));
@@ -163,7 +164,6 @@ if($_POST){
         header('location: create_Post.php?song=' . "$searchTerm");
 
     }
-
 } 
 
 ?>
