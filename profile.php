@@ -9,6 +9,14 @@ require 'db_key.php';
 
 	<div class = "stats">
 
+		<script>
+
+			function myFunction() {
+				header('location: following.php');
+			}
+
+		</script>
+
 		<?php
 
 			$conn = connect_db();
@@ -23,11 +31,6 @@ require 'db_key.php';
 			//echo '<a href="following.php">following</a>';
 			echo "$row[0]";
 			echo '<label onclick="myFunction()">Following</label';
-			echo "<script type = 'text/javascript'>
-				function myFunction() {
-					header('location: following.php')
-				}
-				</script>";
 			
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
