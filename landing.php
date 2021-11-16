@@ -61,7 +61,7 @@
                 <button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
                 </form>';
 
-                echo '<br><br>';
+                echo '<sp><sp>';
                     
             }
         }
