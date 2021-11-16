@@ -73,7 +73,8 @@
 
                 }
             }
-            $list = implode(',', $arr);
+            //$list = implode(',', $arr);
+            $list = join("','", $arr);
             echo $list;
             $sql_query = $conn->query("SELECT * FROM posts Where `user` IN '{$list}' ORDER BY `time` DESC");
             if($sql_query->num_rows > 0){
