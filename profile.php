@@ -35,7 +35,7 @@ require 'db_key.php';
 			//echo '<a href="following.php">following</a>';
 			echo "$row[0] ";
 			echo '<label onclick="following()">Following</label';
-			echo '<br>';
+			echo nl2br(" ");
 			
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
