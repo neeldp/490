@@ -79,7 +79,7 @@ if($_POST){
             
         
         $username = $_SESSION['username']; 
-        $sql = "INSERT into `posts` (`text`, `image`, `time`, `user`,`spotID`) VALUES ('$post_Text', '$imgContent', NOW(), '$username','$_SESSION['songID']'')";
+        $sql = "INSERT into `posts` (`text`, `image`, `time`, `user`,`spotID`) VALUES ('$post_Text', '$imgContent', NOW(), '$username','$_SESSION['songID']')";
         $sql = $conn->query($sql);
         if(!$sql){
             die("Invalid ". mysqli_error($conn));
