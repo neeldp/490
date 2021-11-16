@@ -61,15 +61,18 @@
             $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
             $row = mysqli_fetch_array($result);
 		    $user_id = $row['id'];
-            echo "$user_id";
-            $sql = $conn->query("SELECT `user` FROM followers_table WHERE follower_id = '{$user_id}'");
+            //echo "$user_id";
+            $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
+            $arr = array();
+            $counter = 0;
             if($sql->num_rows > 0){
                 while($row = mysqli_fetch_array($sql))
                 {
-                    echo $row['user'];
+                    $arr[$counter] = $row['user'];
 
                 }
             }
+            print_r($arr);
             $result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
             if($result->num_rows > 0){
                 while($row = mysqli_fetch_array($result))
