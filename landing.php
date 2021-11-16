@@ -36,7 +36,7 @@
 				//echo '<button onclick="myFunction()>"Follow"</button>';
 				
 				echo '<form method="POST" action="backend.php">
-				<input type="hidden" name="following" value="'. $row['username'].'" />
+				<input type="hidden" name="user_id" value="'. $row['id'].'" />
 				<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
 				</form>';
 				
