@@ -19,7 +19,7 @@ require 'db_key.php';
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
 			$row = mysqli_fetch_array($sql);
-			echo "$row[0] . Followers";
+			echo "$row[0] Followers";
 
 
 		?>
