@@ -10,15 +10,18 @@ require 'db_key.php';
     $conn = connect_db();
 
     $sql = $conn->query("SELECT distinct `id` FROM followers_table WHERE `user` = '{$user}'");
+    //$counter = 0;
+    //$arr = array();
     if($sql->num_rows > 0){
         while($row = mysqli_fetch_array($sql))
         {
             $id = $row['id'];
             //echo $id;
-            $result = $conn->query("SELECT `username` FROM `users` WHERE `id` = '{$id}' LIMIT 1");
+            $result = $conn->query("SELECT `username` FROM `users` WHERE `id` = '{$id}'");
             $record = mysqli_fetch_array($result);
-            $follower = $record[0];
-            echo "$follower";
+            //$follower = $record[0];
+
+            echo "$record";
             echo '<br>';
         
         }
