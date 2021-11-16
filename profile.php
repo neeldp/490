@@ -18,8 +18,9 @@ require 'db_key.php';
 			$user_id = $row['id'];
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
-			$row = mysqli_fetch_array($result);
+			$row = mysqli_fetch_array($sql);
 			print_r($row);
+			echo "$row";
 
 
 		?>
