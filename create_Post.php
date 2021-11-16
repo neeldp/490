@@ -23,7 +23,7 @@ $_SESSION['song'] = $NAME;
 </form>
 </div>
 	<?php 
-		echo "<p>" . $_SESSION['songID'] . "</p>";
+		//echo "<p>" . $_SESSION['songID'] . "</p>";
 		require 'vendor/autoload.php';
 
 		$session = new SpotifyWebAPI\Session(
