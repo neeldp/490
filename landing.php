@@ -60,8 +60,9 @@
             $conn = connect_db();
             $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
             $row = mysqli_fetch_array($result);
-		    $user_id = $row['id'];
-            //echo "$user_id";
+		    $user_id = $row['id'];;
+            
+            
             $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
             $arr = array();
             $counter = 0;
@@ -70,13 +71,12 @@
                 {
                     $arr[$counter] = $row['user'];
                     $counter++;
-
                 }
-            }
+            //}
             $list = implode("' ,'", $arr);
             //echo $list;
             $sql_query = $conn->query("SELECT * FROM `posts` Where `user` IN ('{$list}') ORDER BY `time` DESC");
-            if($sql_query->num_rows > 0){
+            //if($sql_query->num_rows > 0){
                 while($row = mysqli_fetch_array($sql_query))
                 {
                     echo "<div class='posts'>";
