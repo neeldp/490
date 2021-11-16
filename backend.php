@@ -78,7 +78,7 @@ if($_POST){
             
         
         $username = $_SESSION['username'];
-        $songId = $_GET['id']   
+        $songId = $_GET['id'];   
         $sql = "INSERT into `posts` (`text`, `image`, `time`, `user`,`spotID`) VALUES ('$post_Text', '$imgContent', NOW(), '$username','$songId')";
         $sql = $conn->query($sql);
         if(!$sql){
