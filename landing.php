@@ -73,9 +73,9 @@
 
                 }
             }
-            $list = implode(', ', $arr);
-            echo $list;
-            $sql_query = $conn->query("SELECT * FROM posts Where `user` IN '{$list}' ORDER BY `time` DESC");
+            $list = implode(',', $arr);
+            //echo $list;
+            $sql_query = $conn->query("SELECT * FROM `posts` Where `user` IN ('jake') ORDER BY `time` DESC");
             if($sql_query->num_rows > 0){
                 while($row = mysqli_fetch_array($sql_query))
                 {
