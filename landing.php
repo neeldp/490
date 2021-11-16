@@ -67,7 +67,7 @@
 					echo "<p class='ptext'>". $row['text']."</p>";
 					echo "<p class='ptime'>". $row['time']."</p>";
 					echo "<p class='ptime'>". $row['spotID']."</p>";
-					echo '<iframe src="https://open.spotify.com/embed/track/"' . $row['spotID'] . "?utm_source=generator width='100%' height='80' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>";
+					echo '<iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
 					$id = $row['id'];
 					$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
 
