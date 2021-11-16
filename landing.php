@@ -66,7 +66,6 @@
 					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
 					echo "<p class='ptext'>". $row['text']."</p>";
 					echo "<p class='ptime'>". $row['time']."</p>";
-					echo "<p class='ptime'>". $row['spotID']."</p>";
 					echo "<iframe src='https://open.spotify.com/embed/track/'" . $row['spotID'] .  "width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>";
 					$id = $row['id'];
 					$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
