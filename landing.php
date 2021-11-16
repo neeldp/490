@@ -69,6 +69,7 @@
                 while($row = mysqli_fetch_array($sql))
                 {
                     $arr[$counter] = $row['user'];
+                    $counter++;
 
                 }
             }
