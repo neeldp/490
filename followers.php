@@ -15,7 +15,7 @@ require 'db_key.php';
     if($sql->num_rows > 0){
         while($row = mysqli_fetch_array($sql))
         {
-            $id = $row['id'];
+            $id = $row['follower_id'];
             //echo $id;
             //$result = $conn->query("SELECT `username` FROM `users` WHERE `id` = '{$id}'");
             //$record = mysqli_fetch_array($result);
