@@ -19,10 +19,14 @@ require 'db_key.php';
 
 			$sql_query = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `follower_id` = '{$user_id}'");
 			$row = mysqli_fetch_array($sql_query);
-			echo "$row[0]";
-			echo '<a href="following.php">following</a>';
 			//echo "$row[0]";
-			//echo '<label onclick="myFunction()">Following</label';
+			//echo '<a href="following.php">following</a>';
+			echo "$row[0]";
+			echo '<label onclick="myFunction()">Following</label';
+			echo "<script type = 'text/javascript'>
+				function myFunction() {
+					header('location: following.php')
+				}";
 			
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
