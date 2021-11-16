@@ -26,7 +26,7 @@ require 'db_key.php';
             //echo "$record";
             //echo '<br>'; 
         }
-        print_r($arr);
+        
         $list = implode("' ,'", $arr);
         $sql_query = $conn->query("SELECT `username` FROM `users` Where `id` IN ('{$list}')");
         while($row = mysqli_fetch_array($sql_query))
