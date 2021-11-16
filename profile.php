@@ -26,7 +26,8 @@ require 'db_key.php';
 			echo "<script type = 'text/javascript'>
 				function myFunction() {
 					header('location: following.php')
-				}";
+				}
+				</script>";
 			
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
