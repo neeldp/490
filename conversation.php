@@ -26,7 +26,7 @@ $_SESSION['get'] = $NAME;
                $result = $conn->query($sql);
                if($result -> num_rows > 0){
                    while($row = mysqli_fetch_array($result)){
-                       echo "<p> " . $row['text_message'] . "</br>" . $row['sender'] . "<br><br>" . "</p>";
+                       echo "<p> " . $row['text_message'] . "</br> <b>" . $row['sender'] . "</b><br><br>" . "</p>";
                     }
                 }
                 //echo "<p> Should be current users sent messages </p>";
