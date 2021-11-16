@@ -36,10 +36,10 @@
 				//echo '<button onclick="myFunction()>"Follow"</button>';
 				
 				echo '<form method="POST" action="backend.php">
-				<input type="hidden" name="user_id" value="'. $row['id'].'" />
+				<input type="hidden" name="user" value="'. $row['username'].'" />
 				<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
 				</form>';
-				
+
 				echo '<br>';
 				
 			}
@@ -57,6 +57,7 @@
 		?>
 		<?php
 			$conn = connect_db();
+			$result =
 			$result = $conn->query("SELECT * FROM posts ORDER BY `time` DESC");
 			if($result->num_rows > 0){
 				while($row = mysqli_fetch_array($result))
@@ -66,7 +67,7 @@
 					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
 					echo "<p class='ptext'>". $row['text']."</p>";
 					echo "<p class='ptime'>". $row['time']."</p>";
-					echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+
 					$id = $row['id'];
 					$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
 
