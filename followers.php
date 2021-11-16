@@ -14,6 +14,7 @@ require 'db_key.php';
         while($row = mysqli_fetch_array($sql))
         {
             $id = $row['id'];
+            echo $id;
             $result = $conn->query("SELECT `username` FROM `users` WHERE `id` = '{$id}'");
             $row = mysqli_fetch_array($result);
             echo $row[0];
