@@ -17,10 +17,13 @@ require 'db_key.php';
         	$row = mysqli_fetch_array($result);
 			$user_id = $row['id'];
 
+			$sql_query = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `follower_id` = '{$user_id}'");
+			$row = mysqli_fetch_array($sql_query);
+			echo "$row[0] Following";
+
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
 			$row = mysqli_fetch_array($sql);
 			echo "$row[0] Followers";
-
 
 		?>
 
