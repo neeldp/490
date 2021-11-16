@@ -17,7 +17,7 @@ require 'db_key.php';
             //echo $id;
             $result = $conn->query("SELECT `username` FROM `users` WHERE `id` = '{$id}' LIMIT 1");
             $record = mysqli_fetch_array($result);
-            echo $record[0];
+            echo "$record[0]";
             echo '<br>';
         
         }
