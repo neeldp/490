@@ -9,7 +9,7 @@ require 'db_key.php';
     $user = $_SESSION['username'];
     $conn = connect_db();
 
-    $sql = $conn->query("SELECT distinct `id` FROM followers_table WHERE `user` = '{$user}'");
+    $sql = $conn->query("SELECT distinct `follower_id` FROM followers_table WHERE `user` = '{$user}'");
     $counter = 0;
     $arr = array();
     if($sql->num_rows > 0){
