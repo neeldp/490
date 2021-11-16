@@ -29,7 +29,7 @@
         $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
         $row = mysqli_fetch_array($result);
 		$user_id = $row['id'];
-        echo $user_id;
+    
 
         $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
         $arr = array();
@@ -38,11 +38,11 @@
             while($row = mysqli_fetch_array($sql))
             {
                 $arr[$counter] = $row['user'];
-                    $counter++;
+                $counter++;
             }
         }
-        print_r($arr);
         
+
         $list = implode("' ,'", $arr);
         $sql_query = $conn->query("SELECT * FROM `users` Where `id` NOT IN ('{$list}') ");
 
@@ -50,7 +50,7 @@
         if($sql_query->num_rows > 0){
             while($row = mysqli_fetch_array($sql_query))
             {
-                echo $row['user'];
+                echo $row['username'];
                 //echo '<button type="button>Follow"</button>';
 
                 //echo '<button onclick="myFunction()>"Follow"</button>';
