@@ -44,7 +44,7 @@
         
 
         $list = implode("' ,'", $arr);
-        $sql_query = $conn->query("SELECT * FROM `users` Where `id` NOT IN ('{$list}') ");
+        $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ");
 
         //$result = $conn->query("SELECT * FROM users WHERE `username` != '{$user}'");
         if($sql_query->num_rows > 0){
