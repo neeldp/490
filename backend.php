@@ -160,6 +160,7 @@ if($_POST){
         //echo "$user_id";
 
         $result = $conn->query("INSERT INTO `followers_table`(`users_id`, `follower_id`) VALUES ('$user_id', '$follower_id')");
+        header('location: landing.php');
     }
 
     if(isset($_POST['searchbtnsong'])){
