@@ -46,7 +46,7 @@ $_SESSION['song'] = $NAME;
 		foreach($res->tracks->items as $track){
 			echo "<a href='songredir.php?id=". $track->id . "'>" . $track->name . "</a>" . '<br>';
 		}
-		echo "<p>" . $songID . "</p>";
+		echo "<p>" . $_SESSION['id'] . "</p>";
 	?> 
 	
 
