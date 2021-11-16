@@ -44,7 +44,7 @@ $_SESSION['song'] = $NAME;
 
 		$res = $api->search($_SESSION["song"], ['track']);
 		foreach($res->tracks->items as $track){
-			echo "<a href='create_Post.php?id=". $track->id . "'>" . $track->name . "</a>" . '<br>';
+			echo "<a href='songredir.php?id=". $track->id . "'>" . $track->name . "</a>" . '<br>';
 		}
 		echo "<p>" . $songID . "</p>";
 	?> 
