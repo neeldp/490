@@ -41,10 +41,12 @@
                 $counter++;
             }
             $arr[$counter] = $user;
-        }
+        } 
+        
+        //$k = array_rand($arr, 3);
         
         $list = implode("' ,'", $arr);
-        $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ");
+        $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ORDER BY Rand() LIMIT 3 ");
 
         if($sql_query->num_rows > 0){
             while($row = mysqli_fetch_array($sql_query))
