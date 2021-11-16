@@ -92,6 +92,7 @@
                     $arr[$counter] = $row['user'];
                     $counter++;
                 }
+                $arr[$counter] = $user;
                 //}
                 $list = implode("' ,'", $arr);
                 $sql_query = $conn->query("SELECT * FROM `posts` Where `user` IN ('{$list}') ORDER BY `time` DESC");
