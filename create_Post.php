@@ -2,7 +2,7 @@
 require 'nav.php';
 require 'db_key.php';
 $NAME = $_GET["song"];
-$songID = $_GET['id'];
+$songID = $_SESSION['songID']; 
 $_SESSION['song'] = $NAME;
 ?>   
 <body>
@@ -23,6 +23,7 @@ $_SESSION['song'] = $NAME;
 </form>
 </div>
 	<?php 
+		echo "<p>" . $_SESSION['songID'] . "</p>";
 		require 'vendor/autoload.php';
 
 		$session = new SpotifyWebAPI\Session(
@@ -44,9 +45,9 @@ $_SESSION['song'] = $NAME;
 
 		$res = $api->search($_SESSION["song"], ['track']);
 		foreach($res->tracks->items as $track){
-			echo "<a href='create_Post.php?id=". $track->id . "'>" . $track->name . "</a>" . '<br>';
+			echo "<a href='songredir.php?id=". $track->id . "'>" . $track->name . "</a>" . '<br>';
 		}
-		echo "<p>" . $songID . "</p>";
+		
 	?> 
 	
 
