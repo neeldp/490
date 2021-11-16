@@ -149,17 +149,17 @@ if($_POST){
     }
 
     if(isset($_POST['followbtn'])){
-        $user = $_SESSION['username'];
+        $follower = $_SESSION['username'];
         $conn = connect_db();
-		$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+		$result = $conn->query("SELECT id FROM users WHERE `username` = '{$follower}'");
 		$row = mysqli_fetch_array($result);
         //the user in the session is the follower
 		$follower_id = $row['id'];
         //the person we will follow
-        $user_id = $_POST['user_id'];
-        //echo "$user_id";
+        $user = $_POST['user'];
+        //echo "$username";
 
-        $result = $conn->query("INSERT INTO `followers_table`(`users_id`, `follower_id`) VALUES ('$user_id', '$follower_id')");
+        $result = $conn->query("INSERT INTO `followers_table`(`user`, `follower_id`) VALUES ('$user', '$follower_id')");
         header('location: landing.php');
     }
 
