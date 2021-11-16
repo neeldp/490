@@ -34,14 +34,14 @@ require 'db_key.php';
 			//echo "$row[0]";
 			//echo '<a href="following.php">following</a>';
 			//echo "$row[0] ";
-			echo '<label onclick="following()">"'. $row[0].'" Following</label>';
-			echo "\t";
+			echo '<label onclick="following()">'. $row[0].' Following</label>';
+			echo "\t\t\t\t";
 			
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
 			$row = mysqli_fetch_array($sql);
-			echo "$row[0] ";
-			echo '<label onclick="followers()">Followers</label>';
+			//echo "$row[0] ";
+			echo '<label onclick="followers()">'. $row[0].' Followers</label>';
 
 		?>
 
