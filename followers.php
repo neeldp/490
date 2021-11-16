@@ -14,11 +14,11 @@ require 'db_key.php';
         while($row = mysqli_fetch_array($sql))
         {
             $id = $row['id'];
-            echo $id;
-            $result = $conn->query("SELECT `username` FROM `users` WHERE `id` = '{$id}'");
-            $row = mysqli_fetch_array($result);
-            echo $row[0];
-            //echo '<br>';
+            //echo $id;
+            $result = $conn->query("SELECT `username` FROM `users` WHERE `id` = '{$id}' LIMIT 1");
+            $record = mysqli_fetch_array($result);
+            echo $record[0];
+            echo '<br>';
         
         }
     }
