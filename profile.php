@@ -11,8 +11,12 @@ require 'db_key.php';
 
 		<script>
 
-			function myFunction() {
+			function following() {
 				window.location.replace("following.php");
+			}
+
+			function followers() {
+				window.location.replace("followers.php");
 			}
 
 		</script>
@@ -30,13 +34,14 @@ require 'db_key.php';
 			//echo "$row[0]";
 			//echo '<a href="following.php">following</a>';
 			echo "$row[0] ";
-			echo '<label onclick="myFunction()">Following</label';
+			echo '<label onclick="following()">Following</label';
 			echo '<br>';
 			
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
 			$row = mysqli_fetch_array($sql);
-			echo "$row[0] Followers";
+			echo "$row[0] ";
+			echo '<label onclick="followers()">Followers</label';
 
 		?>
 
