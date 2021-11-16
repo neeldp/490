@@ -136,7 +136,7 @@ transition: transform 80ms ease-in;
   background-color: white;
   position: absolute;
   width: 1500px;
-  height: 1500px;
+  height: 400px;
   opacity: 0.8;
   bottom: 500px;
   left: 500px;
