@@ -157,7 +157,7 @@ if($_POST){
         //the user in the session is the follower
 		$follower_id = $row['id'];
         //the person we will follow
-        $name = $_POST['follow_list'];
+        $name = $_POST['user'];
         echo "$name";
 
         //$result = $conn->query("INSERT INTO `followers_table`(`user`, `follower_id`) VALUES ('$username', '$follower_id')");
