@@ -16,11 +16,12 @@ require 'db_key.php';
         	$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
         	$row = mysqli_fetch_array($result);
 			$user_id = $row['id'];
+			echo $user_id;
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
 			$row = mysqli_fetch_array($sql);
 			print_r($row);
-			//echo "$row";
+			echo "$row[0]";
 
 
 		?>
