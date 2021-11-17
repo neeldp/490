@@ -178,12 +178,12 @@ if($_GET){
     if(!empty($_GET['d'])){
         $del = html_entity_decode($_GET['d']);
         $del = (int)$del;
-        
-        $conn = connect_db();
-        $sql = "DELETE FROM `posts` WHERE (`id` = '{$del}' )";
+        echo $del;
+        //$conn = connect_db();
+        //$sql = "DELETE FROM `posts` WHERE (`id` = '{$del}' )";
 
-        $sql = $conn->query($sql);
-        header('location: landing.php');
+        //$sql = $conn->query($sql);
+        //header('location: landing.php');
     }
 }
 ?>
