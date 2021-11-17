@@ -11,7 +11,6 @@ require 'nav.php';
 		<div>
 			<?php
             $conn = connect_db();
-			//echo 'hi';
 			$user = $_SESSION['username'];
             $searchTerm = $_GET['search']; 
 			$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
