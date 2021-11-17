@@ -15,9 +15,10 @@ require 'nav.php';
         
             $searchTerm = $_POST['search']; 
 
-			echo $searchTerm;
+			//echo $searchTerm;
             
-			$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE '%$searchTerm%' OR `text` LIKE '%$searchTerm%')");
+			//$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE '%$searchTerm%' OR `text` LIKE '%$searchTerm%')");
+			$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE 'jake' OR `text` LIKE 'jake')");
 			if($result->num_rows > 0){
 				while($row = mysqli_fetch_array($result))
 				{
