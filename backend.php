@@ -167,7 +167,7 @@ if($_POST){
         $id = $_POST['del'];
         $sql = "DELETE FROM `posts` WHERE `id` = '{$id}'";
 		$result = $conn->query($sql);
-		$row = mysqli_fetch_array($result);
+		//$row = (mysqli_fetch_array($result);
         header('location: landing.php');
     }
 
