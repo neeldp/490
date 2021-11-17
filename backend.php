@@ -203,8 +203,21 @@ if($_POST){
 
         $conn = connect_db();
 		$result = $conn->query("DELETE FROM followers_table WHERE `id` = '{$id}'");
-        
+
         header('location: searchresults.php?search=' . "$user");
+    }
+    if(isset($_POST['comment'])){
+        $username = $_SESSION['username'];
+        $text = $_POST['comment']; 
+        $post_ID = $_POST['post_ID'];
+        $user = $_POST['userPost'];
+        //var_dump($_POST);
+        $sql = "INSERT INTO `comments`(`name`,`text`,`date`, `post_ID`) VALUES ('$username','$text', NOW(), '$post_ID')";
+        $result = $conn->query($sql);
+        //$isAdmin = $sql['isAdmin'];
+        header('location: searchresults.php?search=' . "$user");
+        //echo "$post_ID";
+        
     }
 } 
 //if($_GET){
