@@ -34,7 +34,7 @@ require 'nav.php';
 						echo '<form method="POST" action="backend.php"> <b>
 					<input type="hidden" name="id" value="'. $record['id'].'" /> </b>
 					<input type="hidden" name="username" value="'. $row['username'].'" />
-					<button class = "btn btn-outline-info" type="submit" name="unfollow" value= "following">Unfollow</button>
+					<button class = "btn btn-outline-info" type="submit" name="unfollow" value= "following">Following</button>
 					</form>';
 
 					}
