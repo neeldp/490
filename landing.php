@@ -138,7 +138,10 @@
                     echo "<div class='posts'>";
                     echo "<p class='puser'>". $row['user']."</p>";
                     if($_SESSION['isAdmin']==1){
-                    echo '<a href=backend.php?d="' . $row['id'] . '"' . ">" . "Delete post" . "</a>";
+                        echo '<form method="POST" action="backend.php">
+                        <input type="hidden" name="user" value="'. $row['id'].'" />
+                        <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
+                        </form>';
                     }
                     echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                     echo "<p class='ptext'>". $row['text']."</p>";

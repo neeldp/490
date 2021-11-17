@@ -162,6 +162,15 @@ if($_POST){
         $result = $conn->query("INSERT INTO `followers_table`(`user`, `follower_id`) VALUES ('$user', '$follower_id')");
         header('location: landing.php');
     }
+    if(isset($_POST['deletebtn'])){
+        $conn = connect_db();
+        $id = $row['id'];
+        echo $id; 
+		//$result = $conn->query("DELETE FROM `posts` WHERE `id` = '{$id}'");
+		//$row = mysqli_fetch_array($result);
+
+        //header('location: landing.php');
+    }
 
     if(isset($_POST['searchbtnsong'])){
         $searchTerm = $_POST['searchSong'];
