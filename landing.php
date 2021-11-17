@@ -10,15 +10,11 @@
 		position: absolute;
 		width: 120px;
 		height: 700px;
-		bottom: 650ox;
+		bottom: 650px;
 		opacity: 0.8;
 		right: 0px;
 		text-align: left;
 		border: 2px solid silver;
-	}
-	
-	h1 {
-		text-align: center;
 	}
 </style>
 
