@@ -174,12 +174,11 @@ if($_POST){
     }
 } 
     if($_GET['d']){
-        $del = (is_numeric($_GET['d']) ? (int)$_GET['d'] : 0);
-    
-        echo $del;
-       // $sql = "DELETE FROM `posts` WHERE (`id` = '$delint' )";
+        $del = $_GET['d'];
+   
+        $sql = "DELETE FROM `posts` WHERE (`id` = '{$del}' )";
 
-        //$sql = $conn->query($sql);
-        //header('location: landing.php');
+        $sql = $conn->query($sql);
+        header('location: landing.php');
     }
 ?>
