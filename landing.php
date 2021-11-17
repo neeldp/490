@@ -20,7 +20,7 @@
 	}
 	
 	h1 {
-		text-align: left;
+		left: 15%;
 	}
 	
 	h4 {
