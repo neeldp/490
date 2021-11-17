@@ -17,6 +17,7 @@ require 'nav.php';
 
 			foreach ($_POST as $key) {
 				echo $key;
+				echo $hi;
 			}
 			 
 
