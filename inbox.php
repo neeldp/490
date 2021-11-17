@@ -6,8 +6,8 @@ require 'nav.php';
 
 <body>
     <div class="inbox_style">
-       <a href= sendMessage.php> Send a new message. </a> 
-       <ul> <tr> <th> Conversation Name </th></tr> 
+       <a href= sendMessage.php> Create a New Direct Message. </a> 
+       <ul> <tr> <th> Current Conversations </th></tr> 
         <?php 
         $conn = connect_db();
         $usr = $_SESSION['username'];
