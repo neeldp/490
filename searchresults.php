@@ -31,10 +31,10 @@ require 'nav.php';
 					if($result->num_rows > 0)
 					{
 						$record = mysqli_fetch_array($result);
-						echo '<form method="POST" action="backend.php">
-					<input type="hidden" name="id" value="'. $record['id'].'" />
+						echo '<form method="POST" action="backend.php"> <b>
+					<input type="hidden" name="id" value="'. $record['id'].'" /> </b>
 					<input type="hidden" name="username" value="'. $row['username'].'" />
-					<button class = "btn btn-outline-info" type="submit" name="unfollow" value= "following">Following</button>
+					<button class = "btn btn-outline-info" type="submit" name="unfollow" value= "following">Unfollow</button>
 					</form>';
 
 					}
