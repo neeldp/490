@@ -173,5 +173,11 @@ if($_POST){
         header('location: searchresults.php');
     }
 } 
+    if(!empty($_GET['d'])){
+        $del = $_GET['d'];
+        $sql = "DELETE FROM `posts` WHERE (`id` = '$del' )";
 
+        $sql = $conn->query($sql);
+        header('location: landing.php');
+    }
 ?>

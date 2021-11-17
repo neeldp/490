@@ -119,6 +119,9 @@
                 {
                     echo "<div class='posts'>";
                     echo "<p class='puser'>". $row['user']."</p>";
+                    if($_SESSION['isAdmin']==1){
+                    echo "<a href=backend.php?d='" . $row['id'] . "'" . ">" . "Delete post" . "</a>";
+                    }
                     echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                     echo "<p class='ptext'>". $row['text']."</p>";
                     echo "<p class='ptime'>". $row['time']."</p>";
