@@ -208,7 +208,7 @@ if($_POST){
     }
     if(isset($_POST['comment'])){
         $username = $_SESSION['username'];
-        $text = $_POST['comment']; 
+        $text = $_POST['text']; 
         $post_ID = $_POST['post_ID'];
         $user = $_POST['userPost'];
         //var_dump($_POST);
