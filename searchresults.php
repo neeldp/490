@@ -18,7 +18,7 @@ require 'nav.php';
 
 			//echo "$searchTerm";
 			$sql = $conn->query("SELECT id FROM users WHERE `username` = '{$searchTerm}'");
-			if($result->num_rows > 0){
+			if($sql->num_rows > 0){
 
 				echo $row['username'];
                     
