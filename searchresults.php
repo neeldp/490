@@ -14,6 +14,9 @@ require 'nav.php';
 			//echo 'hi';
 			$user = $_SESSION['username'];
             $searchTerm = $_GET['search']; 
+			$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+        	$row = mysqli_fetch_array($result);
+			$user_id = $row['id'];
 			 
 
 			//echo "$searchTerm";
@@ -22,11 +25,29 @@ require 'nav.php';
 				while($row = mysqli_fetch_array($sql)){
 
 					echo $row['username'];
-						
-					echo '<form method="POST" action="backend.php">
+
+					$result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$searchTerm}' AND `follower_id` = '{$user_id}'");
+
+					if($result->num_rows > 0)
+					{
+						$record = mysqli_fetch_array($result);
+						echo '<form method="POST" action="backend.php">
+					<input type="hidden" name="user" value="'. $record['id'].'" />
 					<input type="hidden" name="user" value="'. $row['username'].'" />
-					<button class = "btn btn-outline-info" type="submit" name="followSearch" value= "follower">Follow</button>
+					<button class = "btn btn-outline-info" type="submit" name="unfollow" value= "following">Following</button>
 					</form>';
+
+					}
+					else
+					{
+						echo '<form method="POST" action="backend.php">
+					<input type="hidden" name="user" value="'. $row['username'].'" />
+					<button class = "btn btn-outline-info" type="submit" name="follow" value= "follower">Follow</button>
+					</form>';
+
+					}
+						
+					
 
 					echo '<sp><sp>';
 
