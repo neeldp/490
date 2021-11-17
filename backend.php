@@ -174,7 +174,7 @@ if($_POST){
     }
 } 
     if($_GET['d']){
-        $del = is_numeric($_GET['d']);
+        $del = (is_numeric($_GET['d']) ? (int)$_GET['d'] : 0);
     
         echo $del;
        // $sql = "DELETE FROM `posts` WHERE (`id` = '$delint' )";
