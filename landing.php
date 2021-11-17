@@ -8,7 +8,7 @@
 	.follow_list {
 		background-color: white;
 		position: fixed;
-		width: 14%;
+		width: 13.7%;
 		height: 28%;
 		bottom: 61%;
 		opacity: 0.8;
@@ -19,6 +19,21 @@
 		border: 2px solid silver;
 		font-weight: bold;
 	}
+	
+	#followerListButton {
+	  color: #3399FF;
+	  font-family: "Helvetica";
+	  font-size: 10pt;
+	  background-color: #ffffff;
+	  border: 1px solid;
+	  border-color: #3399FF;
+	  border-radius: 3px;
+	  width: 85px;
+	  height: 30px;
+	  position: fixed;
+	  cursor: pointer;		    
+}
+	
 </style>
 
 <body>
@@ -76,7 +91,7 @@
                     
                 echo '<form method="POST" action="backend.php">
                 <input type="hidden" name="user" value="'. $row['username'].'" />
-                <button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
+                <button id = followerListButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
                 </form>';
 
                 echo '<sp><sp>';
