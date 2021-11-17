@@ -1,7 +1,7 @@
 <?php
-require 'db_key.php';
+
 if($_POST){
-    
+    require 'db_key.php';
     $conn = connect_db();
     session_start();
     if(isset($_POST['register']) ){
@@ -173,6 +173,8 @@ if($_POST){
         header('location: searchresults.php');
     }
 } 
+if($_GET){
+    require db_key.php;
     if(!empty($_GET['d'])){
         $del = $_GET['d'];
         $conn = connect_db();
@@ -181,4 +183,5 @@ if($_POST){
         $sql = $conn->query($sql);
         header('location: landing.php');
     }
+}
 ?>
