@@ -13,7 +13,7 @@ require 'nav.php';
             $conn = connect_db();
 			//echo 'hi';
         
-            $searchTerm = $_POST['search']; 
+            $searchTerm = $_POST['searchR']; 
 
 			echo $searchTerm;
             
