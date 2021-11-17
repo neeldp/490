@@ -13,9 +13,9 @@ require 'nav.php';
             $conn = connect_db();
 			//echo 'hi';
         
-            $searchTerm = $_POST['searchR']; 
+            $searchTerm = $_POST['search']; 
 
-			echo $searchTerm;
+			echo "$searchTerm";
             
 			$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE '%$searchTerm%' OR `text` LIKE '%$searchTerm%') ORDER BY `time`");
 			//$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE 'jake' OR `text` LIKE 'jake') ORDER BY `time`");
