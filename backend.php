@@ -196,6 +196,7 @@ if($_POST){
         header('location: searchresults.php?search=' . "$user");
     }
 
+    //search results
     if(isset($_POST['unfollow'])){
         //$follower = $_SESSION['username'];
         $id = $_POST['id'];
@@ -220,7 +221,7 @@ if($_POST){
         
     }
 
-
+    //timeline
     if(isset($_POST['unfollowbtn'])){
         //$follower = $_SESSION['username'];
         $id = $_POST['id'];
@@ -230,6 +231,19 @@ if($_POST){
 		$result = $conn->query("DELETE FROM followers_table WHERE `id` = '{$id}'");
 
         header('location: landing.php');
+    }
+
+    //following.php
+
+    if(isset($_POST['unfollowButton'])){
+        //$follower = $_SESSION['username'];
+        $id = $_POST['id'];
+        $user = $_POST['name'];
+
+        $conn = connect_db();
+		$result = $conn->query("DELETE FROM followers_table WHERE `id` = '{$id}'");
+
+        header('location: following.php');
     }
 } 
 //if($_GET){
