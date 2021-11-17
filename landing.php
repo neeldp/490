@@ -10,7 +10,7 @@
 		position: fixed;
 		font-weight: bold;
 		width: 14%;
-		height: 30%;
+		height: 31%;
 		bottom: 58%;
 		opacity: 0.8;
 		right: 0%;
