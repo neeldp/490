@@ -61,12 +61,34 @@ require 'nav.php';
 				while($row = mysqli_fetch_array($result))
 				{
 					echo "<div class='posts'>";
+					echo "<p class='puser'>". $row['user']."</p>";
+                    			$userP = $row['user'];  
+					$result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
+					$record = mysqli_fetch_array($result);
+					    
+					echo '<form method="POST" action="backend.php">
+						<input type="hidden" name="id" value="'. $record['id'].'" />
+						<input type="hidden" name="username" value="'. $row['user'].'" />
+						<button class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
+						</form>';
+    
+					if($_SESSION['isAdmin']==1){
+						echo "<a href=backend.php?d='" . $row['id'] . "'" . ">" . "Delete post" . "</a>";
+					}	    
+					echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';	
+					echo "<p class='ptext'>". $row['text']."</p>";	
+					echo "<p class='ptime'>". $row['time']."</p>";
+					echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+
+                    
+					    
+					/*
 					echo $row['time']."<br>";
 					echo $row['user']." <br>";
 					echo $row['text']."<br>";
 					echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
 					echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
-
+					*/
 						
 					$id = $row['id'];
 						
