@@ -174,7 +174,7 @@ if($_POST){
     }
 } 
 if($_GET){
-    require db_key.php;
+    require 'db_key.php';
     if(!empty($_GET['d'])){
         $del = $_GET['d'];
         $conn = connect_db();
