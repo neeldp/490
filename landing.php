@@ -8,11 +8,11 @@
 	.follow_list {
 		background-color: white;
 		position: absolute;
-		width: 70px;
+		width: 120px;
 		height: 700px;
 		bottom: 650ox;
 		opacity: 0.8;
-		right: 50px;
+		right: 0px;
 		text-align: left;
 		border: 2px solid silver;
 	}
@@ -38,7 +38,7 @@
     <div class = "follow_list">
 
         <?php
-	echo "<h4>". "You Might Like". "</h4>";
+	echo "<h4> <b>". "You Might Like". "</b> </h4>";
 	echo "<p>". "-------". "</p>";
         $user = $_SESSION['username'];
         $conn = connect_db();
@@ -88,7 +88,7 @@
 
     <!-- Timeline Code --> 
     <div class = "timeline">
-        <h1> My Timeline </h1> 
+	<h1> <b> My Timeline  </b></h1> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
             echo "<p>". $value."</p>";
