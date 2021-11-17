@@ -16,7 +16,7 @@ require 'backend.php'?>
 			<li>
 			<!--Search Section --> 
 			<div div class = "search_post">
-				<form method="POST" action='searchresults.php'>
+				<form method="POST" action='backend.php'>
 					<div class='form-group'>
 						<label>Search:</label>
 						<input class= 'form-control w-25' type="text" name="search">
