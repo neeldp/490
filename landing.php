@@ -10,7 +10,7 @@
 		position: fixed;
 		width: 13.7%;
 		height: 32%;
-		bottom: 61%;
+		bottom: 58%;
 		opacity: 0.8;
 		right: 0%;    
 		text-align: center;
@@ -91,7 +91,6 @@
                 echo '<form method="POST" action="backend.php">
                 <input type="hidden" name="user" value="'. $row['username'].'" /> <br>
                 <button id = followerListButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
-		<br>
                 </form>';
 
                 echo '<sp><sp>';
