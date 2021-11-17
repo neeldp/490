@@ -106,9 +106,9 @@
             $arr = array();
             $counter = 0;
             if($sql->num_rows > 0){
-                while($row = mysqli_fetch_array($sql))
+                while($r = mysqli_fetch_array($sql))
                 {
-                    $arr[$counter] = $row['user'];
+                    $arr[$counter] = $r['user'];
                     $counter++;
                 }
                 $arr[$counter] = $user;
@@ -122,7 +122,7 @@
                     echo "<p class='puser'>". $row['user']."</p>";
 		    
                     echo '<form method="POST" action="backend.php">
-                            <input type="hidden" name="id" value="'. $row['id'].'" />
+                            <input type="hidden" name="id" value="'. $r['id'].'" />
                             <input type="hidden" name="username" value="'. $row['user'].'" />
                             <button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
                     </form>';
