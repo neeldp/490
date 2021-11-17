@@ -20,7 +20,7 @@
 		font-weight: bold;
 	}
 	
-	#followerListButton {
+	#followerButton {
 	  color: #3399FF;
 	  font-family: "Helvetica";
 	  font-size: 10pt;
@@ -74,7 +74,7 @@
                     
                 echo '<form method="POST" action="backend.php">
                 <input type="hidden" name="user" value="'. $row['username'].'" /> <br>
-                <button id = followerListButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
+                <button id = followerButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
                 </form>';
 
                 echo '<sp><sp>';
@@ -143,7 +143,7 @@
                     echo '<form method="POST" action="backend.php">
 					<input type="hidden" name="id" value="'. $record['id'].'" />
 					<input type="hidden" name="username" value="'. $row['user'].'" />
-					<button class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
+					<button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
 					</form>';
                     
                     
