@@ -140,7 +140,7 @@
                     $id = $row['id'];
                     if($_SESSION['isAdmin']==1){
                         echo '<form method="POST" action="backend.php">
-                        <input type="hidden" name="user" value="'. $id.'" />
+                        <input type="hidden" name="del" value="'. $id.'" />
                         <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
                         </form>';
                     }
