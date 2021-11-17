@@ -19,15 +19,18 @@ require 'nav.php';
 			//echo "$searchTerm";
 			$sql = $conn->query("SELECT id FROM users WHERE `username` = '{$searchTerm}'");
 			if($sql->num_rows > 0){
+				while($row = mysqli_fetch_array($sql)){
 
-				echo $row['username'];
-                    
-                echo '<form method="POST" action="backend.php">
-                <input type="hidden" name="user" value="'. $row['username'].'" />
-                <button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
-                </form>';
+					echo $row['username'];
+						
+					echo '<form method="POST" action="backend.php">
+					<input type="hidden" name="user" value="'. $row['username'].'" />
+					<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
+					</form>';
 
-                echo '<sp><sp>';
+					echo '<sp><sp>';
+
+				}
 				
 			}
             
