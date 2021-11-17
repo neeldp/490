@@ -9,7 +9,7 @@
 		background-color: white;
 		position: fixed;
 		font-weight: bold;
-		width: 7%;
+		width: 14%;
 		height: 30%;
 		bottom: 58%;
 		opacity: 0.8;
@@ -45,7 +45,7 @@
 
         <?php
 	echo "<h4> <b>". "You Might Like". "</b> </h4>";
-	echo "<p>". "-------------------------------------------". "</p>";
+	echo "<p>". "-------------------------------------". "</p>";
         $user = $_SESSION['username'];
         $conn = connect_db();
         $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
