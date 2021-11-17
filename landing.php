@@ -22,6 +22,22 @@
 	h4 {
 		font-family: fangsong;
 	}
+	
+	#follow-button {
+	  color: #3399FF;
+	  font-family: "Helvetica";
+	  font-size: 10pt;
+	  background-color: #ffffff;
+	  border: 1px solid;
+	  border-color: #3399FF;
+	  border-radius: 3px;
+	  width: 85px;
+	  height: 30px;
+	  position: absolute;	 
+	  top: 50px;
+	  left: 50px;	
+	  cursor: hand;		    
+	}
 </style>
 
 <body>
@@ -80,7 +96,7 @@
                 echo '<br>';
                 echo '<form method="POST" action="backend.php">
                 <input type="hidden" name="user" value="'. $row['username'].'" />
-                <button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
+                <button id = "follow-button"  class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
                 </form>';
 
                 echo '<sp><sp>';
