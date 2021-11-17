@@ -31,12 +31,7 @@
 	  border: 1px solid;
 	  border-color: #3399FF;
 	  border-radius: 3px;
-	  width: 85px;
-	  height: 30px;
-	  position: absolute;	 
-	  top: 50px;
-	  left: 50px;	
-	  cursor: hand;		    
+	  cursor: pointer;		    
 	}
 </style>
 
@@ -49,7 +44,7 @@
         echo "<label>"."Delete:"."</label>";
         echo "<input class= 'form-control w-25' type='text' name='admin'>"."<br>"."<br>";
         echo "</div>";    
-        echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Create New User"."</button>";
+        echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Delete"."</button>";
         echo "</form>";
     }else{
         echo "<br>";
