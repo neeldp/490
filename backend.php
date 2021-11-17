@@ -164,7 +164,7 @@ if($_POST){
     }
     if(isset($_POST['deletebtn'])){
         $conn = connect_db();
-        $id = $row['id'];
+        $id = $_POST['delete'];
         echo $id; 
 		//$result = $conn->query("DELETE FROM `posts` WHERE `id` = '{$id}'");
 		//$row = mysqli_fetch_array($result);
