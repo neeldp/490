@@ -19,6 +19,10 @@
 		border: 2px solid silver;
 	}
 	
+	h1 {
+		text-align: left;
+	}
+	
 	h4 {
 		font-size: x-large;
 		font-family: fangsong;
