@@ -166,10 +166,9 @@ if($_POST){
         $conn = connect_db();
         $id = $_POST['del'];
         echo $id; 
-		//$result = $conn->query("DELETE FROM `posts` WHERE `id` = '{$id}'");
-		//$row = mysqli_fetch_array($result);
-
-        //header('location: landing.php');
+		$result = $conn->query("DELETE FROM `posts` WHERE `id` = '{$id}'");
+		$row = mysqli_fetch_array($result);
+        header('location: landing.php');
     }
 
     if(isset($_POST['searchbtnsong'])){
