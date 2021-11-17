@@ -175,7 +175,7 @@ if($_POST){
 } 
     if(!empty($_GET['d'])){
         $del = $_GET['d'];
-   
+        $conn = connect_db();
         $sql = "DELETE FROM `posts` WHERE (`id` = '{$del}' )";
 
         $sql = $conn->query($sql);
