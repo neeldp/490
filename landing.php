@@ -10,7 +10,7 @@
 		position: absolute;
 		width: 120px;
 		height: 700px;
-		bottom: 650px;
+		bottom: 50px;
 		opacity: 0.8;
 		right: 0px;
 		text-align: left;
