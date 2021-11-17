@@ -30,7 +30,6 @@
 	  border-radius: 3px;
 	  width: 85px;
 	  height: 30px;
-	  position: fixed;
 	  cursor: pointer;		    
 }
 	
@@ -90,7 +89,7 @@
                 //echo '<button onclick="myFunction()>"Follow"</button>';
                     
                 echo '<form method="POST" action="backend.php">
-                <input type="hidden" name="user" value="'. $row['username'].'" />
+                <input type="hidden" name="user" value="'. $row['username'].'" /> <br>
                 <button id = followerListButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
                 </form>';
 
