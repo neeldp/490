@@ -7,7 +7,7 @@ require 'nav.php';
 <!-- This file is used for the login screen of the CS 490 SEC. 003 Group 8 Project -->
     
 	<body>	
-		<h1> searchResults</h1> 
+		<h1> Search Results:</h1> 
 		<div>
 			<?php
             $conn = connect_db();
