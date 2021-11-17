@@ -25,7 +25,7 @@ require 'nav.php';
 						
 					echo '<form method="POST" action="backend.php">
 					<input type="hidden" name="user" value="'. $row['username'].'" />
-					<button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
+					<button class = "btn btn-outline-info" type="submit" name="followSearch" value= "follower">Follow</button>
 					</form>';
 
 					echo '<sp><sp>';
