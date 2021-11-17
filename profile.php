@@ -20,6 +20,12 @@ require 'db_key.php';
 			}
 
 		</script>
+		
+		<style>
+			label {
+				cursor: pointer;
+    			}
+		</style>
 
 		<?php
 
