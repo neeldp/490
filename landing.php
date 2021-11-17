@@ -3,6 +3,21 @@
     require 'nav.php';
     require 'db_key.php';
 ?>
+
+<style>
+	.follow_list {
+		background-color: white;
+		position: absolute;
+		width: 100px;
+		height: 650px;
+		opacity: 0.8;
+		bottom: 0px;
+		right: 0px;
+		text-align: left;
+		border: 2px solid silver;
+	}
+</style>
+
 <body>
     <?php
     if($_SESSION['isAdmin'] == 1){
@@ -20,7 +35,7 @@
 
     ?>
 
-    <div class = "follow list">
+    <div class = "follow_list">
 
         <?php
 
