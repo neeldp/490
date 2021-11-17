@@ -20,7 +20,7 @@
 	}
 	
 	h4 {
-		font-size: large;
+		font-size: xx-large;
 		font-family: fangsong;
 	}
 	
