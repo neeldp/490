@@ -8,12 +8,14 @@
 	.follow_list {
 		background-color: white;
 		position: fixed;
-		width: 14.8%;
+		width: 14%;
 		height: 28%;
 		bottom: 61%;
 		opacity: 0.8;
 		right: 0%;    
-		text-align: left;    
+		text-align: center;
+		color: #0384fc;
+		text-decoration: underline;
 		border: 2px solid silver;
 	}
 </style>
