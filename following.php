@@ -20,7 +20,7 @@ require 'db_key.php';
             echo '<form method="POST" action="backend.php"> <b>
 					<input type="hidden" name="id" value="'. $row['id'].'" /> </b>
 					<input type="hidden" name="name" value="'. $row['user'].'" />
-					<button class = "btn btn-outline-info" type="submit" name="unfollowButton" value= "following">Unfollowing</button>
+					<button class = "btn btn-outline-info" type="submit" name="unfollowButton" value= "following">Unfollow</button>
 					</form>';
             echo '<br>';
         
