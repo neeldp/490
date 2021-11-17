@@ -173,17 +173,17 @@ if($_POST){
         header('location: searchresults.php');
     }
 } 
-if($_GET){
-    require 'db_key.php';
-    if(!empty($_GET['d'])){
-        $del = html_entity_decode($_GET['d']);
+//if($_GET){
+   // prequire 'db_key.php';
+    //if(!empty($_GET['d'])){
+      //  $del = html_entity_decode($_GET['d']);
         //$del = (int)$del;
-        echo $del;
+       // echo $del;
         //$conn = connect_db();
         //$sql = "DELETE FROM `posts` WHERE (`id` = '{$del}' )";
 
         //$sql = $conn->query($sql);
         //header('location: landing.php');
-    }
-}
+   // }
+//
 ?>
