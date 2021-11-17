@@ -17,7 +17,7 @@ require 'nav.php';
 			 
 
 			//echo "$searchTerm";
-			$sql = $conn->query("SELECT id FROM users WHERE `username` = '{$searchTerm}'");
+			$sql = $conn->query("SELECT * FROM users WHERE `username` = '{$searchTerm}'");
 			if($sql->num_rows > 0){
 				while($row = mysqli_fetch_array($sql)){
 
