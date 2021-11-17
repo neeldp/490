@@ -89,12 +89,12 @@
                 //echo '<button type="button>Follow"</button>';
 
                 //echo '<button onclick="myFunction()>"Follow"</button>';
-                echo '<br><br>';
+                echo '<br>';
                 echo '<form method="POST" action="backend.php">
                 <input type="hidden" name="user" value="'. $row['username'].'" />
                 <button id = "follow-button"  class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
                 </form>';
-
+		echo '<br>';
                 echo '<sp><sp>';
                     
             }
