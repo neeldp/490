@@ -175,8 +175,8 @@ if($_POST){
 } 
     if($_GET['d']){
         $del = $_GET['d'];
-        $delint = intval($del);
-        echo $delint;
+    
+        echo $del;
        // $sql = "DELETE FROM `posts` WHERE (`id` = '$delint' )";
 
         //$sql = $conn->query($sql);
