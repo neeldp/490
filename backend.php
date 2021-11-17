@@ -182,7 +182,7 @@ if($_POST){
         header('location: searchresults.php?search=' . "$searchTerm");
     }
 
-    if(isset($_POST['followSearch'])){
+    if(isset($_POST['follow'])){
         $follower = $_SESSION['username'];
         $conn = connect_db();
 		$result = $conn->query("SELECT id FROM users WHERE `username` = '{$follower}'");
@@ -193,6 +193,23 @@ if($_POST){
         $user = $_POST['user'];
 
         $result = $conn->query("INSERT INTO `followers_table`(`user`, `follower_id`) VALUES ('$user', '$follower_id')");
+        header('location: searchresults.php?search=' . "$user");
+    }
+
+    if(isset($_POST['unfollow'])){
+        //$follower = $_SESSION['username'];
+        $id = $_POST['id'];
+        $user = $_POST['username'];
+
+        $conn = connect_db();
+		$result = $conn->query("DELETE FROM followers_table WHERE `id` = '{$id}'");
+		//$row = mysqli_fetch_array($result);
+        //the user in the session is the follower
+		//$follower_id = $row['id'];
+        //the person we will follow is the user
+        //$user = $_POST['user'];
+
+        //$result = $conn->query("INSERT INTO `followers_table`(`user`, `follower_id`) VALUES ('$user', '$follower_id')");
         header('location: searchresults.php?search=' . "$user");
     }
 } 
