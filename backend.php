@@ -178,7 +178,8 @@ if($_POST){
     }
 
     if(isset($_POST['searchbtn'])){
-        header('location: searchresults.php');
+        $searchTerm = $_POST['search'];
+        header('location: searchresults.php?search=' . "$searchTerm");
     }
 } 
 //if($_GET){
