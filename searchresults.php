@@ -17,6 +17,19 @@ require 'nav.php';
 			 
 
 			//echo "$searchTerm";
+			$sql = $conn->query("SELECT id FROM users WHERE `username` = '{$searchTerm}'");
+			if($result->num_rows > 0){
+
+				echo $row['username'];
+                    
+                echo '<form method="POST" action="backend.php">
+                <input type="hidden" name="user" value="'. $row['username'].'" />
+                <button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
+                </form>';
+
+                echo '<sp><sp>';
+				
+			}
             
 			$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE '%$searchTerm%' OR `text` LIKE '%$searchTerm%') ORDER BY `time`");
 			//$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE 'jake' OR `text` LIKE 'jake') ORDER BY `time`");
