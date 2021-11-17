@@ -85,7 +85,7 @@ require 'nav.php';
 					echo '<form method="POST" action="backend.php">
 					<div class="form-group">
 						<label>Comment:</label>
-						<input class= "form-control w-25" type="text" name="comment"><br><br>
+						<input class= "form-control w-25" type="text" name="text"><br><br>
 						<input type="hidden" name="post_ID" value="'. $row['id'].'" />
 						<input type="hidden" name="userPost" value="'. $row['user'].'" />
 					</div>	
