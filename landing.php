@@ -90,7 +90,7 @@
                     
                 echo '<form method="POST" action="backend.php">
                 <input type="hidden" name="user" value="'. $row['username'].'" /> <br>
-                <button id = followerListButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
+                <button id = followerListButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
 		<br>
                 </form>';
 
