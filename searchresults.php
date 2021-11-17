@@ -12,12 +12,12 @@ require 'nav.php';
 			<?php
             $conn = connect_db();
 			//echo 'hi';
-        
+			$user = $_SESSION['username'];
             $searchTerm = $_GET['search']; 
 			 
 
 			//echo "$searchTerm";
-			$sql = $conn->query("SELECT * FROM users WHERE `username` = '{$searchTerm}'");
+			$sql = $conn->query("SELECT * FROM users WHERE `username` = '{$searchTerm}' AND `username` != '{$user}'");
 			if($sql->num_rows > 0){
 				while($row = mysqli_fetch_array($sql)){
 
