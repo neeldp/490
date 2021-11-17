@@ -95,18 +95,18 @@
         ?>
 	
 	<?php
-	    //if($_SESSION['isAdmin'] == 1){
-		//echo "<form method='POST' action='backend.php'>";
-		//echo "<h3>". "Delete A Post". "</h3>";
-		//echo "<div class='form-group'>";
-		//echo "<label>"."Delete:"."</label>";
-		//echo "<input class= 'form-control w-25' type='text' name='admin'>"."<br>"."<br>";
-		//echo "</div>";    
-		//echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Create New User"."</button>";
-		//echo "</form>";
-	    //}else{
-		//echo "<br>";
-	    //}
+	    if($_SESSION['isAdmin'] == 1){
+		echo "<form method='POST' action='backend.php'>";
+		echo "<h3>". "Delete A Post". "</h3>";
+		echo "<div class='form-group'>";
+		echo "<label>"."Delete:"."</label>";
+		echo "<input class= 'form-control w-25' type='text' name='admin'>"."<br>"."<br>";
+		echo "</div>";    
+		echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Create New User"."</button>";
+		echo "</form>";
+	    }else{
+		echo "<br>";
+	    }
 	?>
 	
         <?php
@@ -121,9 +121,9 @@
             $arr = array();
             $counter = 0;
             if($sql->num_rows > 0){
-                while($r = mysqli_fetch_array($sql))
+                while($row = mysqli_fetch_array($sql))
                 {
-                    $arr[$counter] = $r['user'];
+                    $arr[$counter] = $row['user'];
                     $counter++;
                 }
                 $arr[$counter] = $user;
@@ -136,21 +136,23 @@
                     echo "<div class='posts'>";
                     echo "<p class='puser'>". $row['user']."</p>";
 		    
-		    echo '<form method="POST" action="backend.php">
-					<input type="hidden" name="id" value="'. $r['id'].'" />
-					<input type="hidden" name="username" value="'. $row['user'].'" />
-					<button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
-		   	</form>';
+                    echo '<form method="POST" action="backend.php">
+                            <input type="hidden" name="id" value="'. $row['id'].'" />
+                            <input type="hidden" name="username" value="'. $row['user'].'" />
+                            <button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
+                    </form>';
 		    
-                    
-                    
                     $userP = $row['user'];
                     $result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
                     $record = mysqli_fetch_array($result);
-                    
+                    $id = $row['id'];
                     if($_SESSION['isAdmin']==1){
-                    echo "<a href=backend.php?d='" . $row['id'] . "'" . ">" . "Delete post" . "</a>";
+                        echo '<form method="POST" action="backend.php">
+                        <input type="hidden" name="del" value="'. $id.'" />
+                        <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
+                        </form>';
                     }
+                   
                     echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                     echo "<p class='ptext'>". $row['text']."</p>";
                     echo "<p class='ptime'>". $row['time']."</p>";

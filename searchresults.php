@@ -71,9 +71,13 @@ require 'nav.php';
 					*/
 
     
-					if($_SESSION['isAdmin']==1){
-						echo "<a href=backend.php?d='" . $row['id'] . "'" . ">" . "Delete post" . "</a>";
-					}	    
+					$id = $row['id'];
+                    if($_SESSION['isAdmin']==1){
+                        echo '<form method="POST" action="backend.php">
+                        <input type="hidden" name="del" value="'. $id.'" />
+                        <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
+                        </form>';
+                    }	    
 					echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';	
 					echo "<p class='ptext'>". $row['text']."</p>";	
 					echo "<p class='ptime'>". $row['time']."</p>";
