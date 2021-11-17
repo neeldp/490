@@ -150,7 +150,7 @@ transition: transform 80ms ease-in;
   display:grid;
 }
 .timeline h1{
-  padding-left:1000px
+  left: 15%;
 }
 
 .posts{
