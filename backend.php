@@ -180,6 +180,6 @@ if($_POST){
        // $sql = "DELETE FROM `posts` WHERE (`id` = '$delint' )";
 
         //$sql = $conn->query($sql);
-        header('location: landing.php');
+        //header('location: landing.php');
     }
 ?>
