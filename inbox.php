@@ -17,7 +17,7 @@ require 'nav.php';
         if($result -> num_rows > 0){
             while($row = mysqli_fetch_array($result)){
                 //if ($row['sender'] == $usr ){
-                echo "<tr><td>".  "<a href='conversation.php?name=".$row['receiver'] . "'>" . $row['receiver']  . "</a></td></tr> <br>";
+                echo "<br> <tr><td>".  "<a href='conversation.php?name=".$row['receiver'] . "'>" . $row['receiver']  . "</a></td></tr> <br>";
                 //}else{
                 //    echo "<tr><td>".  "<a href='conversation.php?name=".$row['sender'] . "'>" . $row['sender']  . "</a></td></tr>";
                 //}
