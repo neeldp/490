@@ -44,6 +44,8 @@ require 'nav.php';
 					echo $row['user']." <br>";
 					echo $row['text']."<br>";
 					echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
+					echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+
 						
 					$id = $row['id'];
 						
@@ -57,7 +59,8 @@ require 'nav.php';
 							echo $r['text']."<br><br>";
 							
 						}
-					}	
+					}
+
 					echo '<form method="POST" action="backend.php">
 					<div class="form-group">
 						<label>Comment:</label>
