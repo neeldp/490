@@ -36,22 +36,6 @@
 </style>
 
 <body>
-    <?php
-    if($_SESSION['isAdmin'] == 1){
-        echo "<form method='POST' action='backend.php'>";
-        echo "<h3>". "Delete A Post". "</h3>";
-        echo "<div class='form-group'>";
-        echo "<label>"."Delete:"."</label>";
-        echo "<input class= 'form-control w-25' type='text' name='admin'>"."<br>"."<br>";
-        echo "</div>";    
-        echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Create New User"."</button>";
-        echo "</form>";
-    }else{
-        echo "<br>";
-    }
-
-    ?>
-
     <div class = "follow_list">
 
         <?php
@@ -109,6 +93,22 @@
             $value = getenv("SPOTIFY_TOKEN");
             echo "<p>". $value."</p>";
         ?>
+	
+	<?php
+	    if($_SESSION['isAdmin'] == 1){
+		echo "<form method='POST' action='backend.php'>";
+		echo "<h3>". "Delete A Post". "</h3>";
+		echo "<div class='form-group'>";
+		echo "<label>"."Delete:"."</label>";
+		echo "<input class= 'form-control w-25' type='text' name='admin'>"."<br>"."<br>";
+		echo "</div>";    
+		echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Create New User"."</button>";
+		echo "</form>";
+	    }else{
+		echo "<br>";
+	    }
+	?>
+	
         <?php
             $user = $_SESSION['username'];
             $conn = connect_db();
