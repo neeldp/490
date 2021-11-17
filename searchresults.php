@@ -15,6 +15,11 @@ require 'nav.php';
         
             $searchTerm = $_POST['search']; 
 
+			foreach ($_POST as $key) {
+				echo $key;
+			}
+			 
+
 			echo "$searchTerm";
             
 			$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE '%$searchTerm%' OR `text` LIKE '%$searchTerm%') ORDER BY `time`");
