@@ -8,13 +8,19 @@
 	.follow_list {
 		background-color: white;
 		position: fixed;
+		font-weight: bold;
 		width: 7%;
 		height: 30%;
 		bottom: 58%;
 		opacity: 0.8;
 		right: 0%;
-		text-align: left;
+		text-align: center;
+		color: #0384fc;
 		border: 2px solid silver;
+	}
+	
+	h4 {
+		font-family: fangsong;
 	}
 </style>
 
@@ -39,7 +45,7 @@
 
         <?php
 	echo "<h4> <b>". "You Might Like". "</b> </h4>";
-	echo "<p>". "-------". "</p>";
+	echo "<p>". "-------------------------------------------". "</p>";
         $user = $_SESSION['username'];
         $conn = connect_db();
         $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
@@ -71,7 +77,7 @@
                 //echo '<button type="button>Follow"</button>';
 
                 //echo '<button onclick="myFunction()>"Follow"</button>';
-                    
+                echo '<br>';
                 echo '<form method="POST" action="backend.php">
                 <input type="hidden" name="user" value="'. $row['username'].'" />
                 <button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
