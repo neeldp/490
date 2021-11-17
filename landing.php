@@ -22,6 +22,7 @@
 	h4 {
 		font-size: x-large;
 		font-family: fangsong;
+		text-decoration: underline;
 	}
 	
 	#follow-button {
@@ -57,7 +58,6 @@
 
         <?php
 	echo "<h4> <b>". "You Might Like". "</b> </h4>";
-	echo "<p>". "-------------------------------------". "</p>";
         $user = $_SESSION['username'];
         $conn = connect_db();
         $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
