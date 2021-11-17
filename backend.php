@@ -126,15 +126,15 @@ if($_POST){
         }
 
 
-    if(isset($_POST['adminbtn'])){
-        $adminTerm = $_POST['admin']; 
+    //if(isset($_POST['adminbtn'])){
+    //    $adminTerm = $_POST['admin']; 
         //$result = "DELETE FROM `comments` WHERE (`post_ID` = 'posts.id')";
         //$result = $conn->query($result);
-        $sql = "DELETE FROM `posts` WHERE (`user` LIKE '%$adminTerm%' OR `text` LIKE '%$adminTerm%')";
+    //    $sql = "DELETE FROM `posts` WHERE (`user` LIKE '%$adminTerm%' OR `text` LIKE '%$adminTerm%')";
         //echo $adminTerm;
-        $sql = $conn->query($sql);
-        header('location: landing.php');
-    }
+    //    $sql = $conn->query($sql);
+    //    header('location: landing.php');
+    //}
 
     if(isset($_POST['commentbtn'])){
         $username = $_SESSION['username'];
@@ -167,7 +167,7 @@ if($_POST){
         $id = $_POST['del'];
         $sql = "DELETE FROM `posts` WHERE `id` = '{$id}'";
 		$result = $conn->query($sql);
-		//$row = mysqli_fetch_array($result);
+		$row = mysqli_fetch_array($result);
         header('location: landing.php');
     }
 
