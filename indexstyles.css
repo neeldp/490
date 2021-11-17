@@ -24,7 +24,8 @@ header{
   
   header li a {
   color: #000000;
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: bold;
 }
 body {    
   font-family: 'Montserrat', sans-serif;
