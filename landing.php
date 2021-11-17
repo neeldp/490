@@ -16,6 +16,10 @@
 		text-align: left;
 		border: 2px solid silver;
 	}
+	
+	h1 {
+		text-align: center;
+	}
 </style>
 
 <body>
@@ -88,7 +92,7 @@
 
     <!-- Timeline Code --> 
     <div class = "timeline">
-	    <h1> <b> <center> My Timeline  </center></b></h1> 
+	    <h1> <b> My Timeline </b></h1> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
             echo "<p>". $value."</p>";
