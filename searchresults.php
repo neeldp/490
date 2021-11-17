@@ -87,8 +87,9 @@ require 'nav.php';
 						<label>Comment:</label>
 						<input class= "form-control w-25" type="text" name="comment"><br><br>
 						<input type="hidden" name="post_ID" value="'. $row['id'].'" />
+						<input type="hidden" name="userPost" value="'. $row['user'].'" />
 					</div>	
-					<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>
+					<button class = "btn btn-outline-info" type="submit" name="comment" value= "post_Comment">Comment</button>
 				</form>';
 					echo "</div>";
 					echo "<br><br>";
