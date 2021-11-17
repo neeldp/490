@@ -134,13 +134,13 @@
                 while($row = mysqli_fetch_array($sql_query))
                 {
                     echo "<div class='posts'>";
-                    echo "<p class='puser'>". $row['user']."
+                    echo "<p class='puser'>". $row['user']."</p>";
 		    
 		    echo '<form method="POST" action="backend.php">
 					<input type="hidden" name="id" value="'. $record['id'].'" />
 					<input type="hidden" name="username" value="'. $row['user'].'" />
 					<button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
-					</form>' </p>;
+		   	</form>';
 		    
                     
                     
