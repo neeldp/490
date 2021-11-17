@@ -203,13 +203,7 @@ if($_POST){
 
         $conn = connect_db();
 		$result = $conn->query("DELETE FROM followers_table WHERE `id` = '{$id}'");
-		//$row = mysqli_fetch_array($result);
-        //the user in the session is the follower
-		//$follower_id = $row['id'];
-        //the person we will follow is the user
-        //$user = $_POST['user'];
-
-        //$result = $conn->query("INSERT INTO `followers_table`(`user`, `follower_id`) VALUES ('$user', '$follower_id')");
+        
         header('location: searchresults.php?search=' . "$user");
     }
 } 
