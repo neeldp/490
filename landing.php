@@ -27,7 +27,7 @@
         echo "<label>"."Delete:"."</label>";
         echo "<input class= 'form-control w-25' type='text' name='admin'>"."<br>"."<br>";
         echo "</div>";    
-        echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Admin"."</button>";
+        echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Create New User"."</button>";
         echo "</form>";
     }else{
         echo "<br>";
