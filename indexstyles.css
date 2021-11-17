@@ -29,7 +29,8 @@ header{
 body {    
   font-family: 'Montserrat', sans-serif;
   color: #200000; 
-  background: linear-gradient(#2b6775,#2b6675,#2b6770) ;
+  background: linear-gradient(#f2f2f2, #f2f2f2, #f2f2f2);
+  /* background: linear-gradient(#2b6775,#2b6675,#2b6770) ; */
   padding: 30px;
   margin-top: 80px;
 }
