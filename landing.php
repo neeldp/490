@@ -7,12 +7,12 @@
 <style>
 	.follow_list {
 		background-color: white;
-		position: absolute;
-		width: 120px;
-		height: 600px;
-		bottom: 550px;
+		position: fixed;
+		width: 7%;
+		height: 30%;
+		bottom: 58%;
 		opacity: 0.8;
-		right: 0px;
+		right: 0%;
 		text-align: left;
 		border: 2px solid silver;
 	}
