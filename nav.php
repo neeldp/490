@@ -19,7 +19,7 @@ require 'backend.php'?>
 				<form method="POST" action='backend.php'>
 					<div class='form-group'>
 						<label>Search:</label>
-						<input class= 'form-control w-25' type="text" name="search">
+						<input class= 'form-control w-25' type="text" name="search" value= "search">
 					</div>	
 					<sp><button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>
 				</form>
