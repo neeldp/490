@@ -9,9 +9,9 @@
 		background-color: white;
 		position: absolute;
 		width: 100px;
-		height: 1000px;
+		height: 800px;
 		opacity: 0.8;
-		bottom: 950px;
+		bottom: 750px;
 		right: 0px;
 		text-align: left;
 		border: 2px solid silver;
