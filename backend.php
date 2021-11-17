@@ -1,7 +1,7 @@
 <?php
-
+require 'db_key.php';
 if($_POST){
-    require 'db_key.php';
+    
     $conn = connect_db();
     session_start();
     if(isset($_POST['register']) ){
