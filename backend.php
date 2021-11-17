@@ -219,6 +219,18 @@ if($_POST){
         //echo "$post_ID";
         
     }
+
+
+    if(isset($_POST['unfollowbtn'])){
+        //$follower = $_SESSION['username'];
+        $id = $_POST['id'];
+        $user = $_POST['username'];
+
+        $conn = connect_db();
+		$result = $conn->query("DELETE FROM followers_table WHERE `id` = '{$id}'");
+
+        header('location: landing.php');
+    }
 } 
 //if($_GET){
    // prequire 'db_key.php';
