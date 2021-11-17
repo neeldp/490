@@ -14,9 +14,10 @@
 		opacity: 0.8;
 		right: 0%;    
 		text-align: center;
-		color: #0384fc;
+		color: #2c03fc;
 		text-decoration: underline;
 		border: 2px solid silver;
+		font-weight: bold;
 	}
 </style>
 
