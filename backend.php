@@ -176,8 +176,9 @@ if($_POST){
 if($_GET){
     require 'db_key.php';
     if(!empty($_GET['d'])){
-        $del = $_GET['d'];
-        $del = is_numeric($del);
+        $del = html_entity_decode($_GET['d']);
+        $del = (int)$del;
+        
         $conn = connect_db();
         $sql = "DELETE FROM `posts` WHERE (`id` = '{$del}' )";
 
