@@ -11,6 +11,7 @@ require 'nav.php';
 		<div>
 			<?php
             $conn = connect_db();
+			echo 'hi';
             if(isset($_POST['searchbtn'])){
                 $searchTerm = $_POST['search']; 
 
