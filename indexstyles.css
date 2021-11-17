@@ -52,7 +52,6 @@ height: 100%;
 position:center;
 transition: transform 1s;
 transform-style: preserve-3d;
-cursor: pointer;
 position: relative;
 }
 
@@ -110,6 +109,7 @@ font-weight: bold;
 padding: 12px 45px;
 letter-spacing: 1px;
 text-transform: uppercase;
+pointer: pointer;
 transition: transform 80ms ease-in;
 }
 
