@@ -176,9 +176,10 @@ if($_POST){
     if($_GET['d']){
         $del = $_GET['d'];
         $delint = (int)$del;
-        $sql = "DELETE FROM `posts` WHERE (`id` = '$delint' )";
+        echo $delint;
+       // $sql = "DELETE FROM `posts` WHERE (`id` = '$delint' )";
 
-        $sql = $conn->query($sql);
+        //$sql = $conn->query($sql);
         header('location: landing.php');
     }
 ?>
