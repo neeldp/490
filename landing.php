@@ -127,7 +127,7 @@
                     echo '<form method="POST" action="backend.php">
 					<input type="hidden" name="id" value="'. $record['id'].'" />
 					<input type="hidden" name="username" value="'. $row['user'].'" />
-					<button class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "following">Following</button>
+					<button class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
 					</form>';
                     
                     
