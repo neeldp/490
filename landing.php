@@ -7,33 +7,14 @@
 <style>
 	.follow_list {
 		background-color: white;
-		position: fixed;
-		font-weight: bold;
-		width: 14%;
-		height: 31%;
-		bottom: 58%;
+		position: absolute;
+		width: 120px;
+		height: 700px;
+		bottom: 650ox;
 		opacity: 0.8;
-		right: 0%;
-		text-align: center;
-		color: #0384fc;
+		right: 0px;
+		text-align: left;
 		border: 2px solid silver;
-	}
-	
-	h4 {
-		font-size: x-large;
-		font-family: fangsong;
-		text-decoration: underline;
-	}
-	
-	#follow-button {
-	  color: #3399FF;
-	  font-family: "Helvetica";
-	  font-size: 10pt;
-	  background-color: #ffffff;
-	  border: 1px solid;
-	  border-color: #3399FF;
-	  border-radius: 3px;
-	  cursor: pointer;		    
 	}
 </style>
 
@@ -46,7 +27,7 @@
         echo "<label>"."Delete:"."</label>";
         echo "<input class= 'form-control w-25' type='text' name='admin'>"."<br>"."<br>";
         echo "</div>";    
-        echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Delete"."</button>";
+        echo "<button class = 'btn btn-outline-info' type='submit' name='adminbtn' value= 'message' class='adminbtn'>"."Create New User"."</button>";
         echo "</form>";
     }else{
         echo "<br>";
@@ -57,7 +38,8 @@
     <div class = "follow_list">
 
         <?php
-	echo "<h4> <b>". "You Might Like". "</b> </h4>";
+	    echo "<h4> <b>". "You Might Like". "</b> </h4>";
+	    echo "<p>". "-------". "</p>";
         $user = $_SESSION['username'];
         $conn = connect_db();
         $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
@@ -89,12 +71,12 @@
                 //echo '<button type="button>Follow"</button>';
 
                 //echo '<button onclick="myFunction()>"Follow"</button>';
-                echo '<br>';
+                    
                 echo '<form method="POST" action="backend.php">
                 <input type="hidden" name="user" value="'. $row['username'].'" />
-                <button id = "follow-button"  class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
+                <button class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">Follow</button>
                 </form>';
-		echo '<br>';
+
                 echo '<sp><sp>';
                     
             }
@@ -106,7 +88,7 @@
 
     <!-- Timeline Code --> 
     <div class = "timeline">
-	    <h1> <b> My Timeline </b></h1> 
+	<h1> <b> My Timeline  </b></h1> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
             echo "<p>". $value."</p>";
@@ -137,12 +119,21 @@
                 {
                     echo "<div class='posts'>";
                     echo "<p class='puser'>". $row['user']."</p>";
-                    $id = $row['id'];
+                    
+                    
+                    $userP = $row['user'];
+                    $result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
+                    $record = mysqli_fetch_array($result);
+                    echo '<form method="POST" action="backend.php">
+					<input type="hidden" name="id" value="'. $record['id'].'" />
+					<input type="hidden" name="username" value="'. $row['user'].'" />
+					<button class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "following">Following</button>
+					</form>';
+                    
+                    
+                    
                     if($_SESSION['isAdmin']==1){
-                        echo '<form method="POST" action="backend.php">
-                        <input type="hidden" name="del" value="'. $id.'" />
-                        <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
-                        </form>';
+                    echo "<a href=backend.php?d='" . $row['id'] . "'" . ">" . "Delete post" . "</a>";
                     }
                     echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                     echo "<p class='ptext'>". $row['text']."</p>";
