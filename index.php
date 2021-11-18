@@ -1,4 +1,9 @@
 <?php require 'header.php'; require 'db_key.php';?>
+<style>
+    body {
+        overflow: hidden;
+    }
+</style>
 
 <div class="scene">
     <div class="card">
