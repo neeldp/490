@@ -4,37 +4,6 @@
     require 'db_key.php';
 ?>
 
-<style>
-	.follow_list {
-		background-color: white;
-		position: fixed;
-		width: 13.7%;
-		height: 40%;
-		bottom: 48%;
-		opacity: 0.8;
-		right: 0%;    
-		text-align: center;
-		color: #2c03fc;
-		text-decoration: underline;
-		border: 2px solid silver;
-		font-weight: bold;
-	}
-	
-	#followerButton {
-	  color: #3399FF;
-	  font-family: "Helvetica";
-	  font-size: 10pt;
-	  background-color: #ffffff;
-	  border: 1px solid;
-	  border-color: #3399FF;
-	  border-radius: 3px;
-	  width: 85px;
-	  height: 30px;
-	  cursor: pointer;		    
-}
-	
-</style>
-
 <body>
     <div class = "follow_list">
 
