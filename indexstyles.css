@@ -91,8 +91,11 @@ width: 150px;
 }
 
 h1 {
-	font-size: 50px;
-	left: 50%;
+	font-size: 35px;
+    	position: absolute; 
+	left: 44%;
+	z-index: -1;
+	top: 6%;
 }
 
 label{
@@ -151,9 +154,6 @@ transition: transform 80ms ease-in;
 
 .timeline{
   display:grid;
-}
-.timeline h1{
-  left: 15%;
 }
 
 .posts{
