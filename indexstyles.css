@@ -73,12 +73,14 @@ font-size: 5px;
 
 
 .form-container{
+	/* If below doesn't work, revert to here... message box will be in chat box but at least it will work.
 	display: flex;
   	justify-content: center;
 	transform: translate(0, 35%);
 	box-sizing: border-box;
 	padding: 12px 5px;
-	/* Repositions message box, but for some reaosn doesn't work?
+	*/
+	
 	display: flex;  
 	justify-content: center;
 	transform: translate(0, 35%);
@@ -87,7 +89,7 @@ font-size: 5px;
 	top: 67%;
 	left: 11.5%;
 	padding: 12px 5px;
-	*/
+	
 }
 
 input:focus {
