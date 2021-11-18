@@ -57,7 +57,7 @@
 
     <!-- Timeline Code --> 
     <div class = "timeline">
-	<h2> <b> My Timeline  </b></h2> 
+	<h2> <b> I HAVE CHANGED  </b></h2> 
 	   
          <?php
             $value = getenv("SPOTIFY_TOKEN");
