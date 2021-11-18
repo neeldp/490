@@ -184,3 +184,7 @@ transition: transform 80ms ease-in;
   color:#000;
 
 }
+
+.nonScrollable {
+  overflow: hidden;
+}  
