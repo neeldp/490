@@ -107,6 +107,22 @@ font-weight: normal;
 font-size: 30px;
 }
 
+label.followingPointer {
+	cursor: pointer; 
+	position: absolute;
+	left: 34%;    
+	top: 16%;
+	z-index: -1;
+}
+
+label.followerPointer {
+	cursor: pointer;
+    	position: absolute;
+    	left: 54%;    
+	top: 16%;
+	z-index: -1;
+}
+
 .button-login {
 border-radius: 20px;
 border: 1px solid #c8d8e4;
@@ -225,20 +241,4 @@ transition: transform 80ms ease-in;
 	width: 85px;
 	height: 30px;
 	cursor: pointer;		    
-}
-
-#followingPointer {
-	cursor: pointer; 
-	position: absolute;
-	left: 34%;    
-	top: 16%;
-	z-index: -1;
-}
-
-#followerPointer {
-	cursor: pointer;
-    	position: absolute;
-    	left: 54%;    
-	top: 16%;
-	z-index: -1;
 }
