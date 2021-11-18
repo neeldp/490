@@ -121,13 +121,17 @@
                     echo "<div class='posts'>";
                     echo "<p class='puser'>". $row['user']."</p>";
                     $name = $row['user'];
-                    $result = $conn->query("SELECT id FROM followers_table WHERE follower_id = '{$user_id}' AND `user` = '{$name}'");
-                    $record = mysqli_fetch_array($result);
-                    echo '<form method="POST" action="backend.php">
-                            <input type="hidden" name="id" value="'. $record['id'].'" />
-                            <input type="hidden" name="username" value="'. $row['user'].'" />
-                            <button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
-                    </form>';
+                    if ($name != $user){
+
+                    
+                        $result = $conn->query("SELECT id FROM followers_table WHERE follower_id = '{$user_id}' AND `user` = '{$name}'");
+                        $record = mysqli_fetch_array($result);
+                        echo '<form method="POST" action="backend.php">
+                                <input type="hidden" name="id" value="'. $record['id'].'" />
+                                <input type="hidden" name="username" value="'. $row['user'].'" />
+                                <button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
+                        </form>';
+                    }
 		    
                     $userP = $row['user'];
                     $result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
