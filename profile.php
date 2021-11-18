@@ -6,9 +6,7 @@ require 'db_key.php';
 
 
 <body>
-	<div class = "timeline">
-		<h2> <b> My Profile </b> </h2> 
-		<div class = "stats">
+	<div class = "stats">
 
 		<script>
 
@@ -51,8 +49,11 @@ require 'db_key.php';
 			echo '<label onclick="followers()">'. $row[0].' Followers</label>';
 
 		?>
-		</div>
-		
+	</div>
+	
+	
+	<div class = "timeline">
+		<h2> <b> My Profile </b> </h2> 
 		
 		<?php
 			
