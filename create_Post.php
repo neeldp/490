@@ -19,7 +19,7 @@ $_SESSION['song'] = $NAME;
 		<label>Search for a Song on Spotify:</label>
 		<input class= 'form-control w-25' type="text" name="searchSong">
 	</div>	
-	<sp><button type="submit" name="searchbtnsong" value= 'searchbtn' class="searchbtnsong">Search</button> <sp>
+	<sp><button type="submit" name="searchbtnsong" value= 'searchbtn' class="searchbtnsong">Search</button> <br>
 	<button class = 'btn btn-outline-info' type="submit" name="create_Post" value= 'Post' class="submit">Post</button></form>
 </form>
 </div>
