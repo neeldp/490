@@ -111,7 +111,6 @@ label.followingPointer {
 	position: absolute;
 	left: 34%;    
 	top: 16%;
-	z-index: -1;
 }
 
 label.followerPointer {
@@ -119,7 +118,6 @@ label.followerPointer {
     	position: absolute;
     	left: 54%;    
 	top: 16%;
-	z-index: -1;
 }
 
 .button-login {
