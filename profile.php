@@ -33,7 +33,8 @@ require 'db_key.php';
 			//echo "$row[0]";
 			//echo '<a href="following.php">following</a>';
 			//echo "$row[0] ";
-			echo '<label id="followingPointer" onclick="following()">'. $row[0].' Following</label>';
+			echo '<label id="followingPointer" onclick="following()">'. $row[0].' Following</label>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
+			//echo '<label onclick="following()">'. $row[0].' Following</label>';
 			echo "\t\t\t\t";
 			
 
