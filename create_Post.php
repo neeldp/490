@@ -40,7 +40,7 @@ $_SESSION['song'] = $NAME;
 		
 		// Set the code on the API wrapper
 		$api->setAccessToken($accessToken);
-		echo "<p>" . $accessToken . "</p>";
+		//echo "<p>" . $accessToken . "</p>";
 		
 		
 
