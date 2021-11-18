@@ -227,7 +227,7 @@ transition: transform 80ms ease-in;
 	cursor: pointer;		    
 }
 
-label.followingPointer {
+#followingPointer {
 	cursor: pointer; 
 	position: absolute;
 	left: 34%;    
@@ -235,7 +235,7 @@ label.followingPointer {
 	z-index: -1;
 }
 
-label.followerPointer {
+#followerPointer {
 	cursor: pointer;
     	position: absolute;
     	left: 54%;    
