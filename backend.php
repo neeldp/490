@@ -225,7 +225,7 @@ if($_POST){
     if(isset($_POST['unfollowbtn'])){
         //$follower = $_SESSION['username'];
         $id = $_POST['id'];
-        echo $id;
+        //echo $id;
         $user = $_POST['username'];
 
         $conn = connect_db();
