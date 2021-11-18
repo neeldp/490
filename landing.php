@@ -6,7 +6,6 @@
 
 <body>
     <div class = "follow_list">
-
         <?php
 	    echo "<h4> <b>". "You Might Like". "</b> </h4>";
         $user = $_SESSION['username'];
@@ -15,7 +14,6 @@
         $row = mysqli_fetch_array($result);
 		$user_id = $row['id'];
     
-
         $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
         $arr = array();
         $counter = 0;
@@ -32,34 +30,27 @@
         
         $list = implode("' ,'", $arr);
         $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ORDER BY Rand() LIMIT 3 ");
-
         if($sql_query->num_rows > 0){
             while($row = mysqli_fetch_array($sql_query))
             {
                 echo $row['username'];
                 //echo '<button type="button>Follow"</button>';
-
                 //echo '<button onclick="myFunction()>"Follow"</button>';
                     
                 echo '<form method="POST" action="backend.php">
                 <input type="hidden" name="user" value="'. $row['username'].'" /> <br>
                 <button id = followerButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
                 </form>';
-
                 echo '<sp><sp>';
                     
             }
         }
-
-
         ?>
     </div>    
-
     <!-- Timeline Code --> 
     <div class = "timeline">
-	<h2> <b> I HAVE CHANGED  </b></h2> 
-	   
-         <?php
+	<h2> <b> My Timeline  </b></h2> 
+        <?php
             $value = getenv("SPOTIFY_TOKEN");
             echo "<p>". $value."</p>";
         ?>
@@ -143,5 +134,5 @@
             
             $conn->close();
         ?>
-     </div>
+    </div>
 </body></html> 
