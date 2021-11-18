@@ -106,9 +106,9 @@
             $arr = array();
             $counter = 0;
             if($sql->num_rows > 0){
-                while($r = mysqli_fetch_array($sql))
+                while($row = mysqli_fetch_array($sql))
                 {
-                    $arr[$counter] = $r['user'];
+                    $arr[$counter] = $row['user'];
                     $counter++;
                 }
                 $arr[$counter] = $user;
@@ -120,9 +120,11 @@
                 {
                     echo "<div class='posts'>";
                     echo "<p class='puser'>". $row['user']."</p>";
-		    
+                    $name = $row['user'];
+                    $result = $conn->query("SELECT id FROM followers_table WHERE follower_id = '{$user_id}' AND `user` = '{$name}'");
+                    $record = mysqli_fetch_array($result);
                     echo '<form method="POST" action="backend.php">
-                            <input type="hidden" name="id" value="'. $r['id'].'" />
+                            <input type="hidden" name="id" value="'. $record['id'].'" />
                             <input type="hidden" name="username" value="'. $row['user'].'" />
                             <button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
                     </form>';
