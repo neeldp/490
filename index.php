@@ -1,12 +1,6 @@
 <?php require 'header.php'; require 'db_key.php';?>
-<!-- Removes scrolling on welcome screen
-<style>
-    body {
-        overflow: hidden;
-    }
-</style>
--->
 
+<body class = "nonScrollable">
 <div class="scene">
     <div class="card">
         <div class="login_Style">
@@ -27,3 +21,4 @@
     </div>   
 
 </div>
+</body>
