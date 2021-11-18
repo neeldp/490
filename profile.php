@@ -33,7 +33,7 @@ require 'db_key.php';
 			//echo "$row[0]";
 			//echo '<a href="following.php">following</a>';
 			//echo "$row[0] ";
-			echo '<label id="followingPointer" onclick="following()">'. $row[0].' Following</label>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
+			echo '<label onclick="following()" class="followingPointer">'. $row[0].' Following</label>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
 			//echo '<label onclick="following()">'. $row[0].' Following</label>';
 			echo "\t\t\t\t";
 			
@@ -41,7 +41,7 @@ require 'db_key.php';
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
 			$row = mysqli_fetch_array($sql);
 			//echo "$row[0] ";
-			echo '<label  id="followerPointer" onclick="followers()">'. $row[0].' Followers</label>';
+			echo '<label onclick="followers()" class="followerPointer">'. $row[0].' Followers</label>';
 
 		?>
 	</div>
