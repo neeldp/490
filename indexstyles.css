@@ -224,6 +224,10 @@ transition: transform 80ms ease-in;
 	cursor: pointer;		    
 }
 
-.followerPointer {
+label.followingPointer {
+	cursor: pointer;
+}
+
+label.followerPointer {
 	cursor: pointer;
 }
