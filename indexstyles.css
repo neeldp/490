@@ -135,13 +135,14 @@ transition: transform 80ms ease-in;
 }
 
 .inbox_container_style {
-  padding: 4px;
+  padding: 4px;  
   background-color: white;
   position: absolute;
-  width: 85%;
-  height: 90%;
-  opacity: 0.8;
-  border: 2px solid silver;  
+  width: 72%;
+  height: 55%;
+  left: 12%;  
+  opacity: 0.8;  
+  border: 2px solid silver;
   overflow-x: hidden;
   overflow-y: auto;
 }
