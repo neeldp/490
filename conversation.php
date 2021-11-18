@@ -7,12 +7,6 @@ $_SESSION['get'] = $NAME;
 //echo 'Conversation with ' . htmlspecialchars($_GET["name"]) . '!';
 ?>
 
-<style>
-    .nonScrollable {
-        overflow: hidden;
-    }    
-</style>
-
 <body class = "nonScrollable">
     <script> 
     $(document).ready(function(){
