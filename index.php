@@ -1,9 +1,11 @@
 <?php require 'header.php'; require 'db_key.php';?>
+<!-- Removes scrolling on welcome screen
 <style>
     body {
         overflow: hidden;
     }
 </style>
+-->
 
 <div class="scene">
     <div class="card">
