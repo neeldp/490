@@ -19,12 +19,6 @@ require 'db_key.php';
 			}
 
 		</script>
-		
-		<style>
-			label {
-				cursor: pointer;
-    			}
-		</style>
 
 		<?php
 
@@ -39,26 +33,26 @@ require 'db_key.php';
 			//echo "$row[0]";
 			//echo '<a href="following.php">following</a>';
 			//echo "$row[0] ";
-			echo '<label onclick="following()">'. $row[0].' Following</label>';
+			echo '<label class = follwerPointer onclick="following()">'. $row[0].' Following</label>';
 			echo "\t\t\t\t";
 			
 
 			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
 			$row = mysqli_fetch_array($sql);
 			//echo "$row[0] ";
-			echo '<label onclick="followers()">'. $row[0].' Followers</label>';
+			echo '<label class = follwerPointer onclick="followers()">'. $row[0].' Followers</label>';
 
 		?>
 	</div>
 	
 	
 	<div class = "timeline">
-		<h2> <b> My Profile </b> </h2> 
+		<h2> <b> My Profile </b> </h2> <br> <br>
 		
 		<?php
 			
 			$conn = connect_db();
-            $usr = $_SESSION['username'];
+            		$usr = $_SESSION['username'];
 			$result = $conn->query("SELECT * FROM posts WHERE `user` = '{$usr}' ORDER BY `time` DESC");
 			if($result->num_rows > 0){
 				while($row = mysqli_fetch_array($result))
