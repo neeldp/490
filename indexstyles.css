@@ -81,14 +81,14 @@ font-size: 5px;
 	padding: 12px 5px;
 	*/
 	
-	display: flex;  
-	justify-content: center;
+	/* display: flex;  
+	justify-content: center; */
 	transform: translate(0, 35%);
 	box-sizing: border-box;
     	position: absolute;
 	top: 67%;
 	left: 11.5%;
-	padding: 12px 5px;
+	/* padding: 12px 5px; */
 	
 }
 
