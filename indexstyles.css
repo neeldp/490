@@ -183,7 +183,6 @@ transition: transform 80ms ease-in;
     margin: 0 auto;
     border-radius: 25px;
     padding: 0.5%;
-    z-index: -1;
 }
   }
 .puser{
