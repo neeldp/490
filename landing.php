@@ -57,7 +57,7 @@
 
     <!-- Timeline Code --> 
     <div class = "timeline">
-	<h1> <b> My Timeline  </b></h1> 
+	<h1 class  = "my_Timeline_Orientation"> <b> My Timeline  </b></h1> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
             echo "<p>". $value."</p>";
