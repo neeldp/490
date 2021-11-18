@@ -223,3 +223,7 @@ transition: transform 80ms ease-in;
 	height: 30px;
 	cursor: pointer;		    
 }
+
+.followerPointer {
+	cursor: pointer;
+}
