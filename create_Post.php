@@ -6,22 +6,22 @@ $songID = $_SESSION['songID'];
 $_SESSION['song'] = $NAME;
 ?>   
 <body>
-<div class = "post-body"> 
-		<form action="backend.php" method="POST" enctype="multipart/form-data">
-			<textarea class = "status" name = "post_Text" placeholder = "Write your post here!" rows="4" cols="50" maxlength = "300"autofocus></textarea>
-			<br>
-			<label for="img">Attach image:</label>
-			<input type="file" id="img" name="img" accept="image/*">
-		</form>
-	
-<form method="POST" action='backend.php'>
-	<div class='form-group'>
+<div class="post-body"> 
+	<form action="backend.php" method="POST" enctype="multipart/form-data">   
+		
+	<div class="form-group">
 		<label>Search for a Song on Spotify:</label>
-		<input class= 'form-control w-25' type="text" name="searchSong">
+		<input class="form-control w-25" type="text" name="searchSong">
 	</div>	
-	<sp><button type="submit" name="searchbtnsong" value= 'searchbtn' class="searchbtnsong">Search</button> <br> <br>
-	<button class = 'btn btn-outline-info' type="submit" name="create_Post" value= 'Post' class="submit">Post</button></form>
-</form>
+	<sp> <button type="submit" name="searchbtnsong" value="searchbtn" class="searchbtnsong">Search</button> <br> <br>
+	
+	</sp></form>		
+    
+	<label for="img">Attach image:</label><br>
+		<input type="file" id="img" name="img" accept="image/*">  <br><br>
+            
+	<textarea class="status" name="post_Text" placeholder="Write your post here!" rows="4" cols="50" maxlength="300" autofocus=""></textarea> 
+	<br><br><button class="btn btn-outline-info" type="submit" name="create_Post" value="Post">Post</button>
 </div>
 	<?php 
 		//echo "<p>" . $_SESSION['songID'] . "</p>";
