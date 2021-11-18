@@ -90,6 +90,10 @@ margin: 8px 0;
 width: 150px;
 }
 
+h1 {
+	left: 15%;	
+}
+
 h2 {
 	font-size: 35px;
     	position: absolute; 
