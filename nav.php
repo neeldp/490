@@ -11,7 +11,7 @@ require 'backend.php'?>
 			<li><a href="index.php">logout</a></li>
 			<?php if($_SESSION['isAdmin']==1){
 				echo"<li>";
-				echo "<a href='admin.php'>"."Admin"."</a>"; 
+				echo "<a href='admin.php'>"."Create New User"."</a>"; 
 				echo "</li>";}?>
 			<li>
 			<!--Search Section --> 
