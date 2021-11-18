@@ -166,9 +166,9 @@ transition: transform 80ms ease-in;
     background-color: gray;
     width: 75%;
     top: 22%;
-    position: absolute;
     margin: 0 auto;
     border-radius: 25px;
+    padding: 0.5%;
     z-index: -1;
 }
   }
