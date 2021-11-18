@@ -180,6 +180,7 @@ transition: transform 80ms ease-in;
 
 .timeline{
   display:grid;
+  padding-top: 3%;
 }
 
 .posts{
