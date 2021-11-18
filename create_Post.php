@@ -12,7 +12,6 @@ $_SESSION['song'] = $NAME;
 			<br>
 			<label for="img">Attach image:</label>
 			<input type="file" id="img" name="img" accept="image/*">
-			<button class = 'btn btn-outline-info' type="submit" name="create_Post" value= 'Post' class="submit">Post</button></form>
 		</form>
 	
 <form method="POST" action='backend.php'>
