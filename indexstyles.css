@@ -90,8 +90,9 @@ margin: 8px 0;
 width: 150px;
 }
 
-h1{
-font-size: 50px;
+h1 {
+	font-size: 50px;
+	left: 50%;
 }
 
 label{
@@ -217,8 +218,4 @@ transition: transform 80ms ease-in;
 	width: 85px;
 	height: 30px;
 	cursor: pointer;		    
-}
-
-#my_Timeline_Orientation {
-	left: 50%;
 }
