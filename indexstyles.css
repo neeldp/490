@@ -1,16 +1,15 @@
 
 
 header{
-  background-color: #708090;
-  position:fixed;
-  top: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  border-bottom:2px solid #000;
+	background-color: #708090;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid #000;
   }
   
   header * {
@@ -99,7 +98,7 @@ h2 {
     	position: absolute; 
 	left: 44%;
 	z-index: -1;
-	top: 6%;
+	top: 7%;
 }
 
 label{
@@ -162,12 +161,16 @@ transition: transform 80ms ease-in;
 
 .posts{
     font-size: 50px;
-    justify-content:center;
-    align-content:center;
+    justify-content: center;
+    align-content: center;
     background-color: gray;
     width: 75%;
+    top: 22%;
+    position: absolute;
     margin: 0 auto;
     border-radius: 25px;
+    z-index: -1;
+}
   }
 .puser{
   color:#000;
@@ -225,9 +228,17 @@ transition: transform 80ms ease-in;
 }
 
 label.followingPointer {
-	cursor: pointer;
+	cursor: pointer; 
+	position: absolute;
+	left: 34%;    
+	top: 16%;
+	z-index: -1;
 }
 
 label.followerPointer {
 	cursor: pointer;
+    	position: absolute;
+    	left: 54%;    
+	top: 16%;
+	z-index: -1;
 }
