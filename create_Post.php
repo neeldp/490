@@ -48,7 +48,8 @@ $_SESSION['song'] = $NAME;
 		}
 		
 	?> 
+	<form method="POST" action='backend.php'>
+		<button class = 'btn btn-outline-info' type="submit" name="create_Post" value= 'Post' class="submit">Post</button></form>
+	</form>
 	
-	<input type="file" id="img" name="img" accept="image/*">
-			<button class = 'btn btn-outline-info' type="submit" name="create_Post" value= 'Post' class="submit">Post</button></form>
 </body></html>
