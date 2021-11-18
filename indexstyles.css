@@ -251,11 +251,13 @@ transition: transform 80ms ease-in;
 }
 
 button.searchbtnsong {
-	top: 12%;
-	float: right;
+	position: absolute;
+    	top: 17%;
+    	left: 43%;
 }	
 
 input#img {
-	top: 15%;
-	float:right;
+	position: absolute;
+	top: 26.9%;
+    	left: 17%;
 }
