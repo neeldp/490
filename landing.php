@@ -9,8 +9,8 @@
 		background-color: white;
 		position: absolute;
 		width: 13.7%;
-		height: 32%;
-		bottom: 58%;
+		height: 40%;
+		bottom: 48%;
 		opacity: 0.8;
 		right: 0%;    
 		text-align: center;
