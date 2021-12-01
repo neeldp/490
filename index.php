@@ -9,7 +9,7 @@
                     <img class = "loginLogo"
 			            src="Treble_1.png"
 			            alt="Treble Logo"
-		            />
+		    />
                     
                     <h1 class = "title"> Welcome to Treble! </h1> <br>
                     <div class="form-group">
