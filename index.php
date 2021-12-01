@@ -6,6 +6,11 @@
         <div class="login_Style">
             <div class = "form-container">
                 <form method = 'POST' action = 'backend.php' >
+                    <img class = "loginLogo"
+			            src="Treble_1.png"
+			            alt="Treble Logo"
+		            />
+                    
                     <h1 class = "title"> Welcome to Treble! </h1> <br>
                     <div class="form-group">
                         <label>Username : </label><br>
