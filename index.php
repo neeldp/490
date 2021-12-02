@@ -7,7 +7,7 @@
             <div class = "form-container">
                 <form method = 'POST' action = 'backend.php' >
                     <img class = "loginLogo"
-			 src="Treble_2_resized.png"
+			 src="transparentTreble.png"
 			 alt="Treble Logo"
 		    />
                     
