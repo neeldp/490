@@ -4,6 +4,7 @@ require 'backend.php'?>
 <header>
 	<nav>
 		<ul>
+			<li><img class = "loginLogo" src="trebleNav.png" alt="Treble Nav"/></li>
 			<li><a href="landing.php">Timeline</a></li>
 			<li><a href="create_Post.php">Create post</a></li>
 			<li><a href="inbox.php">Inbox</a></li>
