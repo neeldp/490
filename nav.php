@@ -3,8 +3,9 @@ require 'header.php';
 require 'backend.php'?>
 <header>
 	<nav>
+		<a href="landing.php"><img class = "loginLogo" src="trebleNav.png" /></a>
 		<ul>
-			<li><a href="landing.php"><img class = "loginLogo" src="trebleNav.png" /></a></li>
+			
 			<li><a href="landing.php">Timeline</a></li>
 			<li><a href="create_Post.php">Create post</a></li>
 			<li><a href="inbox.php">Inbox</a></li>
