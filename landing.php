@@ -30,7 +30,6 @@
         
         $list = implode("' ,'", $arr);
         $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') AND NOT IN '{$user}' ORDER BY Rand() LIMIT 3 ");
-        echo "hi";
         if($sql_query->num_rows > 0){
             while($row = mysqli_fetch_array($sql_query))
             {
