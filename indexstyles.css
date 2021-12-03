@@ -73,21 +73,19 @@ font-size: 5px;
 
 
 .form-container{
+	position:absolute;
 	display: flex;
   	justify-content: center;
 	transform: translate(0, 35%);
 	box-sizing: border-box;
 	padding: 12px 5px;
-	
-	/* display: flex;  
 	justify-content: center;
 	transform: translate(0, 35%);
 	box-sizing: border-box;
     	position: absolute;
-	top: 67%;
+	top: 85%;
 	left: 11.5%;
 	padding: 12px 5px;
-	*/
 }
 
 input:focus {
@@ -170,7 +168,7 @@ transition: transform 80ms ease-in;
   background-color: white;
   position: absolute;
   width: 72%;
-  height: 55%;
+  height: 75%;
   left: 12%;  
   opacity: 0.8;  
   border: 2px solid silver;
