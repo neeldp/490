@@ -253,11 +253,11 @@ transition: transform 80ms ease-in;
 button.searchbtnsong {
 	position: absolute;
     	top: 13.2%;
-    	left: 43%;
+    	left: 34%;
 }	
 
 input#img {
 	position: absolute;
 	top: 21%;
-    	left: 17%;
+	left: 14%;
 }
