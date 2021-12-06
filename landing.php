@@ -84,7 +84,7 @@
                 //if($sql_query->num_rows > 0){
                 while($row = mysqli_fetch_array($sql_query))
                 {
-                    echo "<div class='card single_post'>";
+                    echo "<div class='card-header'>";
                     echo "<p class='puser'>". $row['user']."</p>";
                     $name = $row['user'];
                     if ($name != $user){
