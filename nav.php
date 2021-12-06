@@ -9,7 +9,7 @@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="landing.php" class="nav-link px-2 text-secondary">Home</a></li>
           <li><a href="create_Post.php" class="nav-link px-2 text-white">Create Post</a></li>
-          <li><a href="inbox.php" class="nav-link px-2 text-white">inbox.php</a></li>
+          <li><a href="inbox.php" class="nav-link px-2 text-white">Inbox</a></li>
           <li><a href="profile.php" class="nav-link px-2 text-white">Profile</a></li>
           <li><a href="index.php" class="nav-link px-2 text-white">Logout</a></li>
         </ul>

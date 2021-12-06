@@ -213,7 +213,7 @@
                             echo '<form method="POST" action="backend.php">';
                             echo '<div class ="form-group">';
                             echo '<label>Comment:</label>';
-                            echo '<input class= "form-control w-25" type="text" name="comment">';
+                            echo '<input class= "form-control w-25" type="text" name="comment_timeline">';
                             echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
                             echo '</div>';
                             echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';

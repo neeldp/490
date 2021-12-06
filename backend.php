@@ -138,7 +138,7 @@ if($_POST){
 
     if(isset($_POST['commentbtn'])){
         $username = $_SESSION['username'];
-        $text = $_POST['comment']; 
+        $text = $_POST['comment_timeline']; 
         $post_ID = $_POST['post_ID'];
         //var_dump($_POST);
         $sql = "INSERT INTO `comments`(`name`,`text`,`date`, `post_ID`) VALUES ('$username','$text', NOW(), '$post_ID')";
