@@ -85,11 +85,10 @@
             ?> 
         </div>
         <!-- Side widgets-->
-        <div class="col-lg-4">
+        <div class="col-lg-4" style="position:fixed;">
             <!-- Search widget-->
-            <sp><br>
+            <br>
             <div class="card mb-4">
-                
                 <div class="card-header">Search</div>
                 <div class="card-body">
                     <div class="input-group">
