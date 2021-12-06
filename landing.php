@@ -88,6 +88,7 @@
         <div class="col-lg-4">
             <!-- Search widget-->
             <div class="card mb-4">
+                <br>
                 <div class="card-header">Search</div>
                 <div class="card-body">
                     <div class="input-group">
