@@ -1,32 +1,31 @@
-<?php 
-require 'header.php';
-require 'backend.php'?>
+<?php require 'header.php'; require 'backend.php';?>
 <header>
-	<nav>
-		<a href="landing.php"><img class = "loginLogo" src="trebleNav.png" /></a>
-		<ul>
-			<li><a href="landing.php">Timeline</a></li>
-			<li><a href="create_Post.php">Create post</a></li>
-			<li><a href="inbox.php">Inbox</a></li>
-			<li><a href="profile.php">Profile</a></li>
-			<li><a href="index.php">logout</a></li>
-			<?php if($_SESSION['isAdmin']==1){
-				echo"<li>";
-				echo "<a href='admin.php'>"."Create New User"."</a>"; 
-				echo "</li>";}?>
-			<li>
-			<!--Search Section --> 
-			<div div class = "search_post">
-				<form method="POST" action='backend.php'>
-					<div class='form-group'>
-						<label>Search:</label>
-						<input class= 'form-control w-25' type="text" name="search">
-					</div>	
-					<sp><button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>
-				</form>
-			</div>
-			</li>	
-		</ul>
-	</nav>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="landing.php">Timeline</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="landing.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="create_Post.php">Create Post</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="inbox.php">Inbox</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="profile.php">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Logout</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="POST" action='backend.php'>
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbtn" value= 'searchbtn'>Search</button>
+    </form>
+  </div>
+</nav>
