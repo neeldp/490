@@ -171,7 +171,7 @@ if($_POST){
         header('location: landing.php');
     }
 
-    if(isset($_POST['delete'])){
+    if(isset($_POST['deleteButton'])){
         $conn = connect_db();
         $id = $_POST['del_post'];
         $sql = "DELETE FROM `posts` WHERE `id` = '{$id}'";
