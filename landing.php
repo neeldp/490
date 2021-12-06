@@ -87,7 +87,7 @@
             ?> 
         </div>
     </div>  
-</div>
+
         
     <!-- Side widgets-->
     <div class="col-lg-4">
@@ -101,6 +101,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
     <!-- Timeline Code --> 
     <div class='container'>
         <div class = 'row clearfix'>
