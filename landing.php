@@ -101,9 +101,10 @@
                         <!--<label>Search:</label>
 					    <input class= 'form-control w-25' type="text" name="search">
                         <button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>-->
-                        <input class="form-control" type="text" name="search" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" /></form>
+                        <input class="form-control" type="text" name="search" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
                         <button class="btn btn-primary" id="button-search" type="submit" name='searchbtn'>Go!</button>
                     </div>
+                    </form>
                 </div>
             </div>
 
