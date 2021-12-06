@@ -15,8 +15,7 @@
             <?php
                 $user = $_SESSION['username']; $conn = connect_db(); $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
                 $row = mysqli_fetch_array($result); $user_id = $row['id'];
-                
-                
+                   
                 $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'"); $arr = array(); $counter = 0;
                 if($sql->num_rows > 0){
                     while($row = mysqli_fetch_array($sql)){
@@ -82,13 +81,9 @@
                         echo "<br><br>";
                         }
                     }
-            
                 $conn->close();     
             ?> 
         </div>
-      
-
-        
         <!-- Side widgets-->
         <div class="col-lg-4">
             <!-- Search widget-->
@@ -101,8 +96,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class = "col-lg-4">
+            
             <div class = "card mb-4">
                 <div class="card-header">You Might Like</div>
                     <?php
@@ -134,7 +128,8 @@
                             }
                         echo '</div>';
                     ?>
-            </div>             
+            </div> 
+        </div>            
     </div>
 </div>
     <!-- Timeline Code --> 
