@@ -88,7 +88,7 @@
             ?> 
         </div>
         <!-- Side widgets-->
-        <div class="col-lg-2" style="float:right;position:fixed;">
+        <div class="col-lg-2" >
             <!-- Search widget-->
             <br>
             <div class="card mb-2">
