@@ -87,8 +87,9 @@
         <!-- Side widgets-->
         <div class="col-lg-4">
             <!-- Search widget-->
+            <sp><br>
             <div class="card mb-4">
-                <br>
+                
                 <div class="card-header">Search</div>
                 <div class="card-body">
                     <div class="input-group">
