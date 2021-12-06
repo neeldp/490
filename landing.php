@@ -51,7 +51,7 @@
     <!-- Timeline Code --> 
     <div class='container'>
         <div class = 'row clearfix'>
-    <div class = "col-lg-8 col-md-12">
+    <div class = "col-lg-12">
 	<h2> <b> My Timeline  </b></h2> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
