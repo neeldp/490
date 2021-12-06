@@ -1,8 +1,8 @@
 <?php require 'header.php'; require 'db_key.php';?>
 
-<body class = "nonScrollable">
+<body class = "nonScrollable" style="background:linear-gradient(#2C3E50,#000000)">
 
-<div class="scene" style="background:linear-gradient(#2C3E50,#000000)">
+<div class="scene" >
     <div class="card">
         <div class="login_Style">
             <div class = "form-container">
