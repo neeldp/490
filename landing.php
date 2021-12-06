@@ -138,46 +138,10 @@
                             echo "<br><br>";
                         }
                     }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    echo '<form method="POST" action="backend.php">';
-                    echo '<div class ="form-group">';
-                    echo '<label>Comment:</label>';
-                    echo '<input class= "form-control w-25" type="text" name="comment_timeline">';
-                    echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
-                    echo '</div>';
-                    echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
-                    echo '</form>';
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "<br><br>";
-                }
-            }
-            
-            $conn->close();
-        ?>
-       </div>
-    </div>  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-=======
-=======
->>>>>>> 317a372afc003e2eb0328270fdebe3554d02fea5
->>>>>>> Stashed changes
                     
                     $conn->close();
                 ?>
             </div>
         </div>  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
->>>>>>> 317a372afc003e2eb0328270fdebe3554d02fea5
-=======
->>>>>>> 317a372afc003e2eb0328270fdebe3554d02fea5
->>>>>>> Stashed changes
 </body></html> 
