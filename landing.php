@@ -49,7 +49,9 @@
         ?>
     </div>    
     <!-- Timeline Code --> 
-    <div class = "col-lg-8">
+    <div class='container'>
+        <div class = 'row clearfix'>
+    <div class = "col-lg-8 col-md-12">
 	<h2> <b> My Timeline  </b></h2> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
@@ -80,7 +82,7 @@
                 //if($sql_query->num_rows > 0){
                 while($row = mysqli_fetch_array($sql_query))
                 {
-                    echo "<div class='card mb-4'>";
+                    echo "<div class='card single_post'>";
                     echo "<p class='puser'>". $row['user']."</p>";
                     $name = $row['user'];
                     if ($name != $user){
@@ -104,9 +106,9 @@
                         <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
                         </form>';
                     }
-                   
-                    echo '<img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                     echo '<div class="card-body">';
+                    echo '<img class="img-post" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+            
                     echo "<p class='ptext'>". $row['text']."</p>";
                     echo "<p class='ptime'>". $row['time']."</p>";
                     echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
