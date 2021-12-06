@@ -39,6 +39,7 @@
                     {
                         echo "<div class='card-header'>";
                         echo "<p>". $row['user']."</p>";
+                        echo "/<div>";
                         $name = $row['user'];
                         if ($name != $user){
                         
