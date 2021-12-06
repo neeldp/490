@@ -6,10 +6,7 @@
         <div class="login_Style">
             <div class = "form-container">
                 <form method = 'POST' action = 'backend.php' >
-                    <img class = "loginLogo"
-			 src="transparentTreble2.png"
-			 alt="Treble Logo"
-		    />
+                    <img class = "loginLogo" src="transparentTreble2.png" alt="Treble Logo"/>
                     
                     <!--<h1 class = "title"> Welcome to Treble! </h1> <br>-->
                     <div class="form-group">
@@ -24,7 +21,6 @@
             </div>
         </div>       
     </div>   
-
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
