@@ -40,32 +40,32 @@
                             //echo '<div class="card mb-4">';
                             echo '<img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                             echo '<div class="card-body">';
+                                $name = $row['user'];
+                                if ($name != $user){
+                                    $result = $conn->query("SELECT id FROM followers_table WHERE follower_id = '{$user_id}' AND `user` = '{$name}'");
+                                    $record = mysqli_fetch_array($result);
+                                    echo '<form method="POST" action="backend.php">
+                                            <input type="hidden" name="id" value="'. $record['id'].'" />
+                                            <input type="hidden" name="username" value="'. $row['user'].'" />
+                                            <button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
+                                        </form>';
+                                }
+                    
+                                $userP = $row['user'];
+                                $result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
+                                $record = mysqli_fetch_array($result);
+                                $id = $row['id'];
+                                if($_SESSION['isAdmin']==1){
+                                    echo '<form method="POST" action="backend.php">
+                                            <input type="hidden" name="del" value="'. $id.'" />
+                                            <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
+                                        </form>';
+                                }
                                 echo "<p class='card-text'>". $row['text']."</p>";
                                 echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
                                 echo "<p>". $row['user']."</p>";
                             
-                                    $name = $row['user'];
-                                    if ($name != $user){
-                                        $result = $conn->query("SELECT id FROM followers_table WHERE follower_id = '{$user_id}' AND `user` = '{$name}'");
-                                        $record = mysqli_fetch_array($result);
-                                        echo '<form method="POST" action="backend.php">
-                                                <input type="hidden" name="id" value="'. $record['id'].'" />
-                                                <input type="hidden" name="username" value="'. $row['user'].'" />
-                                                <button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
-                                            </form>';
-                                    }
-                            
-                                    $userP = $row['user'];
-                                    $result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
-                                    $record = mysqli_fetch_array($result);
-                                    $id = $row['id'];
-                                    if($_SESSION['isAdmin']==1){
-                                        echo '<form method="POST" action="backend.php">
-                                                <input type="hidden" name="del" value="'. $id.'" />
-                                                <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
-                                            </form>';
-                                    }
-                                echo "</div>";    
+                                
                                 $id = $row['id'];
                                 $sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
                                 if($sql->num_rows > 0){
