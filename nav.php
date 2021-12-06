@@ -12,6 +12,7 @@
           <li><a href="inbox.php" class="nav-link px-2 text-white">Inbox</a></li>
           <li><a href="profile.php" class="nav-link px-2 text-white">Profile</a></li>
           <li><a href="index.php" class="nav-link px-2 text-white">Logout</a></li>
+          <li><a href="register.php" class="nav-link px-2 text-white">Logout</a></li>
         </ul>
 
         <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
