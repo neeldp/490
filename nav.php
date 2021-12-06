@@ -15,16 +15,7 @@
           <li><a href="admin.php" class="nav-link px-2 text-white">Create User</a></li>
         </ul>
 
-        <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <form method="POST" action='backend.php'>
-					<div class='form-group'>
-						<label>Search:</label>
-						<input class= 'form-control w-25' type="text" name="search">
-            <button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>
-					</div>	
-				</form>
-        </div>
-        <div class="text-end"></div>
+      
       </div>
     </div>
   </header>
