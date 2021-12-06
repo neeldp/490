@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
     <!-- Blog entries-->
-        <div class="col-lg-6" style="float: right;">
+        <div class="col-lg-6">
             <!-- Featured blog post-->
             
             <?php $value = getenv("SPOTIFY_TOKEN"); echo "<p>". $value."</p>"; ?> 
@@ -91,6 +91,7 @@
         <div class="col-lg-2" style='overflow-y: auto;' >
             <!-- Search widget-->
             <br>
+            <div style="position:fixed">
             <div class="card mb-2">
                 <div class="card-header">Search</div>
                 <div class="card-body">
@@ -133,7 +134,8 @@
                         echo '</div>';
                     ?>
             </div> 
-        </div>            
+        </div>  
+     </div>          
     </div>
 </div>
     <!-- Timeline Code --> 
