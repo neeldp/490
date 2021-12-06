@@ -11,13 +11,19 @@
         margin: 0;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background:linear-gradient(#2C3E50,#212e3c,#161f28,#0f151b,#000000)  
+        background: #2c3e50;
+        background: -webkit-linear-gradient(left, #2c3e50, #000000);
+        background:    -moz-linear-gradient(left, #2c3e50, #000000);
+        background:     -ms-linear-gradient(left, #2c3e50, #000000);
+        background:      -o-linear-gradient(left, #2c3e50, #000000);
+        background:         linear-gradient(to right, #2c3e50, #000000);
+							
     }
 </style>
 
 <body class = "index"> 
 
-    <div class = "container">
+    <div class="d-flex justify-content-center">
         <img class = "loginLogo" src="transparentTreble2.png" alt="Treble Logo"/>
         <form method = 'POST' action = 'backend.php' > 
             <div>
