@@ -10,7 +10,7 @@
     <div class='container'>
         <div class = 'row clearfix'>
             
-    <div class = "col-lg-8 col-md-12 left-box">
+    <div class = "col-lg-8">
 	<h2> <b> My Timeline  </b></h2> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
@@ -65,11 +65,10 @@
                         <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
                         </form>';
                     }
-                    echo '<div class="card-body">';
+                    echo '<div class="card mb-4">';
                     echo '<img class="card-img-post" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
-            
-                    echo "<p class='ptext'>". $row['text']."</p>";
-                    echo "<p class='ptime'>". $row['time']."</p>";
+                    echo '<div class="card-body">';
+                    echo "<p class='card-text'>". $row['text']."</p>";
                     echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
                         
                     $id = $row['id'];
@@ -90,6 +89,7 @@
                     echo '</div>';
                     echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
                     echo '</form>';
+                    echo "</div>";
                     echo "</div>";
                     echo "</div>";
                     echo "<br><br>";
