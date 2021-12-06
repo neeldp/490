@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
     <!-- Blog entries-->
-        <div class="col-lg-10">
+        <div class="col-lg-6">
             <!-- Featured blog post-->
             
             <?php $value = getenv("SPOTIFY_TOKEN"); echo "<p>". $value."</p>"; ?> 
