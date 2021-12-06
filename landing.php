@@ -61,7 +61,7 @@
                             }
                         echo "</div>";
                         //echo '<div class="card mb-4">';
-                        echo '<img class="card-img-post" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+                        echo '<img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                         echo '<div class="card-body">';
                             echo "<p class='card-text'>". $row['text']."</p>";
                             echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
@@ -77,13 +77,13 @@
                                 }
                             }
                             echo '<form method="POST" action="backend.php">';
-                            echo '<div class ="form-group">';
-                            echo '<label>Comment:</label>';
-                            echo '<input class= "form-control w-25" type="text" name="comment_timeline">';
-                            echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
-                            echo '</div>';
-                            echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
-                            echo '</form>';
+                                echo '<div class ="form-group">';
+                                    echo '<label>Comment:</label>';
+                                    echo '<input class= "form-control w-25" type="text" name="comment_timeline">';
+                                    echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
+                                 echo '</div>';
+                                echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
+                                echo '</form>';
                        // echo "</div>";
                             echo "</div>";
                         echo "</div>";
