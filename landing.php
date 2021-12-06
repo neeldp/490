@@ -129,15 +129,12 @@
             if($sql_query->num_rows > 0){
                 while($row = mysqli_fetch_array($sql_query))
                 {
-                    echo $row['username'];
-                    echo '<button type="button>Follow"</button>';
-                    echo '<button onclick="myFunction()>"Follow"</button>';
-                      
+                    echo $row['username'];    
                     echo '<form method="POST" action="backend.php">
                     <input type="hidden" name="user" value="'. $row['username'].'" /> <br>
                     <button id = followerButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
                     </form>';
-                    echo '<sp><sp>';
+                    echo '<br>';
                         
                 }
             }
