@@ -49,7 +49,7 @@
         ?>
     </div>    
     <!-- Timeline Code --> 
-    <div class = "d-flex flex-column">
+    <div class = "card mb-4">
 	<h2> <b> My Timeline  </b></h2> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
@@ -105,7 +105,8 @@
                         </form>';
                     }
                    
-                    echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+                    echo '<img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+                    echo '<div class="card-body">';
                     echo "<p class='ptext'>". $row['text']."</p>";
                     echo "<p class='ptime'>". $row['time']."</p>";
                     echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
@@ -128,6 +129,7 @@
                     echo '</div>';
                     echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
                     echo '</form>';
+                    echo "</div>";
                     echo "</div>";
                     echo "<br><br>";
                 }
