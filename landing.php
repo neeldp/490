@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
     <!-- Blog entries-->
-        <div class="col-lg-8">
+        <div class="col-lg-10">
             <!-- Featured blog post-->
             
             <?php $value = getenv("SPOTIFY_TOKEN"); echo "<p>". $value."</p>"; ?> 
@@ -85,10 +85,10 @@
             ?> 
         </div>
         <!-- Side widgets-->
-        <div class="col-lg-4" style="float:right;position:fixed;">
+        <div class="col-lg-2" style="float:right;position:fixed;">
             <!-- Search widget-->
             <br>
-            <div class="card mb-4">
+            <div class="card mb-2">
                 <div class="card-header">Search</div>
                 <div class="card-body">
                     <div class="input-group">
@@ -98,7 +98,7 @@
                 </div>
             </div>
 
-            <div class = "card mb-4">
+            <div class = "card mb-2">
                 <div class="card-header">You Might Like</div>
                     <?php
                         $user = $_SESSION['username']; $conn = connect_db(); $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
