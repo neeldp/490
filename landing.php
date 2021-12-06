@@ -5,53 +5,54 @@
 ?>
 
 <body>
-    <div class = "follow_list">
-        <?php
-	    echo "<h4> <b>". "You Might Like". "</b> </h4>";
-        $user = $_SESSION['username'];
-        $conn = connect_db();
-        $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
-        $row = mysqli_fetch_array($result);
-		$user_id = $row['id'];
-    
-        $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
-        $arr = array();
-        $counter = 0;
-        if($sql->num_rows > 0){
-            while($row = mysqli_fetch_array($sql))
-            {
-                $arr[$counter] = $row['user'];
-                $counter++;
-            }
-            $arr[$counter] = $user;
-        } 
-        
-        //$k = array_rand($arr, 3);
-        
-        $list = implode("' ,'", $arr);
-        $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ORDER BY Rand() LIMIT 3 ");
-        //AND NOT IN '{$user}'
-        if($sql_query->num_rows > 0){
-            while($row = mysqli_fetch_array($sql_query))
-            {
-                echo $row['username'];
-                echo '<button type="button>Follow"</button>';
-                echo '<button onclick="myFunction()>"Follow"</button>';
-                    
-                echo '<form method="POST" action="backend.php">
-                <input type="hidden" name="user" value="'. $row['username'].'" /> <br>
-                <button id = followerButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
-                </form>';
-                echo '<sp><sp>';
-                    
-            }
-        }
-        ?>
-    </div>    
+      
     <!-- Timeline Code --> 
     <div class='container'>
         <div class = 'row clearfix'>
-    <div class = "col-lg-12">
+            <div class = "col-lg-4 col-md-12 right-box">
+            <?php
+            echo "<h4> <b>". "You Might Like". "</b> </h4>";
+            $user = $_SESSION['username'];
+            $conn = connect_db();
+            $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+            $row = mysqli_fetch_array($result);
+            $user_id = $row['id'];
+        
+            $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
+            $arr = array();
+            $counter = 0;
+            if($sql->num_rows > 0){
+                while($row = mysqli_fetch_array($sql))
+                {
+                    $arr[$counter] = $row['user'];
+                    $counter++;
+                }
+                $arr[$counter] = $user;
+            } 
+            
+            //$k = array_rand($arr, 3);
+            
+            $list = implode("' ,'", $arr);
+            $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ORDER BY Rand() LIMIT 3 ");
+            //AND NOT IN '{$user}'
+            if($sql_query->num_rows > 0){
+                while($row = mysqli_fetch_array($sql_query))
+                {
+                    echo $row['username'];
+                    echo '<button type="button>Follow"</button>';
+                    echo '<button onclick="myFunction()>"Follow"</button>';
+                        
+                    echo '<form method="POST" action="backend.php">
+                    <input type="hidden" name="user" value="'. $row['username'].'" /> <br>
+                    <button id = followerButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
+                    </form>';
+                    echo '<sp><sp>';
+                        
+                }
+            }
+            ?>
+        </div>  
+    <div class = "col-lg-8 col-md-12 left-box">
 	<h2> <b> My Timeline  </b></h2> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
@@ -107,7 +108,7 @@
                         </form>';
                     }
                     echo '<div class="card-body">';
-                    echo '<img class="img-post" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+                    echo '<img class="card-img-post" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
             
                     echo "<p class='ptext'>". $row['text']."</p>";
                     echo "<p class='ptime'>". $row['time']."</p>";
