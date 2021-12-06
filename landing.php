@@ -49,7 +49,7 @@
         ?>
     </div>    
     <!-- Timeline Code --> 
-    <div class = "timeline">
+    <div class = "d-flex flex-column">
 	<h2> <b> My Timeline  </b></h2> 
         <?php
             $value = getenv("SPOTIFY_TOKEN");
@@ -80,7 +80,7 @@
                 //if($sql_query->num_rows > 0){
                 while($row = mysqli_fetch_array($sql_query))
                 {
-                    echo "<div class='posts'>";
+                    echo "<div class='p-2'>";
                     echo "<p class='puser'>". $row['user']."</p>";
                     $name = $row['user'];
                     if ($name != $user){
