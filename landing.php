@@ -49,7 +49,7 @@
                             
                     }
                 }
-                echo '</div>';
+                //echo '</div>';
                 ?>
             </div>  
        
@@ -85,7 +85,7 @@
                 while($row = mysqli_fetch_array($sql_query))
                 {
                     echo "<div class='card-header'>";
-                    echo "<p class='puser'>". $row['user']."</p>";
+                    echo "<p>". $row['user']."</p>";
                     $name = $row['user'];
                     if ($name != $user){
                     
