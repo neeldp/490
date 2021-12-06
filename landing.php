@@ -85,7 +85,7 @@
             ?> 
         </div>
         <!-- Side widgets-->
-        <div class="col-lg-4" style="position:fixed;right:auto;">
+        <div class="col-lg-4" style="position:-webkit-sticky;position:sticky;">
             <!-- Search widget-->
             <br>
             <div class="card mb-4">
