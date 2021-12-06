@@ -3,6 +3,15 @@
     .index{
         background:linear-gradient(#2C3E50,#000000)  
     }
+    html {
+        height: 100%;
+    }
+    body {
+        height: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 </style>
 
 <body class = "index"> 
