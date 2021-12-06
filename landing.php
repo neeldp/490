@@ -88,7 +88,7 @@
             ?> 
         </div>
         <!-- Side widgets-->
-        <div class="col-lg-2" >
+        <div class="col-lg-2" style='overflow-y: auto;' >
             <!-- Search widget-->
             <br>
             <div class="card mb-2">
