@@ -123,7 +123,7 @@
                                 $counter++;
                             }
                             $arr[$counter] = $user;
-                            print_r($arr);
+                            var_dump($arr);
                         } 
                         $list = implode("' ,'", $arr);
                         $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ORDER BY Rand() LIMIT 3 ");
