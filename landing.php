@@ -39,7 +39,7 @@
                     {
                         echo "<div class='card-header'>";
                         echo "<p>". $row['user']."</p>";
-                        echo "/<div>";
+                        
                         $name = $row['user'];
                         if ($name != $user){
                         
@@ -62,7 +62,8 @@
                             <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
                             </form>';
                         }
-                        echo '<div class="card mb-4">';
+                        echo "</div>";
+                        //echo '<div class="card mb-4">';
                         echo '<img class="card-img-post" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                         echo '<div class="card-body">';
                         echo "<p class='card-text'>". $row['text']."</p>";
@@ -86,7 +87,7 @@
                         echo '</div>';
                         echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
                         echo '</form>';
-                        echo "</div>";
+                       // echo "</div>";
                         echo "</div>";
                         echo "</div>";
                         echo "<br><br>";
