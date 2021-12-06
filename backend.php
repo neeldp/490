@@ -171,6 +171,15 @@ if($_POST){
         header('location: landing.php');
     }
 
+    if(isset($_POST['delete'])){
+        $conn = connect_db();
+        $id = $_POST['del_post'];
+        $sql = "DELETE FROM `posts` WHERE `id` = '{$id}'";
+		$result = $conn->query($sql);
+		//$row = (mysqli_fetch_array($result);
+        header('location: profile.php');
+    }
+
     if(isset($_POST['searchbtnsong'])){
         $searchTerm = $_POST['searchSong'];
         header('location: create_Post.php?song=' . "$searchTerm");
