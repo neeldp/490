@@ -9,7 +9,51 @@
     <!-- Timeline Code --> 
     <div class='container'>
         <div class = 'row clearfix'>
+        <div class = "col-lg-4">
+            <div class = "card mb-4">
+                <div class="card-header">You might Like </div>
+            <?php
+            $user = $_SESSION['username'];
+            $conn = connect_db();
+            $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+            $row = mysqli_fetch_array($result);
+            $user_id = $row['id'];
+        
+            $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
+            $arr = array();
+            $counter = 0;
+            if($sql->num_rows > 0){
+                while($row = mysqli_fetch_array($sql))
+                {
+                    $arr[$counter] = $row['user'];
+                    $counter++;
+                }
+                $arr[$counter] = $user;
+            } 
             
+            //$k = array_rand($arr, 3);
+            
+            $list = implode("' ,'", $arr);
+            $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ORDER BY Rand() LIMIT 3 ");
+            //AND NOT IN '{$user}'
+            echo '<div class ="card-body">';
+            if($sql_query->num_rows > 0){
+                while($row = mysqli_fetch_array($sql_query))
+                {
+                    echo $row['username'];    
+                    echo '<form method="POST" action="backend.php">
+                    <input type="hidden" name="user" value="'. $row['username'].'" /> 
+                    <button id = followerButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
+                    </form>';
+                    echo '<br>';
+                        
+                }
+            }
+            echo '</div>';
+            ?>
+        </div>  
+        </div>
+    </div>
     <div class = "col-lg-8">
 	<h2> <b> My Timeline  </b></h2> 
         <?php
@@ -91,57 +135,14 @@
                     echo '</form>';
                     echo "</div>";
                     echo "</div>";
+                    echo "</div>";
                     echo "<br><br>";
                 }
             }
             
             $conn->close();
         ?>
-        <div class = "col-lg-4">
-            <div class = "card mb-4">
-                <div class="card-header">You might Like </div>
-            <?php
-            $user = $_SESSION['username'];
-            $conn = connect_db();
-            $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
-            $row = mysqli_fetch_array($result);
-            $user_id = $row['id'];
         
-            $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
-            $arr = array();
-            $counter = 0;
-            if($sql->num_rows > 0){
-                while($row = mysqli_fetch_array($sql))
-                {
-                    $arr[$counter] = $row['user'];
-                    $counter++;
-                }
-                $arr[$counter] = $user;
-            } 
-            
-            //$k = array_rand($arr, 3);
-            
-            $list = implode("' ,'", $arr);
-            $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') ORDER BY Rand() LIMIT 3 ");
-            //AND NOT IN '{$user}'
-            echo '<div class ="card-body">';
-            if($sql_query->num_rows > 0){
-                while($row = mysqli_fetch_array($sql_query))
-                {
-                    echo $row['username'];    
-                    echo '<form method="POST" action="backend.php">
-                    <input type="hidden" name="user" value="'. $row['username'].'" /> 
-                    <button id = followerButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
-                    </form>';
-                    echo '<br>';
-                        
-                }
-            }
-            echo '</div>';
-            ?>
-        </div>  
-        </div>
-    </div></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body></html> 
