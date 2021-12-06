@@ -1,5 +1,5 @@
 <?php require 'header.php'; require 'backend.php';?>
-<header class="p-3 bg-dark text-white">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="landing.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -19,11 +19,11 @@
 					<div class='form-group'>
 						<label>Search:</label>
 						<input class= 'form-control w-25' type="text" name="search">
+            <button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>
 					</div>	
-					<sp><button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>
 				</form>
         </div>
         <div class="text-end"></div>
       </div>
     </div>
-  </header>
+</nav>
