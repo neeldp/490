@@ -36,8 +36,8 @@
     <!-- Timeline Code --> 
     <div class='container'>
         <div class = 'row clearfix'>
-            <div class = "col-lg-4">
-                <div class = "card mb-4">
+            <div class = "col-lg-12">
+                <div class = "card mb-12">
                     <div class="card-header">You Might Like</div>
                 <?php
                 $user = $_SESSION['username'];
