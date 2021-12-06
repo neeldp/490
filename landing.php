@@ -30,7 +30,10 @@
                     while($row = mysqli_fetch_array($sql_query)){
                         echo '<div class="card mb-4">';
                             echo '<img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+                            
                             echo '<div class="card-body">';
+                            echo "<p class='card-text'>". $row['text']."</p>";
+                                echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
                                 echo "<p>". $row['user']."</p>";
                                 $name = $row['user'];
                                 if ($name != $user){
@@ -54,8 +57,7 @@
                                         </form>';
                                 }
 
-                                echo "<p class='card-text'>". $row['text']."</p>";
-                                echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+                                
                             
                                 $id = $row['id'];
                                 $sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
