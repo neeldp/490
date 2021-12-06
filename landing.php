@@ -130,7 +130,7 @@
                 {
                     echo $row['username'];    
                     echo '<form method="POST" action="backend.php">
-                    <input type="hidden" name="user" value="'. $row['username'].'" /> <br>
+                    <input type="hidden" name="user" value="'. $row['username'].'" /> 
                     <button id = followerButton class = "btn btn-outline-info" type="submit" name="followbtn" value= "follower">+ Follow</button>
                     </form>';
                     echo '<br>';
