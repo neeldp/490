@@ -122,11 +122,11 @@
                                 $arr[$counter] = $row['user'];
                                 $counter++;
                             }
-                            $arr[$counter] = $user;
+                            //$arr[$counter] = $user;
                             //var_dump($arr);
                         } 
                         $list = implode("' ,'", $arr);
-                        $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') and username != $user ORDER BY Rand() LIMIT 3 ");
+                        $sql_query = $conn->query("SELECT * FROM `users` Where `username` NOT IN ('{$list}') and username != '{$user}' ORDER BY Rand() LIMIT 3 ");
                         echo '<div class ="card-body">';
                             if($sql_query->num_rows > 0){
                                 while($row = mysqli_fetch_array($sql_query)){
