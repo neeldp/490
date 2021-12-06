@@ -65,7 +65,7 @@ require 'db_key.php';
 					echo "<p class='ptime'>". $row['time']."</p>";
 					echo '<form method="POST" action="backend.php">
                         <input type="hidden" name="del_post" value="'. $id.'" />
-                        <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="delete" value= "delete">Delete</button>
+                        <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deleteButton" value= "delete">Delete</button>
                         </form>';
 					echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
 
