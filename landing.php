@@ -10,20 +10,14 @@
     <!-- Blog entries-->
     <div class="col-lg-8">
         <!-- Featured blog post-->
-        <div class="card mb-4">
-        <?php $value = getenv("SPOTIFY_TOKEN"); echo "<p>". $value."</p>"; ?>
-            
+        
+        <?php $value = getenv("SPOTIFY_TOKEN"); echo "<p>". $value."</p>"; ?> 
             <?php
-                $user = $_SESSION['username'];
-                $conn = connect_db();
-                $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
-                $row = mysqli_fetch_array($result);
-                $user_id = $row['id'];
+                $user = $_SESSION['username']; $conn = connect_db(); $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+                $row = mysqli_fetch_array($result); $user_id = $row['id'];
                 
                 
-                $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'");
-                $arr = array();
-                $counter = 0;
+                $sql = $conn->query("SELECT distinct `user` FROM followers_table WHERE follower_id = '{$user_id}'"); $arr = array(); $counter = 0;
                 if($sql->num_rows > 0){
                     while($row = mysqli_fetch_array($sql)){
                         $arr[$counter] = $row['user'];
@@ -35,6 +29,7 @@
                     $sql_query = $conn->query("SELECT * FROM `posts` Where `user` IN ('{$list}') ORDER BY `time` DESC");
                     
                     while($row = mysqli_fetch_array($sql_query)){
+                        echo '<div class="card mb-4">';
                             echo '<img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                             echo '<div class="card-body">';
                                 echo "<p>". $row['user']."</p>";
@@ -82,15 +77,15 @@
                                     echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
                                     echo '</form>';
 
-                                //echo "</div>";
                             echo "</div>";
-                            echo "<br><br>";
+                        echo "</div>";
+                        echo "<br><br>";
                         }
                     }
             
                 $conn->close();     
             ?>
-        </div>
+        
     </div>  
             <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
             <div class="card-body">
