@@ -16,8 +16,8 @@ $_SESSION['get'] = $NAME;
     });
     </script>
     
-    <div id="inbox_container_style" class="inbox_container_style">
-        <div class="inbox_style" id="fresh">
+    <div class="card">
+        <div class="card-body" id="fresh">
             <?php
                $conn = connect_db();
                $usr = $_SESSION['username'];
@@ -34,7 +34,7 @@ $_SESSION['get'] = $NAME;
             <script>
              document.getElementbyId("fresh").scrollTop =  document.getElementbyId("fresh").scrollHeight;   
             </script>
-            </div>
+        </div>
     </div>
      
     <div class ="form-container message">
