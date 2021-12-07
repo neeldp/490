@@ -63,6 +63,7 @@
                             $id = $row['id'];
                             $sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
                             if($sql->num_rows > 0){
+                                echo "<br>";
                                 echo '<div class ="card">';
                                     echo '<div class="card-body">';
                                         echo "<p>".'Comments'."</p>";
@@ -83,8 +84,7 @@
                                         echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
                                     echo '</div>';
                                     echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Add your own</button>';
-                                echo '</form>';
-                                
+                                echo '</form>'; 
                         echo "</div>";
                     echo "</div>";
                     echo "<br><br>";
