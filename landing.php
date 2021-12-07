@@ -22,6 +22,7 @@
                         $arr[$counter] = $row['user'];
                         $counter++;
                     }
+                }
                     //$arr[$counter] = $user;
                     
                     $list = implode("' ,'", $arr);
@@ -83,7 +84,7 @@
                         echo "</div>";
                         echo "<br><br>";
                         }
-                    }
+                
                 $conn->close();     
             ?> 
         </div>
