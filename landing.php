@@ -67,13 +67,12 @@
                             if($sql->num_rows > 0){
                                 echo '<ul class "list-group list-group-flush>';
                                 while($r = mysqli_fetch_array($sql))
-                                {   
-                                    
-                                        echo '<li class="list-group-item">'.$r['date']."<br>";
+                                {       
+                                    echo '<li class="list-group-item">';
                                         echo $r['name'].":<sp>";
-                                        echo $r['text'].'</li>'."<br><br>";
+                                        echo $r['text']."<br>";
                                 }
-                                echo '</ul>';
+                                echo '</li>'.'</ul>';
                             }
                             echo '<form method="POST" action="backend.php">';
                                     echo '<div class ="form-group">';
