@@ -28,9 +28,10 @@
 <body class = "index"> 
 
 <div class="d-flex justify-content-center">
-        <img class = "loginLogo" src="transparentTreble2.png" alt="Treble Logo"/>
+        
     <div class = "container">
         <form method = 'POST' action = 'backend.php' >    
+        <img class = "loginLogo" src="transparentTreble2.png" alt="Treble Logo"/>
             <input class= 'form-control w-25' type="text" name="username"><br>
             <input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
             <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
