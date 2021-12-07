@@ -1,9 +1,7 @@
 <?php require 'header.php'; require 'db_key.php';?>
 <style>   
     body {
-        display:flex;
-        height: 100%;
-        margin: 0;
+       
         background-repeat: no-repeat;
         background-attachment: fixed;
         background: #2c3e50;
@@ -14,9 +12,7 @@
         background:         linear-gradient(to right, #2c3e50, #000000);
                             
     }
-    .lgForm{
-        margin:0,auto;
-    }
+  
     
 </style>
 
