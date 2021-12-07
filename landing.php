@@ -108,8 +108,8 @@
             </div>-->
 
            <!-- random followers goes here -->
-        </div>  
-     </div>          
+        <!-- </div>  
+     </div>  -->         
     </div>
 </div>
     <!-- Timeline Code --> 
