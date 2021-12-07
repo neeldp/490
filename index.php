@@ -19,11 +19,15 @@
         background:         linear-gradient(to right, #2c3e50, #000000);
 							
     }
+    .container{
+        float:center;
+        position:absolute
+    }
 </style>
 
 <body class = "index"> 
 
-    <div class="d-flex justify-content-center">
+    <div class="container">
         <img class = "loginLogo" src="transparentTreble2.png" alt="Treble Logo"/>
         <form method = 'POST' action = 'backend.php' >    
             <input class= 'form-control w-25' type="text" name="username"><br>
