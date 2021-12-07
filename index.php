@@ -1,4 +1,4 @@
-<?php require 'header.php'; require 'db_key.php'; require 'backend.php'?>
+<?php require 'header.php'; require 'db_key.php'; ?>
 <style>
     .gradient-custom {
         background: #2c3e50;
@@ -27,6 +27,7 @@
                         <input type="password" id="typePasswordX" class="form-control form-control-lg" name="password"/>
                         <label class="form-label" for="typePasswordX" >Password</label>
                     </div>
+
                     <button class="btn btn-outline-light btn-lg px-5" type="submit" name="login" value="login">Login</button>
                     </form> 
 
