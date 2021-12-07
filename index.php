@@ -21,7 +21,15 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 2.5rem
+        font-size: 2.5rem;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background: #2c3e50;
+        background: -webkit-linear-gradient(left, #2c3e50, #000000);
+        background:    -moz-linear-gradient(left, #2c3e50, #000000);
+        background:     -ms-linear-gradient(left, #2c3e50, #000000);
+        background:      -o-linear-gradient(left, #2c3e50, #000000);
+        background:         linear-gradient(to right, #2c3e50, #000000);
     }
     @media (max-width: 500px) {
         .lgForm {
