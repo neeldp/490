@@ -1,0 +1,29 @@
+
+
+
+.inbox_style p {
+  padding: 15px;
+  text-align: left;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.inbox_container_style {
+  padding: 4px;  
+  background-color: white;
+  position: absolute;
+  width: 72%;
+  height: 75%;
+  left: 12%;  
+  opacity: 0.8;  
+  border: 2px solid silver;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.nonScrollable {
+  overflow: hidden;
+}
+
+
