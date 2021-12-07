@@ -71,8 +71,9 @@
                                         echo $r['name'].":<sp>";
                                         echo $r['text']."<br>";
                                 } 
+                                echo '</p><br/>';/* border div */
                             }
-                            echo '</p><br/>';/* border div */
+                            
                             echo '<form method="POST" action="backend.php">';
                                     echo '<div class ="form-group">';
                                         echo '<label>Comment:</label>';
