@@ -24,7 +24,7 @@
     
 <div class = "container">
     <div class="row">
-        <div class=col-lg-4>
+        <div class=col-lg-12>
             <img src="transparentTreble2.png" alt="Treble Logo"/> 
             <form method = 'POST' action = 'backend.php' >    
                 <input class= 'form-control' type="text" name="username"><br>
