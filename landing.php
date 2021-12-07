@@ -76,11 +76,10 @@
                                         echo '<p class = "card-text">';
                                             echo $r['name'].":<sp>";
                                             echo $r['text']."<br>";
-                                        
+                                        echo '</p>';
                                     } 
-                                    echo '</p>';
                                 }/* End comments content  */
-                                echo '</div>';/* border div */
+                            echo '</div>';/* border div */
                             /* Comment btn */
                             echo '<form method="POST" action="backend.php">';
                                     /* echo '<div class ="form-group">'; */
