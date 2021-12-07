@@ -28,10 +28,10 @@
   
 </style>
 
-<body>      
+<body>   
+    <img class = "mx-auto d-block" src="transparentTreble2.png" alt="Treble Logo"/>   
     <div class='lgForm'>
         <form method = 'POST' action = 'backend.php' >    
-            <img class = "mx-auto d-block" src="transparentTreble2.png" alt="Treble Logo"/>
             <input class= 'form-control' type="text" name="username"><br>
             <input class= 'form-control' type="password" name="password" id="password" autocomplete="off">
             <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
