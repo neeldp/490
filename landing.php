@@ -7,10 +7,7 @@
 <body>
 <div class="container">
     <div class="row">
-    <!-- Blog entries-->
         <div class="col-lg-7">
-            <!-- Featured blog post-->
-            
             <?php $value = getenv("SPOTIFY_TOKEN"); echo "<p>". $value."</p>"; ?> 
             <?php
                 $user = $_SESSION['username']; $conn = connect_db(); $result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
@@ -23,18 +20,12 @@
                         $counter++;
                     }
                 }
-                    
+
                 $list = implode("' ,'", $arr);
                 if (count($arr) == 0){
-
                     $sql_query = $conn->query("SELECT * FROM `posts` Where `user` = '{$user}' ORDER BY `time` DESC");
-
-                }
-                else
-                {
-
+                }else{
                     $sql_query = $conn->query("SELECT * FROM `posts` Where `user` IN ('{$list}') or `user` = '{$user}' ORDER BY `time` DESC");
-
                 }
             
                     
@@ -43,60 +34,62 @@
                         echo '<img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                             
                         echo '<div class="card-body">';
-                        echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
-                        echo "<p class='card-text'>". $row['text']."</p>";
-                                
-                        echo "<p>". $row['user']."</p>";
-                    $name = $row['user'];
-                    if ($name != $user){
-                        $result = $conn->query("SELECT id FROM followers_table WHERE follower_id = '{$user_id}' AND `user` = '{$name}'");
-                        $record = mysqli_fetch_array($result);
-                        echo '<form method="POST" action="backend.php">
-                            <input type="hidden" name="id" value="'. $record['id'].'" />
-                            <input type="hidden" name="username" value="'. $row['user'].'" />
-                            <button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
-                            </form>';
-                    }
-                    
-                    $userP = $row['user'];
-                    $result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
-                    $record = mysqli_fetch_array($result);
-                    $id = $row['id'];
-                    if($_SESSION['isAdmin']==1){
-                        echo '<form method="POST" action="backend.php">
-                            <input type="hidden" name="del" value="'. $id.'" />
-                            <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
-                            </form>';
-                    }
-
-                                
+                            echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+                            echo "<p class='card-text'>". $row['text']."</p>";
+                                    
+                            echo "<p>". $row['user']."</p>";
+                            $name = $row['user'];
+                            if ($name != $user){
+                                $result = $conn->query("SELECT id FROM followers_table WHERE follower_id = '{$user_id}' AND `user` = '{$name}'");
+                                $record = mysqli_fetch_array($result);
+                                echo '<form method="POST" action="backend.php">
+                                        <input type="hidden" name="id" value="'. $record['id'].'" />
+                                        <input type="hidden" name="username" value="'. $row['user'].'" />
+                                        <button id = followerButton class = "btn btn-outline-info" type="submit" name="unfollowbtn" value= "unfollow">Following</button>
+                                    </form>';
+                            }
                             
-                    $id = $row['id'];
-                    $sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
-                    if($sql->num_rows > 0){
-                        while($r = mysqli_fetch_array($sql))
-                        {   
-                            echo '<ul class "list-group list-group-flush>';
-                            echo '<li class="list-group-item">'.$r['date']."<br>";
-                             echo $r['name'].":<sp>";
-                            echo $r['text'].'</li>'."<br><br>";
-                        }
-                    }
-                    echo '<form method="POST" action="backend.php">';
-                        echo '<div class ="form-group">';
-                        echo '<label>Comment:</label>';
-                        echo '<input class= "form-control w-25" type="text" name="comment_timeline">';
-                        echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
-                        echo '</div>';
-                        echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
-                        echo '</form>';
+                            $userP = $row['user'];
+                            $result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
+                            $record = mysqli_fetch_array($result);
+                            $id = $row['id'];
+                            if($_SESSION['isAdmin']==1){
+                                echo '<form method="POST" action="backend.php">
+                                        <input type="hidden" name="del" value="'. $id.'" />
+                                        <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
+                                    </form>';
+                            }
+
+                                    
+                                
+                            $id = $row['id'];
+                            $sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
+                            if($sql->num_rows > 0){
+                                echo '<ul class "list-group list-group-flush>';
+                                while($r = mysqli_fetch_array($sql))
+                                {   
+                                    
+                                        echo '<li class="list-group-item">'.$r['date']."<br>";
+                                        echo $r['name'].":<sp>";
+                                        echo $r['text'].'</li>'."<br><br>";
+                                }
+                                echo '</ul>';
+                            }
+                            echo '<form method="POST" action="backend.php">';
+                                    echo '<div class ="form-group">';
+                                        echo '<label>Comment:</label>';
+                                        echo '<input class= "form-control w-25" type="text" name="comment_timeline">';
+                                        echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
+                                    echo '</div>';
+                                    echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
+                                echo '</form>';
 
                         echo "</div>";
-                        echo "</div>";
+                    echo "</div>";
                         echo "<br><br>";
                 }
                 
-                $conn->close();     
+            $conn->close();     
             ?> 
         </div>
         <!-- Side widgets-->
