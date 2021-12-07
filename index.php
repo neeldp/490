@@ -1,45 +1,37 @@
 <?php require 'header.php'; require 'db_key.php'; ?>
 <style>
-    .gradient-custom {
+    body {
+
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         background: #2c3e50;
         background: -webkit-linear-gradient(left, #2c3e50, #000000);
-        background:         linear-gradient(to bottom right, #2c3e50, #000000);
+        background:    -moz-linear-gradient(left, #2c3e50, #000000);
+        background:     -ms-linear-gradient(left, #2c3e50, #000000);
+        background:      -o-linear-gradient(left, #2c3e50, #000000);
+        background:         linear-gradient(to right, #2c3e50, #000000);
+
     }
+
+
 </style>
-    <section class="vh-100 gradient-custom">
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div class="card bg-secondary text-white" style="border-radius: 1rem;">
-            <div class="card-body p-5 text-center">
 
-                <div class="mb-md-5 mt-md-4 pb-5">
+<body>
+
+<div class = "container">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="input-group">
                 <img src="transparentTreble2.png" alt="Treble Logo"/> 
-                <!--<h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                <p class="text-white-50 mb-5">Please enter your login and password!</p>-->
-                <form method="POST" action='backend.php'>
-                    <div class="form-outline form-white mb-4">
-                        <input type="text" id="typeEmailX" class="form-control form-control-lg" name="username"/>
-                        <label  class="form-label" for="typeEmailX">Username</label>
-                    </div>
-
-                    <div class="form-outline form-white mb-4">
-                        <input type="password" id="typePasswordX" class="form-control form-control-lg" name="password"/>
-                        <label class="form-label" for="typePasswordX" >Password</label>
-                    </div>
-
-                    <button class="btn btn-outline-light btn-lg px-5" type="submit" name="login" value="login">Login</button>
-                    </form> 
-
-                </div>
-
-
+                <form method = 'POST' action = 'backend.php' >
+                    <input class= 'form-control' type="text" name="username"><br>
+                    <input class= 'form-control' type="password" name="password" id="password" autocomplete="off">
+                    <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
+                </form>
             </div>
-            </div>
-        </div>
         </div>
     </div>
-    </section>
+</div>
  
         
         
