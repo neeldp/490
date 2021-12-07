@@ -14,22 +14,12 @@
         background:         linear-gradient(to right, #2c3e50, #000000);
                             
     }
-    .lgForm {
-        min-width: 500px;
-        position:
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2.5rem;
-        background: #2c3e50;
-     
-    }
+
   
 </style>
 
 <body>   
-    <img src="transparentTreble2.png" alt="Treble Logo"/>   
+    
     <div class='lgForm'>
         <img src="transparentTreble2.png" alt="Treble Logo"/> 
         <form method = 'POST' action = 'backend.php' >    
