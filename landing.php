@@ -72,6 +72,7 @@
                                         echo $r['text']."<br>";
                                 } 
                                 echo '</p><br/>';/* border div */
+                                echo '</div></div>';
                             }
                             
                             echo '<form method="POST" action="backend.php">';
@@ -82,7 +83,7 @@
                                     echo '</div>';
                                     echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
                                 echo '</form>';
-                                echo '</div></div>';
+                                
                         echo "</div>";
                     echo "</div>";
                     echo "<br><br>";
