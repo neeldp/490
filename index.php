@@ -26,14 +26,16 @@
 <body> 
 
 <div class="container">
-        
-        <form method = 'POST' action = 'backend.php' >    
-        <img class = "loginLogo" src="transparentTreble2.png" alt="Treble Logo"/>
-            <input class= 'form-control w-25' type="text" name="username"><br>
-            <input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
-            <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
-        </form>	
-
+    <div class="row">
+        <div class = "col-4">        
+            <form method = 'POST' action = 'backend.php' >    
+                <img class = "mx-auto d-block" src="transparentTreble2.png" alt="Treble Logo"/>
+                <input class= 'form-control w-25' type="text" name="username"><br>
+                <input class= 'form-control w-25' type="password" name="password" id="password" autocomplete="off">
+                <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
+            </form>	
+        </div>
+    </div>  
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
