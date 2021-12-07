@@ -29,8 +29,9 @@
 </style>
 
 <body>   
-    <img class = "mx-auto d-block" src="transparentTreble2.png" alt="Treble Logo"/>   
+    <img src="transparentTreble2.png" alt="Treble Logo"/>   
     <div class='lgForm'>
+        <img src="transparentTreble2.png" alt="Treble Logo"/> 
         <form method = 'POST' action = 'backend.php' >    
             <input class= 'form-control' type="text" name="username"><br>
             <input class= 'form-control' type="password" name="password" id="password" autocomplete="off">
