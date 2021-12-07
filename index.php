@@ -16,7 +16,7 @@
     }
     .lgForm {
         min-width: 500px;
-        
+        position:
         text-align: center;
         top: 50%;
         left: 50%;

@@ -116,7 +116,7 @@
                 </div>
             </div>-->
 
-            <div class = "card mb-2">
+            <div class = "card mb-4">
                 <div class="card-header">You Might Like</div>
                     <?php
                         $user = $_SESSION['username']; 
