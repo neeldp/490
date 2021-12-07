@@ -10,7 +10,7 @@
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div class="card bf-secondary text-white" style="border-radius: 1rem;">
+            <div class="card bg-secondary text-white" style="border-radius: 1rem;">
             <div class="card-body p-5 text-center">
 
                 <div class="mb-md-5 mt-md-4 pb-5">
@@ -27,7 +27,6 @@
                         <input type="password" id="typePasswordX" class="form-control form-control-lg" name="password"/>
                         <label class="form-label" for="typePasswordX" name="password">Password</label>
                     </div>
-
 
                     <button class="btn btn-outline-light btn-lg px-5" type="submit" name="login" value="login">Login</button>
                     </form> 
