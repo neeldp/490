@@ -26,7 +26,18 @@
                     //$arr[$counter] = $user;
                     
                     $list = implode("' ,'", $arr);
-                    $sql_query = $conn->query("SELECT * FROM `posts` Where `user` IN ('{$list}') or `user` = '{$user}' ORDER BY `time` DESC");
+                    if (count($arr) == 0){
+
+                        $sql_query = $conn->query("SELECT * FROM `posts` Where `user` = '{$user}' ORDER BY `time` DESC");
+
+                    }
+                    else
+                    {
+
+                        $sql_query = $conn->query("SELECT * FROM `posts` Where `user` IN ('{$list}') or `user` = '{$user}' ORDER BY `time` DESC");
+
+                    }
+            
                     
                     while($row = mysqli_fetch_array($sql_query)){
                         echo '<div class="card mb-4">';
@@ -83,7 +94,7 @@
                             echo "</div>";
                         echo "</div>";
                         echo "<br><br>";
-                        }
+                    }
                 
                 $conn->close();     
             ?> 
