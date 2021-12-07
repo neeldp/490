@@ -34,3 +34,16 @@
                         echo '</div>';
                     ?>
             </div> -->
+<!-- search function thing below -->
+            <!-- <div class="card mb-2">
+                <div class="card-header">Search</div>
+                <div class="card-body">
+                
+                    <div class="input-group">
+                        <form method="POST" action='backend.php'>
+                        <input class="form-control" type="text" name="search" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                        <button class="btn btn-primary" id="button-search" type="submit" name='searchbtn'>Go!</button>
+                    </div>
+                    </form>
+                </div>
+            </div>-->
