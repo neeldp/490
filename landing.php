@@ -75,10 +75,11 @@
                     $sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
                     if($sql->num_rows > 0){
                         while($r = mysqli_fetch_array($sql))
-                        {
-                            echo $r['date']."<br>";
-                             echo $r['name'].":";
-                            echo $r['text']."<br><br>";
+                        {   
+                            echo '<ul class "list-group list-group-flush>';
+                            echo '<li class="list-group-item">'.$r['date']."<br>";
+                             echo $r['name'].":<sp>";
+                            echo $r['text'].'</li>'."<br><br>";
                         }
                     }
                     echo '<form method="POST" action="backend.php">';
