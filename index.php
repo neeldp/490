@@ -31,11 +31,7 @@
         background:      -o-linear-gradient(left, #2c3e50, #000000);
         background:         linear-gradient(to right, #2c3e50, #000000);
     }
-    @media (max-width: 500px) {
-        .lgForm {
-            min-width: 90%;
-        }
-    }
+  
 </style>
 
 <body>      
