@@ -66,12 +66,12 @@
                                 echo "<p>".'Comments'."</p>";
                                 echo '<ul class "list-group list-group-flush>';
                                 while($r = mysqli_fetch_array($sql)){       
-                                    echo '<li class="list-group-item">';
+                                    echo '<p>';
                                         echo $r['name'].":<sp>";
                                         echo $r['text']."<br>";
                                 } 
                             }
-                            echo '</li>'.'</ul>';
+                            echo '</p><br/>'.'</ul>';
                             echo '<form method="POST" action="backend.php">';
                                     echo '<div class ="form-group">';
                                         echo '<label>Comment:</label>';
