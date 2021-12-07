@@ -92,7 +92,7 @@
             <!-- Search widget-->
             <br>
             <div style="position:fixed">
-            <div class="card mb-2">
+            <!-- <div class="card mb-2">
                 <div class="card-header">Search</div>
                 <div class="card-body">
                 
@@ -103,7 +103,7 @@
                     </div>
                     </form>
                 </div>
-            </div>
+            </div>-->
 
             <div class = "card mb-2">
                 <div class="card-header">You Might Like</div>
