@@ -65,7 +65,7 @@
                             $id = $row['id'];
                             $sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
                             if($sql->num_rows > 0){
-                                echo "<p>".Comments."</p>"
+                                echo "<p>".Comments."</p>";
                                 echo '<ul class "list-group list-group-flush>';
                                 while($r = mysqli_fetch_array($sql)){       
                                     echo '<li class="list-group-item">';
