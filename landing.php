@@ -64,14 +64,14 @@
                             $sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
                             if($sql->num_rows > 0){
                                 echo "<p>".'Comments'."</p>";
-                                echo '<ul class "list-group list-group-flush>';
+                                echo '<div style="border-style:inset;border-top-style: dotted; border-right-style: solid; border-bottom-style: dotted; border-left-style: solid;">';
                                 while($r = mysqli_fetch_array($sql)){       
                                     echo '<p>';
                                         echo $r['name'].":<sp>";
                                         echo $r['text']."<br>";
                                 } 
                             }
-                            echo '</p><br/>'.'</ul>';
+                            echo '</p><br/>'.'</div>';/* border div */
                             echo '<form method="POST" action="backend.php">';
                                     echo '<div class ="form-group">';
                                         echo '<label>Comment:</label>';
