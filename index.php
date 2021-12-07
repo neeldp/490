@@ -1,24 +1,41 @@
 <?php require 'header.php'; require 'db_key.php';?>
+    <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
 
-<body class="text-center">
-    <form class="form-signin">
-      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-    </form>
-  </body>
-</html>
+                <div class="mb-md-5 mt-md-4 pb-5">
+                <img src="transparentTreble2.png" alt="Treble Logo"/> 
+                <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
+                <div class="form-outline form-white mb-4">
+                    <input type="text" id="typeEmailX" class="form-control form-control-lg" name="username"/>
+                    <label type="text" name="username" class="form-label" for="typeEmailX">Username</label>
+                </div>
+
+                <div class="form-outline form-white mb-4">
+                    <input type="password" id="typePasswordX" class="form-control form-control-lg" name="password"/>
+                    <label class="form-label" for="typePasswordX" name="password">Password</label>
+                </div>
+
+                <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+
+                <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+
+
+                </div>
+
+                
+
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
  
         
         
