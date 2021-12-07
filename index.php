@@ -15,11 +15,9 @@
                             
     }
     .lgForm{
-        text-align:center;
+        margin:0,auto;
     }
-    .lgForm form{
-        display:inline-block;
-    }
+    
 </style>
 
 <body>   
