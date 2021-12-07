@@ -63,16 +63,17 @@
                             $id = $row['id'];
                             $sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
                             if($sql->num_rows > 0){
-                                echo "<p>".'Comments'."</p>";
                                 echo '<div class ="card">';
                                     echo '<div class="card-body">';
-                                while($r = mysqli_fetch_array($sql)){       
-                                    echo '<p>';
-                                        echo $r['name'].":<sp>";
-                                        echo $r['text']."<br>";
-                                } 
-                                echo '</p><br/>';/* border div */
-                                echo '</div></div>';
+                                        echo "<p>".'Comments'."</p>";
+                                        while($r = mysqli_fetch_array($sql)){       
+                                            echo '<p class="card-text">';
+                                                echo $r['name'].": <sp>";
+                                                echo $r['text']."<br>";
+                                        } 
+                                        echo '</p><br/>';/* border div */
+                                    echo '</div>';
+                                echo '</div>';
                             }
                             
                             echo '<form method="POST" action="backend.php">';
@@ -81,7 +82,7 @@
                                         echo '<input class= "form-control w-25" type="text" name="comment_timeline">';
                                         echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
                                     echo '</div>';
-                                    echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
+                                    echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Add your own</button>';
                                 echo '</form>';
                                 
                         echo "</div>";
