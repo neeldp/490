@@ -3,9 +3,7 @@
     .gradient-custom {
         background: #2c3e50;
         background: -webkit-linear-gradient(left, #2c3e50, #000000);
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background:         linear-gradient(to right, #2c3e50, #000000);
+        background:         linear-gradient(to bottom right, #2c3e50, #000000);
     }
 </style>
     <section class="vh-100 gradient-custom">
@@ -19,7 +17,7 @@
                 <img src="transparentTreble2.png" alt="Treble Logo"/> 
                 <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                 <p class="text-white-50 mb-5">Please enter your login and password!</p>
-
+                <form method="POST">
                 <div class="form-outline form-white mb-4">
                     <input type="text" id="typeEmailX" class="form-control form-control-lg" name="username"/>
                     <label type="text" name="username" class="form-label" for="typeEmailX">Username</label>
@@ -32,11 +30,10 @@
 
 
                 <button class="btn btn-outline-light btn-lg px-5" type="submit" name="login" value="login">Login</button>
-
+                </form> 
 
                 </div>
 
-                
 
             </div>
             </div>
