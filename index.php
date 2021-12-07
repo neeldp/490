@@ -1,8 +1,6 @@
 <?php require 'header.php'; require 'db_key.php';?>
 <style>
-    .index{
-        background:linear-gradient(#2C3E50,#000000)  
-    }
+    
     html {
         height: 100%;
     }
@@ -20,12 +18,12 @@
 							
     }
     .container{
-        display:flex;
+        margin:0,auto;
         
     }
 </style>
 
-<body class = "index"> 
+<body> 
 
 <div class="container">
         
