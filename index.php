@@ -14,17 +14,27 @@
         background:         linear-gradient(to right, #2c3e50, #000000);
                             
     }
-    form{
-        margin:auto;
+    .lgForm {
+        min-width: 500px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2.5rem
     }
-
+    @media (max-width: 500px) {
+        .lgForm {
+            min-width: 90%;
+        }
+    }
 </style>
 
 <body> 
     <div class="container">
         <div class="row">
             <div class = "col-4">        
-                <form method = 'POST' action = 'backend.php' >    
+                <form method = 'POST' action = 'backend.php' class=lgForm>    
                     <img class = "mx-auto d-block" src="transparentTreble2.png" alt="Treble Logo"/>
                     <input class= 'form-control' type="text" name="username"><br>
                     <input class= 'form-control' type="password" name="password" id="password" autocomplete="off">
