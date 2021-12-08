@@ -22,14 +22,12 @@
 	<div class='row'> 
 		<div card ="col-lg-7">
 			<div class='card mb-4'>
-				<div class='card-body'> 
                     <img src="transparentTreble2.png" alt="Treble Logo"/> 
                     <form method = 'POST' action = 'backend.php' >
                         <input class= 'form-control' type="text" name="username"><br>
                         <input class= 'form-control' type="password" name="password" id="password" autocomplete="off">
                         <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
-                    </form>
-                </div>     
+                    </form> 
             </div>   
         </div>
     </div>
