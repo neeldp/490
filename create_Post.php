@@ -14,7 +14,7 @@ $_SESSION['song'] = $NAME;
 				<div class='card-body'> 
 					<form action="backend.php" method="POST" enctype="multipart/form-data">   	
 						<div class="form-group">
-							<label for="spotSearch">Search for a Song on Spotify:</label>
+							<label for="spotSearch" card="card-title">Search for a Song on Spotify:</label>
 							<input class="form-control" id="spotSearch" type="text" name="searchSong">
 						</div>	
 						<sp> <button type="submit" name="searchbtnsong" value="searchbtn" class="searchbtnsong">Search</button> <br> <br>
@@ -57,7 +57,7 @@ $_SESSION['song'] = $NAME;
 							<input type="file" id="img" name="img" accept="image/*">  <br><br>
 					
 							<textarea class="form-control" name="post_Text" placeholder="Write your post here!"></textarea> 
-							<br><br><button class="btn btn-outline-info" type="submit" name="create_Post" value="Post">Post</button> <br>
+							<button class="btn btn-outline-info" type="submit" name="create_Post" value="Post">Post</button> <br>
 						</div>
 					</form>
 				</div>
