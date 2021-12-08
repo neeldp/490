@@ -24,7 +24,7 @@ $_SESSION['song'] = $NAME;
 						if($_GET){ 
 							echo"<div class ='card mx-auto'>";
 							echo	"<div class ='card-body'>";
-								echo "<p> Spotify Search Results </p>";
+								echo "<p class='card-title'> Spotify Search Results </p>";
 								require 'vendor/autoload.php';
 
 								$session = new SpotifyWebAPI\Session(
