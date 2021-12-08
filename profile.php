@@ -52,10 +52,8 @@ require 'db_key.php';
 		<div class="container">
     		<div class="row">
         		<div class="col-lg-7">
-					<h2> <b> My Profile </b> </h2> <br> <br>
 					
 					<?php
-						
 						$conn = connect_db();
 						$usr = $_SESSION['username'];
 						$result = $conn->query("SELECT * FROM posts WHERE `user` = '{$usr}' ORDER BY `time` DESC");
@@ -110,11 +108,47 @@ require 'db_key.php';
 								echo "<br><br>";
 							}
 						}
-						
 						$conn->close();
-
 						?>
 				</div>
+				<div class="col-lg-2" style='overflow-y: auto;' >
+             <!-- Search widget -->
+            <br>
+            <div style="position:fixed">
+            	<div class = "card mb-6">
+					<div class="card-header">Fans</div>
+					<script>
+						function following() {
+							window.location.replace("following.php");
+						}
+
+						function followers() {
+							window.location.replace("followers.php");
+						}
+					</script>
+
+					<?php
+
+						$conn = connect_db();
+						$user = $_SESSION['username'];
+						$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+						$row = mysqli_fetch_array($result);
+						$user_id = $row['id'];
+
+						$sql_query = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `follower_id` = '{$user_id}'");
+						$row = mysqli_fetch_array($sql_query);
+			
+						echo '<a onclick="following()" class="followingPointer">'. $row[0].' Following</a>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
+			
+
+						$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
+						$row = mysqli_fetch_array($sql);
+						
+						echo '<label onclick="followers()" class="followerPointer">'. $row[0].' Followers</label>';
+
+					?>
+				</div> 
+			</div>
 			</div>
 		</div>
 	</body>
