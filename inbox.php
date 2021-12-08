@@ -4,21 +4,23 @@
 <div class='container'>
 	<div class='row'> 
 		<div card ="col-lg-7">
-			<h1> Create A Post </h1>
+			<h1> Inbox </h1>
 			<div class='card mb-4'>
 				<div class='card-body'> 
-                <?php 
-                    $conn = connect_db();
-                    $usr = $_SESSION['username'];
-                    $sql = "SELECT receiver FROM dm_table WHERE sender = '{$usr}' UNION SELECT sender FROM dm_table WHERE receiver = '{$usr}'";
-                    $result = $conn->query($sql);
-                    if($result -> num_rows > 0){
-                        while($row = mysqli_fetch_array($result)){
-                            echo "<br> <tr><td>".  "<a href='conversation.php?name=".$row['receiver'] . "'>" . $row['receiver']  . "</a></td></tr> <br>";
-                        }
-                    }
-                    $conn->close();
-                ?>
+                    <ul class='list-group'>
+                        <?php 
+                            $conn = connect_db();
+                            $usr = $_SESSION['username'];
+                            $sql = "SELECT receiver FROM dm_table WHERE sender = '{$usr}' UNION SELECT sender FROM dm_table WHERE receiver = '{$usr}'";
+                            $result = $conn->query($sql);
+                            if($result -> num_rows > 0){
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<li class='list-group-item'>".  "<a href='conversation.php?name=".$row['receiver'] . "'>" . $row['receiver']  . "</a></li>";
+                                }
+                            }
+                            $conn->close();
+                        ?>
+                    </ul>
                 </div>
             </div>
         </div>
