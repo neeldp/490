@@ -18,7 +18,7 @@
 
 <body>
 
-<div class='container'>
+<div class='container-md'>
 	<div class='row'> 	
         
             <img src="transparentTreble2.png" alt="Treble Logo"/> 
