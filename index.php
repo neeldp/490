@@ -18,7 +18,7 @@
         width: 300px;
     }
     .container-large {
-        width: 970px;
+        width: 500px;
     } 
 } 
 </style>
