@@ -30,7 +30,7 @@
 			<div class='card mb-4'>
 				<div class='card-body'>
                     <h1> Inbox </h1> 
-                    <a href="#" class="buttonClass">Button text</a>
+                    <a href="sendMessage.php" class="buttonClass">Send a Message</a>
                     <ul class='list-group'>
                         <?php 
                             $conn = connect_db();
