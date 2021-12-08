@@ -63,8 +63,9 @@ require 'db_key.php';
 							while($row = mysqli_fetch_array($result))
 							{
 								echo "<div class='posts'>";
-								echo "<p class='puser'>". $row['user']."</p>";
 								echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+								echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+								//echo "<p class='puser'>". $row['user']."</p>";
 								echo "<p class='ptext'>". $row['text']."</p>";
 								echo "<p class='ptime'>". $row['time']."</p>";
 								$id = $row['id'];
@@ -72,7 +73,6 @@ require 'db_key.php';
 									<input type="hidden" name="del_post" value="'. $id.'" />
 									<button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deleteButton" value= "delete">Delete</button>
 									</form>';
-								echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
 
 								$id = $row['id'];
 								$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
