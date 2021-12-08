@@ -115,7 +115,7 @@ require 'db_key.php';
              <!-- Search widget -->
             <br>
             <div style="position:fixed">
-            	<div class = "card mb-4">
+            	<div class = "card mb-6">
 					<div class="card-header">Fans</div>
 					<script>
 						function following() {
@@ -137,17 +137,13 @@ require 'db_key.php';
 
 						$sql_query = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `follower_id` = '{$user_id}'");
 						$row = mysqli_fetch_array($sql_query);
-						//echo "$row[0]";
-						//echo '<a href="following.php">following</a>';
-						//echo "$row[0] ";
-						echo '<label onclick="following()" class="followingPointer">'. $row[0].' Following</label>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
-						//echo '<label onclick="following()">'. $row[0].' Following</label>';
-						//echo "\t\t\t\t";
-						
+			
+						echo '<a onclick="following()" class="followingPointer">'. $row[0].' Following</a>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
+			
 
 						$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
 						$row = mysqli_fetch_array($sql);
-						//echo "$row[0] ";
+						
 						echo '<label onclick="followers()" class="followerPointer">'. $row[0].' Followers</label>';
 
 					?>
