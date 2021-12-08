@@ -61,9 +61,7 @@ require 'db_key.php';
 							while($row = mysqli_fetch_array($result))
 							{
 								echo '<div class="card mb-4">';
-								echo `<div class="rounded">`;
 									echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
-									echo `</div>`;
 									echo '<div class="card-body">';
 										echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
 										//echo "<p class='puser'>". $row['user']."</p>";
