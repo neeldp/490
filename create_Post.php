@@ -52,11 +52,13 @@ $_SESSION['song'] = $NAME;
 					?> 
 					
 					<form action="backend.php" method="POST" enctype="multipart/form-data"> 
-						<label for="img">Attach image:</label><br>
-						<input type="file" id="img" name="img" accept="image/*">  <br><br>
-				
-						<textarea class="status" name="post_Text" placeholder="Write your post here!"></textarea> 
-						<br><br><button class="btn btn-outline-info" type="submit" name="create_Post" value="Post">Post</button> <br>
+						<div class='form-group'>
+							<label for="img">Attach image:</label><br>
+							<input type="file" id="img" name="img" accept="image/*">  <br><br>
+					
+							<textarea class="form-control" name="post_Text" placeholder="Write your post here!"></textarea> 
+							<br><br><button class="btn btn-outline-info" type="submit" name="create_Post" value="Post">Post</button> <br>
+						</div>
 					</form>
 				</div>
 			</div>
