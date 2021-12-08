@@ -6,46 +6,6 @@ require 'db_key.php';
 
 
 <body>
-	<div class = "stats">
-
-		<script>
-
-			function following() {
-				window.location.replace("following.php");
-			}
-
-			function followers() {
-				window.location.replace("followers.php");
-			}
-
-		</script>
-
-		<?php
-
-			$conn = connect_db();
-			$user = $_SESSION['username'];
-        	$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
-        	$row = mysqli_fetch_array($result);
-			$user_id = $row['id'];
-
-			$sql_query = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `follower_id` = '{$user_id}'");
-			$row = mysqli_fetch_array($sql_query);
-			//echo "$row[0]";
-			//echo '<a href="following.php">following</a>';
-			//echo "$row[0] ";
-			echo '<label onclick="following()" class="followingPointer">'. $row[0].' Following</label>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
-			//echo '<label onclick="following()">'. $row[0].' Following</label>';
-			echo "\t\t\t\t";
-			
-
-			$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
-			$row = mysqli_fetch_array($sql);
-			//echo "$row[0] ";
-			echo '<label onclick="followers()" class="followerPointer">'. $row[0].' Followers</label>';
-
-		?>
-	</div>
-	
 	
 	<div class = "timeline">
 	<body>
