@@ -26,8 +26,8 @@
                 <input class= 'form-control' type="text" name="username"><br>
                 <input class= 'form-control' type="password" name="password" id="password" autocomplete="off">
                 <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
-            </div>
-        </form> 
+            </form> 
+        </div>
     </div>
 </div>
  
