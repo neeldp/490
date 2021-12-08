@@ -6,7 +6,7 @@ $songID = $_SESSION['songID'];
 $_SESSION['song'] = $NAME;
 ?>   
 <body>
-<div class='card'>
+<div class='card mx-auto'>
 	<div class='card-body'> 
 		<form action="backend.php" method="POST" enctype="multipart/form-data">   	
 			<div class="form-group">
@@ -18,7 +18,7 @@ $_SESSION['song'] = $NAME;
 		
 		<?php
 			if($_GET){ 
-				echo"<div class ='card'>";
+				echo"<div class ='card mx-auto'>";
 				echo	"<div class ='card-body'>";
 					//echo "<p>" . $_SESSION['songID'] . "</p>";
 					require 'vendor/autoload.php';
