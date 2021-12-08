@@ -148,6 +148,19 @@ if($_POST){
         //echo "$post_ID";
         
     }
+    
+    if(isset($_POST['commentPro'])){
+        $username = $_SESSION['username'];
+        $text = $_POST['comment_profile']; 
+        $post_ID = $_POST['pID'];
+        //var_dump($_POST);
+        $sql = "INSERT INTO `comments`(`name`,`text`,`date`, `post_ID`) VALUES ('$username','$text', NOW(), '$post_ID')";
+        $result = $conn->query($sql);
+        //$isAdmin = $sql['isAdmin'];
+        header('location: profile.php');
+        //echo "$post_ID";
+        
+    }
 
     if(isset($_POST['followbtn'])){
         $follower = $_SESSION['username'];
