@@ -20,14 +20,14 @@
 
 <div class='container'>
 	<div class='row'> 	
-        <div class="col-md-6 col-sm-1 col-lg-12">
+        
             <img src="transparentTreble2.png" alt="Treble Logo"/> 
             <form method = 'POST' action = 'backend.php' >
                 <input class= 'form-control' type="text" name="username"><br>
                 <input class= 'form-control' type="password" name="password" id="password" autocomplete="off">
                 <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
             </form> 
-        </div>
+        
     </div>
 </div>
  
