@@ -271,7 +271,7 @@ if($_POST){
 
     if(isset($_POST['profile_image']))
     {
-        $img = $_POST['image'];
+        $img = $_POST['p_img'];
         var_dump($img);
         $user = $_SESSION['username'];
         $conn = connect_db();
