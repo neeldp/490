@@ -6,7 +6,7 @@ $songID = $_SESSION['songID'];
 $_SESSION['song'] = $NAME;
 ?>   
 <body>
-<div class='card mx-auto'>
+<div class='card mb-4'>
 	<div class='card-body'> 
 		<div class='card mb-4'>
 			<div class='card-body'> 
