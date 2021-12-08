@@ -10,6 +10,7 @@ $_SESSION['song'] = $NAME;
 <div class='container'>
 	<div class='row'> 
 		<div card ="col-lg-7">
+			<h1> Create A Post </h1>
 			<div class='card mb-4'>
 				<div class='card-body'> 
 					<form action="backend.php" method="POST" enctype="multipart/form-data">   	
