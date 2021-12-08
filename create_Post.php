@@ -14,8 +14,8 @@ $_SESSION['song'] = $NAME;
 				<div class='card-body'> 
 					<form action="backend.php" method="POST" enctype="multipart/form-data">   	
 						<div class="form-group">
-							<label>Search for a Song on Spotify:</label>
-							<input class="form-control w-25" type="text" name="searchSong">
+							<label for="spotSearch">Search for a Song on Spotify:</label>
+							<input class="form-control" id="spotSearch" type="text" name="searchSong">
 						</div>	
 						<sp> <button type="submit" name="searchbtnsong" value="searchbtn" class="searchbtnsong">Search</button> <br> <br>
 					</form>
@@ -24,7 +24,7 @@ $_SESSION['song'] = $NAME;
 						if($_GET){ 
 							echo"<div class ='card mx-auto'>";
 							echo	"<div class ='card-body'>";
-								//echo "<p>" . $_SESSION['songID'] . "</p>";
+								echo "<p> Spotify Search Results </p>";
 								require 'vendor/autoload.php';
 
 								$session = new SpotifyWebAPI\Session(
