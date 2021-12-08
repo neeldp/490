@@ -13,12 +13,19 @@
 
     }
 
-
+    @media (min-width: 768px) {
+    .container-small {
+        width: 300px;
+    }
+    .container-large {
+        width: 970px;
+    } 
+} 
 </style>
 
 <body>
 
-<div class='container-md'>
+<div class='container-small'>
 	<div class='row'> 	
         
             <img src="transparentTreble2.png" alt="Treble Logo"/> 
