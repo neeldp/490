@@ -116,8 +116,8 @@ require 'db_key.php';
 
 	<form action="backend.php" method="POST" enctype="multipart/form-data"> 
 		<div class='form-group'>
-			<label for="img">Attach profile image:</label><br>
-			<input type="file" id="img" name="image" accept="image/*">  <br><br>
+			<label for="image">Attach profile image:</label><br>
+			<input type="file" id="image" name="image" accept="image/*">  <br><br>
 			<button class="btn btn-outline-info" type="submit" name="profile_image" value="p_image">Save Change</button> <br>
 		</div>
 	</form>
