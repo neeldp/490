@@ -269,7 +269,7 @@ if($_POST){
         header('location: following.php');
     }
 
-    if(isset($_POST['profile_img']))
+    if(isset($_POST['profile_image']))
     {
         $img = $_POST['image'];
         $user = $_SESSION['username'];
