@@ -15,32 +15,34 @@ $_SESSION['song'] = $NAME;
 	</div>	
 	<sp> <button type="submit" name="searchbtnsong" value="searchbtn" class="searchbtnsong">Search</button> <br> <br>
 	
-	</sp>		
-    <?php 
-		//echo "<p>" . $_SESSION['songID'] . "</p>";
-		require 'vendor/autoload.php';
+	</sp>	
+	<div class="card">
+		<div class ="card-body">
+			<?php 
+				require 'vendor/autoload.php';
 
-		$session = new SpotifyWebAPI\Session(
-			'b7d9baca79b6424597551d19d5fd02cf',
-			'6b988bb0c7ae4cf58013ff29e6ce5a26',
-			'https://login490.herokuapp.com/redir.php'
-		);
-		
-		$api = new SpotifyWebAPI\SpotifyWebAPI();
-		
-		$session->requestCredentialsToken();
-		$accessToken = $session->getAccessToken();
-		
-		// Set the code on the API wrapper
-		$api->setAccessToken($accessToken);
-		//echo "<p>" . $accessToken . "</p>";
+				$session = new SpotifyWebAPI\Session(
+					'b7d9baca79b6424597551d19d5fd02cf',
+					'6b988bb0c7ae4cf58013ff29e6ce5a26',
+					'https://login490.herokuapp.com/redir.php'
+				);
+				
+				$api = new SpotifyWebAPI\SpotifyWebAPI();
+				
+				$session->requestCredentialsToken();
+				$accessToken = $session->getAccessToken();
+				
+				// Set the code on the API wrapper
+				$api->setAccessToken($accessToken);
+				//echo "<p>" . $accessToken . "</p>";
 
-		$res = $api->search($_SESSION["song"], ['track']);
-		foreach($res->tracks->items as $track){
-			echo "<a href='songredir.php?id=". $track->id . "'>" . $track->name . $track->artist . "</a>" . '<br>';
-		}
-		
-	?> 
+				$res = $api->search($_SESSION["song"], ['track']);
+				foreach($res->tracks->items as $track){
+					echo "<a href='songredir.php?id=". $track->id . "'>" . $track->name . $track->artist . "</a>" . '<br>';
+				}	
+			?> 
+		</div>
+	</div>
 	<sp>
 	<label for="img">Attach image:</label><br>
 		<input type="file" id="img" name="img" accept="image/*">  <br><br>
@@ -48,6 +50,7 @@ $_SESSION['song'] = $NAME;
 	<textarea class="status" name="post_Text" placeholder="Write your post here!" rows="4" cols="50" maxlength="300" autofocus=""></textarea> 
 	<br><br><button class="btn btn-outline-info" type="submit" name="create_Post" value="Post">Post</button>
 	</form>
+	<div>
 </div>
 	
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
