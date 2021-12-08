@@ -25,8 +25,8 @@
 
 <body>
 
-<div class='container-small mx-auto'>
-	<div class='row'> 	
+<div class='container-large mx-auto'>
+	<div class='row mx-auto'> 	
         
             <img src="transparentTreble2.png" alt="Treble Logo"/> 
             <form method = 'POST' action = 'backend.php' >
