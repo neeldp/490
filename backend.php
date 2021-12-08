@@ -268,6 +268,14 @@ if($_POST){
 
         header('location: following.php');
     }
+
+    if(isset($_POST['profile_img']))
+    {
+        $img = $_POST['image'];
+        $user = $_SESSION['username'];
+        $conn = connect_db();
+        $query = $conn->query("UPDATE users SET `profile_img` = `{$img}` WHERE `username` = `{$user}`");
+    }
 } 
 //if($_GET){
    // prequire 'db_key.php';
