@@ -4,7 +4,7 @@
 <div class='container'>
 	<div class='row'> 
 		<div card ="col-lg-7">
-			
+			<br>
 			<div class='card mb-4'>
 				<div class='card-body'>
                     <h1> Inbox </h1> 
