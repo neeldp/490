@@ -6,6 +6,7 @@ $songID = $_SESSION['songID'];
 $_SESSION['song'] = $NAME;
 ?>   
 <body>
+<br><br>
 <div class='container'>
 	<div class='row'> 
 		<div card ="col-lg-7">
