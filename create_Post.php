@@ -16,15 +16,7 @@ $_SESSION['song'] = $NAME;
 	<sp> <button type="submit" name="searchbtnsong" value="searchbtn" class="searchbtnsong">Search</button> <br> <br>
 	
 	</sp>		
-    
-	<label for="img">Attach image:</label><br>
-		<input type="file" id="img" name="img" accept="image/*">  <br><br>
-            
-	<textarea class="status" name="post_Text" placeholder="Write your post here!" rows="4" cols="50" maxlength="300" autofocus=""></textarea> 
-	<br><br><button class="btn btn-outline-info" type="submit" name="create_Post" value="Post">Post</button>
-	</form>
-</div>
-	<?php 
+    <?php 
 		//echo "<p>" . $_SESSION['songID'] . "</p>";
 		require 'vendor/autoload.php';
 
@@ -42,8 +34,6 @@ $_SESSION['song'] = $NAME;
 		// Set the code on the API wrapper
 		$api->setAccessToken($accessToken);
 		//echo "<p>" . $accessToken . "</p>";
-		
-		
 
 		$res = $api->search($_SESSION["song"], ['track']);
 		foreach($res->tracks->items as $track){
@@ -51,6 +41,15 @@ $_SESSION['song'] = $NAME;
 		}
 		
 	?> 
+	<sp>
+	<label for="img">Attach image:</label><br>
+		<input type="file" id="img" name="img" accept="image/*">  <br><br>
+            
+	<textarea class="status" name="post_Text" placeholder="Write your post here!" rows="4" cols="50" maxlength="300" autofocus=""></textarea> 
+	<br><br><button class="btn btn-outline-info" type="submit" name="create_Post" value="Post">Post</button>
+	</form>
+</div>
+	
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	
 </body></html>
