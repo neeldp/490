@@ -25,7 +25,7 @@
 
 <body>
 
-<div class='container-small'>
+<div class='container-small mx-auto'>
 	<div class='row'> 	
         
             <img src="transparentTreble2.png" alt="Treble Logo"/> 
