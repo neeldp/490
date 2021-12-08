@@ -6,7 +6,7 @@ require 'db_key.php';
 
 
 <body>
-	<h2 style="text-align: center;">Profile</h2>
+	<h2 >Profile</h2>
 	<div class = "timeline">
 	<body>
 		<div class="container">
