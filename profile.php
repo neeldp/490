@@ -67,7 +67,8 @@ require 'db_key.php';
 									echo '<div class="card-body">';
 										echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
 										//echo "<p class='puser'>". $row['user']."</p>";
-										echo "<p class='ptext'>". $row['text']."</p>";
+										echo "<p class='card-text'>". $row['text']."</p>";
+										//echo "<p class='ptext'>". $row['text']."</p>";
 										echo "<p class='ptime'>". $row['time']."</p>";
 										$id = $row['id'];
 										echo '<form method="POST" action="backend.php">
@@ -79,13 +80,21 @@ require 'db_key.php';
 										$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
 
 										if($sql->num_rows > 0){
-											while($r = mysqli_fetch_array($sql))
-											{
-												echo $r['date']."<br>";
-												echo $r['name'].":";
-												echo $r['text']."<br><br>";
+											echo '<div class ="card">';
+                                    			echo '<div class="card-body">';
+                                        			echo "<p>".'Comments'."</p>";
+														while($r = mysqli_fetch_array($sql))
+														{
+															echo '<p class="card-text">';
+																echo $r['date']."<br>";
+																echo $r['name'].":";
+																echo $r['text']."<br><br>";
 
-											}
+														}
+
+													echo '</p><br/>'; /* border div */
+												echo '</div>';
+											echo '</div>';
 										}
 										echo '<form method="POST" action="backend.php">';
 										echo '<div class ="form-group">';
