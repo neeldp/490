@@ -116,9 +116,9 @@ require 'db_key.php';
 
 	<form action="backend.php" method="POST" enctype="multipart/form-data"> 
 		<div class='form-group'>
-			<label for="img">Attach image:</label><br>
+			<label for="img">Attach profile image:</label><br>
 			<input type="file" id="img" name="image" accept="image/*">  <br><br>
-			<button class="btn btn-outline-info" type="submit" name="profile_img" value="p_image">Post</button> <br>
+			<button class="btn btn-outline-info" type="submit" name="profile_img" value="p_image">Save Change</button> <br>
 		</div>
 	</form>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
