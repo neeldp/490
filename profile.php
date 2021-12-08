@@ -99,10 +99,10 @@ require 'db_key.php';
 										echo '<form method="POST" action="backend.php">';
 										echo '<div class ="form-group">';
 										echo '<label>Comment:</label>';
-										echo '<input class= "form-control w-25" type="text" name="comment">';
-										echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
+										echo '<input class= "form-control w-25" type="text" name="comment_profile">';
+										echo '<input type="hidden" name="pID" value="'. $row['id'].'" />';
 										echo '</div>';
-										echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
+										echo '<button class = "btn btn-outline-info" type="submit" name="commentPro" value= "post_Comment">Comment</button>';
 										echo '</form>';
 
 									echo "</div>";
