@@ -62,39 +62,41 @@ require 'db_key.php';
 						if($result->num_rows > 0){
 							while($row = mysqli_fetch_array($result))
 							{
-								echo "<div class='posts'>";
-								echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
-								echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
-								//echo "<p class='puser'>". $row['user']."</p>";
-								echo "<p class='ptext'>". $row['text']."</p>";
-								echo "<p class='ptime'>". $row['time']."</p>";
-								$id = $row['id'];
-								echo '<form method="POST" action="backend.php">
-									<input type="hidden" name="del_post" value="'. $id.'" />
-									<button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deleteButton" value= "delete">Delete</button>
-									</form>';
+								echo '<div class="card mb-4">';
+									echo '<img class="post_image" src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+									echo '<div class="card-body">';
+										echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+										//echo "<p class='puser'>". $row['user']."</p>";
+										echo "<p class='ptext'>". $row['text']."</p>";
+										echo "<p class='ptime'>". $row['time']."</p>";
+										$id = $row['id'];
+										echo '<form method="POST" action="backend.php">
+											<input type="hidden" name="del_post" value="'. $id.'" />
+											<button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deleteButton" value= "delete">Delete</button>
+											</form>';
 
-								$id = $row['id'];
-								$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
+										$id = $row['id'];
+										$sql = $conn->query("SELECT * FROM comments Where post_ID = '{$id}'");
 
-								if($sql->num_rows > 0){
-									while($r = mysqli_fetch_array($sql))
-									{
-										echo $r['date']."<br>";
-										echo $r['name'].":";
-										echo $r['text']."<br><br>";
+										if($sql->num_rows > 0){
+											while($r = mysqli_fetch_array($sql))
+											{
+												echo $r['date']."<br>";
+												echo $r['name'].":";
+												echo $r['text']."<br><br>";
 
-									}
-								}
-								echo '<form method="POST" action="backend.php">';
-								echo '<div class ="form-group">';
-								echo '<label>Comment:</label>';
-								echo '<input class= "form-control w-25" type="text" name="comment">';
-								echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
-								echo '</div>';
-								echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
-								echo '</form>';
+											}
+										}
+										echo '<form method="POST" action="backend.php">';
+										echo '<div class ="form-group">';
+										echo '<label>Comment:</label>';
+										echo '<input class= "form-control w-25" type="text" name="comment">';
+										echo '<input type="hidden" name="post_ID" value="'. $row['id'].'" />';
+										echo '</div>';
+										echo '<button class = "btn btn-outline-info" type="submit" name="commentbtn" value= "post_Comment">Comment</button>';
+										echo '</form>';
 
+									echo "</div>";
 								echo "</div>";
 								echo "<br><br>";
 							}
