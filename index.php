@@ -22,7 +22,7 @@
 	<div class='row'> 
 		<div card ="col-lg-7">
 			<div class='card mb-4'>
-            <img class="card-img-top" src="transparentTreble2.png" alt="Treble Logo"/> 
+            <img src="transparentTreble2.png" alt="Treble Logo"/> 
 				<div class='card-body'> 
                 <form method = 'POST' action = 'backend.php' >
                     <input class= 'form-control' type="text" name="username"><br>
