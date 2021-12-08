@@ -32,7 +32,7 @@
             <form method = 'POST' action = 'backend.php' >
                 <input class= 'form-control' type="text" name="username"><br>
                 <input class= 'form-control' type="password" name="password" id="password" autocomplete="off">
-                <br><button class = 'button-login' type="submit" name="login" value= 'login' class="submit">Login</button>
+                <br><button class = 'button-login mx-auto' type="submit" name="login" value= 'login' class="submit">Login</button>
             </form> 
         
     </div>
