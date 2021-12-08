@@ -271,11 +271,25 @@ if($_POST){
 
     if(isset($_POST['profile_image']))
     {
-        $img = $_POST['p_img'];
-        var_dump($img);
+        //$img = $_POST['p_img'];
+        //var_dump($img);
         $user = $_SESSION['username'];
+        if(!empty($_FILES["p_img"]["name"])) { 
+            // Get file info 
+            $fileName = basename($_FILES["p_img"]["name"]); 
+            $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+            
+            // Allow certain file formats 
+            $allowTypes = array('jpg','png','jpeg','gif'); 
+            if(in_array($fileType, $allowTypes)){ 
+                $image = $_FILES['p_img']['tmp_name']; 
+                $imgContent = addslashes(file_get_contents($image)); 
+            
+            }
+        }
+        var_dump($img);
         $conn = connect_db();
-        $query = $conn->query("UPDATE users SET `profile_img` = `{$img}` WHERE `username` = `{$user}`");
+        $query = $conn->query("UPDATE users SET `profile_img` = `{$imgContent}` WHERE `username` = `{$user}`");
         //header('location: profile.php');
     }
 } 
