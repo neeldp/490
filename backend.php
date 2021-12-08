@@ -275,6 +275,7 @@ if($_POST){
         $user = $_SESSION['username'];
         $conn = connect_db();
         $query = $conn->query("UPDATE users SET `profile_img` = `{$img}` WHERE `username` = `{$user}`");
+        header('location: profile.php');
     }
 } 
 //if($_GET){
