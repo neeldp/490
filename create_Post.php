@@ -15,36 +15,38 @@ $_SESSION['song'] = $NAME;
 			</div>	
 			<sp> <button type="submit" name="searchbtnsong" value="searchbtn" class="searchbtnsong">Search</button> <br> <br>
 		</form>
-		<div class ="card">
-			<div class ="card-body">
-				<?php
-					if($_GET){ 
-						//echo "<p>" . $_SESSION['songID'] . "</p>";
-						require 'vendor/autoload.php';
+		
+		<?php
+			if($_GET){ 
+				echo"<div class ='card'>";
+				echo	"<div class ='card-body'>";
+					//echo "<p>" . $_SESSION['songID'] . "</p>";
+					require 'vendor/autoload.php';
 
-						$session = new SpotifyWebAPI\Session(
-							'b7d9baca79b6424597551d19d5fd02cf',
-							'6b988bb0c7ae4cf58013ff29e6ce5a26',
-							'https://login490.herokuapp.com/redir.php'
-						);
-						
-						$api = new SpotifyWebAPI\SpotifyWebAPI();
-						
-						$session->requestCredentialsToken();
-						$accessToken = $session->getAccessToken();
-						
-						// Set the code on the API wrapper
-						$api->setAccessToken($accessToken);
-						//echo "<p>" . $accessToken . "</p>";
-						
-						$res = $api->search($_SESSION["song"], ['track']);
-						foreach($res->tracks->items as $track){
-							echo "<a href='songredir.php?id=". $track->id . "'>" . $track->name . $track->artist . "</a>" . '<br>';
-						}	
+					$session = new SpotifyWebAPI\Session(
+						'b7d9baca79b6424597551d19d5fd02cf',
+						'6b988bb0c7ae4cf58013ff29e6ce5a26',
+						'https://login490.herokuapp.com/redir.php'
+					);
+					
+					$api = new SpotifyWebAPI\SpotifyWebAPI();
+					
+					$session->requestCredentialsToken();
+					$accessToken = $session->getAccessToken();
+					
+					// Set the code on the API wrapper
+					$api->setAccessToken($accessToken);
+					//echo "<p>" . $accessToken . "</p>";
+					
+					$res = $api->search($_SESSION["song"], ['track']);
+					foreach($res->tracks->items as $track){
+						echo "<a href='songredir.php?id=". $track->id . "'>" . $track->name . $track->artist . "</a>" . '<br>';
 					}
-				?> 
-			</div>
-		</div>
+				echo	"</div>";
+			echo "</div>";	
+			}
+		?> 
+		
 		<form action="backend.php" method="POST" enctype="multipart/form-data"> 
 			<label for="img">Attach image:</label><br>
 			<input type="file" id="img" name="img" accept="image/*">  <br><br>
