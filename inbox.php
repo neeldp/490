@@ -4,9 +4,10 @@
 <div class='container'>
 	<div class='row'> 
 		<div card ="col-lg-7">
-			<h1> Inbox </h1>
+			
 			<div class='card mb-4'>
-				<div class='card-body'> 
+				<div class='card-body'>
+                    <h1> Inbox </h1> 
                     <ul class='list-group'>
                         <?php 
                             $conn = connect_db();
