@@ -53,76 +53,89 @@ require 'nav.php';
 				}
 				
 			}
-            
-			$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE '%$searchTerm%' OR `text` LIKE '%$searchTerm%') ORDER BY `time` DESC");
-			//$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE 'jake' OR `text` LIKE 'jake') ORDER BY `time`");
-			if($result->num_rows > 0){
-				while($row = mysqli_fetch_array($result))
-				{
-					echo "<div class='posts'>";
-					
-					
-					echo "<p class='puser'>". $row['user']."</p>";
-                    			/*
-					$userP = $row['user'];  
-					$result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
-					$record = mysqli_fetch_array($result);
-					*/
+			?>
+	</body>
 
-    
-					$id = $row['id'];
-                    if($_SESSION['isAdmin']==1){
-                        echo '<form method="POST" action="backend.php">
-                        <input type="hidden" name="del" value="'. $id.'" />
-                        <button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
-                        </form>';
-                    }	    
-					echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';	
-					echo "<p class='ptext'>". $row['text']."</p>";	
-					echo "<p class='ptime'>". $row['time']."</p>";
-					echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
-					
-                    
-					    
-					/*
-					echo $row['time']."<br>";
-					echo $row['user']." <br>";
-					echo $row['text']."<br>";
-					echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
-					echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
-					*/
-						
-					$id = $row['id'];
-						
-					$sql = $conn->query("SELECT * FROM comments Where `post_ID` = '{$id}'");
-					
-					if($sql->num_rows > 0){
-						while($r = mysqli_fetch_array($sql))
+
+	<body>		
+		<div class="container">
+    		<div class="row">
+        		<div class="col-lg-7">
+
+					<?php
+
+            
+					$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE '%$searchTerm%' OR `text` LIKE '%$searchTerm%') ORDER BY `time` DESC");
+					//$result = $conn->query("SELECT * FROM posts WHERE (`user` LIKE 'jake' OR `text` LIKE 'jake') ORDER BY `time`");
+					if($result->num_rows > 0){
+						while($row = mysqli_fetch_array($result))
 						{
-							echo $r['date']."<br>";
-							echo $r['name'].":";
-							echo $r['text']."<br><br>";
+							echo "<div class='posts'>";
 							
+							
+							echo "<p class='puser'>". $row['user']."</p>";
+										/*
+							$userP = $row['user'];  
+							$result = $conn->query("SELECT id FROM `followers_table` WHERE `user` = '{$userP}' AND `follower_id` = '{$user_id}'");
+							$record = mysqli_fetch_array($result);
+							*/
+
+			
+							$id = $row['id'];
+							if($_SESSION['isAdmin']==1){
+								echo '<form method="POST" action="backend.php">
+								<input type="hidden" name="del" value="'. $id.'" />
+								<button id = "delete-button"  class = "btn btn-outline-info" type="submit" name="deletebtn" value= "delete">Delete</button>
+								</form>';
+							}	    
+							echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';	
+							echo "<p class='ptext'>". $row['text']."</p>";	
+							echo "<p class='ptime'>". $row['time']."</p>";
+							echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+							
+							
+								
+							/*
+							echo $row['time']."<br>";
+							echo $row['user']." <br>";
+							echo $row['text']."<br>";
+							echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>'."<br>";
+							echo "<iframe src='https://open.spotify.com/embed/track/". $row['spotID'] . "'" . 'width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+							*/
+								
+							$id = $row['id'];
+								
+							$sql = $conn->query("SELECT * FROM comments Where `post_ID` = '{$id}'");
+							
+							if($sql->num_rows > 0){
+								while($r = mysqli_fetch_array($sql))
+								{
+									echo $r['date']."<br>";
+									echo $r['name'].":";
+									echo $r['text']."<br><br>";
+									
+								}
+							}
+
+							echo '<form method="POST" action="backend.php">
+							<div class="form-group">
+								<label>Comment:</label>
+								<input class= "form-control w-25" type="text" name="text"><br><br>
+								<input type="hidden" name="post_ID" value="'. $row['id'].'" />
+								<input type="hidden" name="userPost" value="'. $row['user'].'" />
+							</div>	
+							<button class = "btn btn-outline-info" type="submit" name="comment" value= "post_Comment">Comment</button>
+						</form>';
+							echo "</div>";
+							echo "<br><br>";
+							echo "</div>";
+							echo "<br><br>";
 						}
 					}
-
-					echo '<form method="POST" action="backend.php">
-					<div class="form-group">
-						<label>Comment:</label>
-						<input class= "form-control w-25" type="text" name="text"><br><br>
-						<input type="hidden" name="post_ID" value="'. $row['id'].'" />
-						<input type="hidden" name="userPost" value="'. $row['user'].'" />
-					</div>	
-					<button class = "btn btn-outline-info" type="submit" name="comment" value= "post_Comment">Comment</button>
-				</form>';
-					echo "</div>";
-					echo "<br><br>";
-					echo "</div>";
-					echo "<br><br>";
-				}
-			}
-		$conn->close();
-			?>
+				$conn->close();
+				?>
+				</div>
+			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	</body>
