@@ -288,9 +288,10 @@ if($_POST){
             }
         }
         //print_r($_FILES);
-        var_dump($image);
+        //var_dump($image);
         $conn = connect_db();
         $query = $conn->query("UPDATE `users` SET `profile_img` = `{$imgContent}` WHERE `username` = `{$user}`");
+        var_dump($query);
         //header('location: profile.php');
     }
 } 
