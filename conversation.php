@@ -22,36 +22,40 @@ $_SESSION['get'] = $NAME;
                 <br>
                 <div class='card mb-4'>
                     <div class='card-body'>
-                        <?php
-                        $conn = connect_db();
-                        $usr = $_SESSION['username'];
+                        <div class='card mb-4'>
+                            <div class='card-body'>
+                                <?php
+                                $conn = connect_db();
+                                $usr = $_SESSION['username'];
 
-                        $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE (`receiver` = '{$usr}' OR `receiver` = '{$NAME}')  AND (`sender` = '{$NAME}' OR `sender` = '{$usr}')";
-                        $result = $conn->query($sql);
-                        if($result -> num_rows > 0){
-                            while($row = mysqli_fetch_array($result)){
-                                echo "<p> " . $row['text_message'] . "</br> <b>" . $row['sender'] . "</b><br><br>" . "</p>";
-                                }
-                            }
-                            $conn->close();
-                        ?>
-                        <script>
-                        document.getElementbyId("fresh").scrollTop =  document.getElementbyId("fresh").scrollHeight;   
-                        </script>
-                    </div>
-                </div>
-            </div>
-            <div class='card mb-4'>
-                <div class='card-body'>
-                    <div class ="form-container message">
-                        <form method='POST' action ='backend.php'>
-                            <div class='form-group'>
-                                <label>Message:</label>
-                                <input class= 'form-control w-25' type="text" name="message">
+                                $sql = "SELECT sender,text_message,receiver,id FROM dm_table WHERE (`receiver` = '{$usr}' OR `receiver` = '{$NAME}')  AND (`sender` = '{$NAME}' OR `sender` = '{$usr}')";
+                                $result = $conn->query($sql);
+                                if($result -> num_rows > 0){
+                                    while($row = mysqli_fetch_array($result)){
+                                        echo "<p> " . $row['text_message'] . "</br> <b>" . $row['sender'] . "</b><br><br>" . "</p>";
+                                        }
+                                    }
+                                    $conn->close();
+                                ?>
+                                <script>
+                                document.getElementbyId("fresh").scrollTop =  document.getElementbyId("fresh").scrollHeight;   
+                                </script>
                             </div>
-                            <button class = 'btn btn-outline-info' type="submit" name="replyMsg" value= 'message' class="replyMsg">Message</button>        
-                        </form>
-                    </div> 
+                        </div>
+                    </div>
+                    <div class='card mb-4'>
+                        <div class='card-body'>
+                            <div class ="form-container message">
+                                <form method='POST' action ='backend.php'>
+                                    <div class='form-group'>
+                                        <label>Message:</label>
+                                        <input class= 'form-control w-25' type="text" name="message">
+                                    </div>
+                                    <button class = 'btn btn-outline-info' type="submit" name="replyMsg" value= 'message' class="replyMsg">Message</button>        
+                                </form>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
