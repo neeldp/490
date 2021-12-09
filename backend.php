@@ -269,39 +269,6 @@ if($_POST){
         header('location: following.php');
     }
 
-    if(isset($_POST['profile_image']))
-    {
-        //$img = $_POST['p_img'];
-        $user = $_SESSION['username'];
-        //var_dump($user);
-        if(!empty($_FILES["p_img"]["name"])) { 
-            // Get file info 
-            $fileName = basename($_FILES["p_img"]["name"]); 
-            $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
-            
-            // Allow certain file formats 
-            $allowTypes = array('jpg','png','jpeg','gif'); 
-            if(in_array($fileType, $allowTypes)){ 
-                $image = $_FILES['p_img']['tmp_name']; 
-                $imgContent = addslashes(file_get_contents($image)); 
-            
-            }
-        }
-        //print_r($_FILES);
-        //var_dump($image);
-        $conn = connect_db();
-        $query = $conn->query("UPDATE `users` SET `profile_img` = `{$imgContent}` WHERE `username` = `{$user}`");
-        //$stmt = $conn->prepare("UPDATE users SET profile_img = `{$imgContent}` WHERE username =  `{$user}`");
-        //try 
-        //{
-        //    $stmt->execute();
-        //} 
-        //catch (PDOException $e) {
-        //    error_log(var_export($e, true));
-        //}
-        //var_dump($stmt);
-        header('location: profile.php');
-    }
 } 
 //if($_GET){
    // prequire 'db_key.php';
