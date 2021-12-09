@@ -273,7 +273,7 @@ if($_POST){
     {
         //$img = $_POST['p_img'];
         $user = $_SESSION['username'];
-        var_dump($user);
+        //var_dump($user);
         if(!empty($_FILES["p_img"]["name"])) { 
             // Get file info 
             $fileName = basename($_FILES["p_img"]["name"]); 
@@ -287,10 +287,17 @@ if($_POST){
             
             }
         }
-        print_r($_FILES);
+        //print_r($_FILES);
         //var_dump($imgContent);
         $conn = connect_db();
         $query = $conn->query("UPDATE users SET `profile_img` = `{$imgContent}` WHERE `username` = `{$user}`");
+        try 
+        {
+            $query = $conn->query("UPDATE users SET `profile_img` = `{$imgContent}` WHERE `username` = `{$user}`");
+        } 
+        catch (PDOException $e) {
+            error_log(var_export($e, true));
+        }
         //header('location: profile.php');
     }
 } 
