@@ -98,13 +98,13 @@ require 'db_key.php';
 								$sql_query = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `follower_id` = '{$user_id}'");
 								$row = mysqli_fetch_array($sql_query);
 					
-								echo '<a onclick="following()" class="followingPointer">'. $row[0].' Following</a>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
+								echo '<h3 onclick="following()" class="followingPointer">'. $row[0].' Following</h3>'. "  "; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
 					
 
 								$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
 								$row = mysqli_fetch_array($sql);
 								
-								echo '<label onclick="followers()" class="followerPointer">'. $row[0].' Followers</label>';
+								echo '<h3 onclick="followers()" class="followerPointer">'. $row[0].' Followers</h3>';
 
 							?>
 					</div>

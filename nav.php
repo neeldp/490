@@ -1,5 +1,5 @@
 <?php require 'header.php'; require 'backend.php';?>
-<header class="p-3 bg-dark text-white" style="position:fixed">
+<header class="p-3 bg-dark text-white" >
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="landing.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
