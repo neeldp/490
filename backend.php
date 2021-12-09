@@ -299,7 +299,7 @@ if($_POST){
         catch (PDOException $e) {
             error_log(var_export($e, true));
         }
-        var_dump($query);
+        var_dump($stmt);
         //header('location: profile.php');
     }
 } 
