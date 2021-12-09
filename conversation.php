@@ -39,7 +39,10 @@ $_SESSION['get'] = $NAME;
                         document.getElementbyId("fresh").scrollTop =  document.getElementbyId("fresh").scrollHeight;   
                         </script>
                     </div>
-                
+                </div>
+            </div>
+            <div class='card mb-4'>
+                <div class='card-body'>
                     <div class ="form-container message">
                         <form method='POST' action ='backend.php'>
                             <div class='form-group'>
