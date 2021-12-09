@@ -6,7 +6,6 @@ require 'db_key.php';
 
 
 <body>
-	<h2 >Profile</h2>
 	<div class = "timeline">
 	<body>
 		<div class="container">
@@ -77,36 +76,38 @@ require 'db_key.php';
             <div style="position:fixed">
             	<div class = "card mb-6">
 					<div class="card-header">Fans</div>
-					<script>
-						function following() {
-							window.location.replace("following.php");
-						}
+						<div class="card-body">
+							<script>
+								function following() {
+									window.location.replace("following.php");
+								}
 
-						function followers() {
-							window.location.replace("followers.php");
-						}
-					</script>
+								function followers() {
+									window.location.replace("followers.php");
+								}
+							</script>
 
-					<?php
+							<?php
 
-						$conn = connect_db();
-						$user = $_SESSION['username'];
-						$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
-						$row = mysqli_fetch_array($result);
-						$user_id = $row['id'];
+								$conn = connect_db();
+								$user = $_SESSION['username'];
+								$result = $conn->query("SELECT id FROM users WHERE `username` = '{$user}'");
+								$row = mysqli_fetch_array($result);
+								$user_id = $row['id'];
 
-						$sql_query = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `follower_id` = '{$user_id}'");
-						$row = mysqli_fetch_array($sql_query);
-			
-						echo '<a onclick="following()" class="followingPointer">'. $row[0].' Following</a>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
-			
+								$sql_query = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `follower_id` = '{$user_id}'");
+								$row = mysqli_fetch_array($sql_query);
+					
+								echo '<a onclick="following()" class="followingPointer">'. $row[0].' Following</a>'; /* WHY DOESN'T THE ID WORK/MAKES THE FUNCTION STOP WORKING?? */
+					
 
-						$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
-						$row = mysqli_fetch_array($sql);
-						
-						echo '<label onclick="followers()" class="followerPointer">'. $row[0].' Followers</label>';
+								$sql = $conn->query("SELECT COUNT(*) FROM followers_table WHERE `user` = '{$user}'");
+								$row = mysqli_fetch_array($sql);
+								
+								echo '<label onclick="followers()" class="followerPointer">'. $row[0].' Followers</label>';
 
-					?>
+							?>
+					</div>
 				</div> 
 			</div>
 			</div>
