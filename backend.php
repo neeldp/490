@@ -300,7 +300,7 @@ if($_POST){
         //    error_log(var_export($e, true));
         //}
         //var_dump($stmt);
-        //header('location: profile.php');
+        header('location: profile.php');
     }
 } 
 //if($_GET){
