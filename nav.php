@@ -21,8 +21,8 @@
           <form method="POST" action='backend.php'>
               <div class='form-group'>
                 <label>Search:</label>
-                <input class= 'form-control w-25' type="text" name="search" width="500">
-                <button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>
+                <input class= 'form-control ' type="text" name="search">
+                <button type="submit" name="searchbtn" value= 'searchbtn' >Search</button>
               </div>	
           </form>
         </div> 
