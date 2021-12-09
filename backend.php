@@ -272,8 +272,8 @@ if($_POST){
     if(isset($_POST['profile_image']))
     {
         //$img = $_POST['p_img'];
-        //var_dump($img);
         $user = $_SESSION['username'];
+        var_dump($user);
         if(!empty($_FILES["p_img"]["name"])) { 
             // Get file info 
             $fileName = basename($_FILES["p_img"]["name"]); 
