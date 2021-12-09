@@ -291,7 +291,7 @@ if($_POST){
         //var_dump($image);
         $conn = connect_db();
         //$query = $conn->query("UPDATE `users` SET `profile_img` = `{$imgContent}` WHERE `username` = `{$user}`");
-        $stmt = $db->prepare("UPDATE users SET profile_img = $imgContent WHERE username =  :user");
+        $stmt = $conn->prepare("UPDATE users SET profile_img = $imgContent WHERE username =  :user");
         try 
         {
             $stmt->execute([":user" => $user]);
