@@ -290,8 +290,7 @@ if($_POST){
         //print_r($_FILES);
         //var_dump($image);
         $conn = connect_db();
-        //$query = $conn->query("UPDATE `users` SET `profile_img` = `{$imgContent}` WHERE `username` = `{$user}`");
-        $query = $conn->query("UPDATE `users` SET `profile_img` = `{$imgContent}` WHERE `profile_img` = NULL");
+        $query = $conn->query("UPDATE `users` SET `profile_img` = `{$imgContent}` WHERE `username` = `{$user}`");
         //$stmt = $conn->prepare("UPDATE users SET profile_img = `{$imgContent}` WHERE username =  `{$user}`");
         //try 
         //{
