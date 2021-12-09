@@ -18,15 +18,14 @@
         </ul>
 
         <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <form method="POST" action='backend.php'>
-					<div class='form-group'>
-						<label>Search:</label>
-						<input class= 'form-control w-25' type="text" name="search" width="500">
-            <button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>
-					</div>	
-				</form>
-        </div>
-        <div class="text-end"></div>
+          <form method="POST" action='backend.php'>
+              <div class='form-group'>
+                <label>Search:</label>
+                <input class= 'form-control w-25' type="text" name="search" width="500">
+                <button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>
+              </div>	
+          </form>
+        </div> 
       </div>
     </div>
   </header>
