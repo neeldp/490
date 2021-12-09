@@ -21,7 +21,9 @@
         <form method="POST" action='backend.php'>
 					<div class='form-group'>
 						<label>Search:</label>
-						<input class= 'form-control w-25' type="text" name="search" width="80%">
+            <div class="col-md-offset-5 col-md-5">
+						<input class= 'form-control w-25' type="text" name="search" >
+          </div>
             <button type="submit" name="searchbtn" value= 'searchbtn' class="searchbtn">Search</button>
 					</div>	
 				</form>
