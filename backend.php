@@ -291,14 +291,15 @@ if($_POST){
         //var_dump($image);
         $conn = connect_db();
         //$query = $conn->query("UPDATE `users` SET `profile_img` = `{$imgContent}` WHERE `username` = `{$user}`");
-        $stmt = $conn->prepare("UPDATE users SET profile_img = `{$imgContent}` WHERE username =  `{$user}`");
-        try 
-        {
-            $stmt->execute();
-        } 
-        catch (PDOException $e) {
-            error_log(var_export($e, true));
-        }
+        $query = $conn->query("UPDATE `users` SET `profile_img` = `{$imgContent}` WHERE `profile_img` = NULL");
+        //$stmt = $conn->prepare("UPDATE users SET profile_img = `{$imgContent}` WHERE username =  `{$user}`");
+        //try 
+        //{
+        //    $stmt->execute();
+        //} 
+        //catch (PDOException $e) {
+        //    error_log(var_export($e, true));
+        //}
         //var_dump($stmt);
         header('location: profile.php');
     }
